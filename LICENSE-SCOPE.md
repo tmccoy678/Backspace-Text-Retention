@@ -1,10 +1,12 @@
 # License scope
 
-The top-level MIT License applies to the original documentation and utilities
-created for this repository unless a file says otherwise.
+The top-level Apache License, Version 2.0 applies to the original documentation
+and utilities created for this repository unless a file says otherwise.
+
+Copyright (c) 2026 Taylor
 
 The following are preserved as evidence or third-party provenance and are not
-relicensed by the top-level MIT License:
+relicensed by the top-level Apache License, Version 2.0:
 
 - screenshots containing third-party interfaces, source-code views, terminal
   output, or model output;
