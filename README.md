@@ -350,3 +350,9 @@ https://pubs.opengroup.org/onlinepubs/007904975/basedefs/xbd_chap11.html
 Wasserstein, R. L., & Lazar, N. A. (2016). The ASA's statement on p-values:
 Context, process, and purpose. *The American Statistician, 70*(2), 129–133.
 https://doi.org/10.1080/00031305.2016.1154108
+
+## License
+
+Original documentation and utilities are licensed under the
+[Apache License, Version 2.0](LICENSE). See [License scope](LICENSE-SCOPE.md)
+for the preserved evidence and third-party material exceptions.
