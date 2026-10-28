@@ -19,6 +19,12 @@ Two October 27 mechanistic follow-ups are indexed separately in
 2015 Intel Mac and `@oliviamckee`'s independent Windows ConPTY study. Neither is
 an outcome of the prospective ten-card challenge.
 
+Olivia's question about why Blu enabled recording by default prompted a separate
+[forensic response](docs/PR3-FORENSIC-RESPONSE.md). It distinguishes direct
+contemporaneous evidence from present inference, documents the same-day Intel
+negative control, and traces when literal recovered text entered the Codex
+conversation.
+
 ## Abstract
 
 Text deleted from a terminal's visible input line may remain recoverable in a
