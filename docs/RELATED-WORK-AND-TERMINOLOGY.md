@@ -56,6 +56,26 @@ visual-erasure output**, **child-visible committed line**, and **recorder-
 retained composition history** over an unqualified statement that text “was
 deleted.”
 
+### Cross-platform key-label boundary
+
+The macOS and Windows experiments did not use the same physical key label. In
+the macOS foundation case, the operator used the Apple key labeled **Delete**
+as a backward-edit action. In Olivia's native Windows ConPTY trial (`N1`), the
+operator instead used **Backspace** 19 times; the metadata records zero physical
+Delete presses and zero Home presses (oliviamckee, 2026).
+
+Olivia's later four-case matrix also did not compare a Backspace key with a
+Delete key. It scripted five Backspace actions and varied the byte used by the
+host to serialize each Backspace action as `0x7f` versus `0x08`, crossed with
+starting column 0 versus 4. An earlier Python harness trial (`P3`) deliberately
+remapped a physical Windows Del key to backward erase, so it did not measure
+native Windows forward-Delete semantics. A separate native control (`N0`) sent
+scripted forward-Delete sequences, but it was not the physical native trial.
+
+These conditions should remain separate: **Mac physical Delete used as backward
+edit**, **Windows physical Backspace**, **scripted Backspace serialization**,
+and **scripted forward Delete** are four different claims.
+
 ## Closest direct prior work
 
 ### `script` and `forscript`
@@ -260,6 +280,11 @@ it's gone”: User understanding of online data deletion and expiration. In
 *Fourteenth Symposium on Usable Privacy and Security (SOUPS 2018)* (pp.
 329–339). USENIX Association.
 https://www.usenix.org/conference/soups2018/presentation/murillo
+
+oliviamckee. (2026). *Backspace retention on Windows: Simulation and native
+ConPTY evidence* (Commit 5815c0136ff88b03c7d6c455962aacb7e2a8bd60) [Source
+code and research repository]. GitHub.
+https://github.com/oliviamckee/backspace-retention-windows-study/tree/5815c0136ff88b03c7d6c455962aacb7e2a8bd60
 
 Reardon, J., Marforio, C., Capkun, S., & Basin, D. (2011). *Secure deletion on
 log-structured file systems* [Preprint]. arXiv.

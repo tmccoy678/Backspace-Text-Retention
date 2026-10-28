@@ -46,6 +46,11 @@ and import chronology are committed in the
 [earliest-evidence audit](docs/EARLIEST-EVIDENCE-AUDIT.md) and
 [existing-evidence investigation](investigations/2026-10-28-olivia-hypothesis/).
 
+Here, **Codex tool result** means the standard output returned after the
+deliberate `sed` file-read command inside the active Codex conversation. It was
+not a model reply, a passive background read, or evidence that Codex received
+the draft before Blu opened the transcript.
+
 The completed September 21 terminal case that motivated this study is preserved
 separately as the [original-observation foundation](foundation/original-observation/).
 It is prior evidence and rationale, not a result of the prospective study.
@@ -66,7 +71,12 @@ the ordinary-Codex hypothesis without running a new experiment.
 Two October 27 mechanistic follow-ups are indexed separately in
 [`replications/`](replications/): a byte-preserved recorded-PTY replication on a
 2015 Intel Mac and `@oliviamckee`'s independent Windows ConPTY study. Neither is
-an outcome of the prospective ten-card challenge.
+an outcome of the prospective ten-card challenge. The input actions also
+differed: the Mac path used a physical Apple key labeled Delete as a backward-
+edit action, while Olivia's native Windows trial used 19 physical Backspace
+presses and zero physical Delete presses. Her follow-up matrix varied how
+**Backspace** was serialized (`0x7f` versus `0x08`); it was not a Backspace-
+versus-Delete comparison.
 
 Olivia's question about why Blu enabled recording by default prompted a separate
 [forensic response](docs/PR3-FORENSIC-RESPONSE.md). It distinguishes direct
