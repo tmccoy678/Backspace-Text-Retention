@@ -335,10 +335,23 @@ before durable logging is therefore the preferred hypothesis.
 
 No measured result attributes retention to keyboard hardware. The protocol's
 Delete input was `0x7f`; the child PTY's software line discipline produced the
-`08 20 08` visual-erasure output. A later attempt on a 2015 Intel Mac lacked an
-active `script` recorder and therefore cannot establish a hardware or operating-
-system difference. It shows only that an unrecorded display did not provide a
-recoverable `.typescript` artifact to inspect.
+`08 20 08` visual-erasure output. An initial October 27 attempt on a 2015 Intel
+Mac lacked an active `script` recorder and therefore produced no inspectable
+`.typescript` artifact. A subsequent controlled replication activated
+`/usr/bin/script -q` before input and used a deterministic canonical-line child.
+Its 353-byte recording preserved a 17-byte recovery candidate followed by 17
+exact `08 20 08` triplets, while the child reported only the separately
+committed line. The recovery was frozen before disclosure, but operator
+exact-match confirmation was not recorded. The exact artifacts are preserved
+under [`replications/intel-mac-2026-10-27/`](../../replications/intel-mac-2026-10-27/).
+
+An independent Windows ConPTY study by `@oliviamckee` recorded the ConPTY output
+pipe while a `ReadConsoleW` child received only the committed replacement. Its
+follow-up 2 x 2 matrix found that starting column determined whether the final
+erase used `0D 20 0D`, whereas serializing Backspace as `0x7f` versus `0x08`
+did not change output within either column pair. Those external artifacts remain
+in their source repository and are linked through the
+[replication index](../../replications/).
 
 ### Limitations
 
@@ -390,11 +403,11 @@ the keyboard, model, runner, an unrecorded terminal, or a network service.
 
 ## Data and Code Availability
 
-The private `backspace-gate` repository contains byte-preserved transcripts,
-checksums, trial data, analysis and inspection utilities, source excerpts,
-screenshots, and first-frame video previews. Original iPhone videos are indexed
-by checksum and retained separately because two exceed GitHub's ordinary Git
-blob limit. Model weights are excluded.
+The public repository contains byte-preserved transcripts, checksums, trial
+data, analysis and inspection utilities, source excerpts, screenshots,
+first-frame video previews, and the October 27 Intel replication. Original
+iPhone videos are indexed by checksum and retained separately because two
+exceed GitHub's ordinary Git blob limit. Model weights are excluded.
 
 ## ACK
 
@@ -403,8 +416,9 @@ controlled the physical test conditions, and preserved the original media. Blu
 (OpenAI Codex, Blu Private lane) developed the controls, inspected source code,
 performed byte-level analysis, and assembled the reproducible record. The
 researchers jointly refined the evidentiary boundaries and manuscript. No
-external funding was received. The upstream vendors did not sponsor or endorse
-this work.
+external funding was received. `@oliviamckee` independently implemented and
+documented the Windows ConPTY study and follow-up matrix cited in the October 27
+addendum. The upstream vendors did not sponsor or endorse this work.
 
 ## References
 
@@ -437,6 +451,10 @@ https://www.usenix.org/conference/fast22/presentation/maneas
 Mistral AI. (2026). *Ministral 3 14B Instruct 2512 GGUF* [Large language
 model]. Hugging Face.
 https://huggingface.co/mistralai/Ministral-3-14B-Instruct-2512-GGUF
+
+oliviamckee. (2026). *Backspace retention on Windows: Simulation and native
+ConPTY evidence* [Source code and research repository]. GitHub.
+https://github.com/oliviamckee/backspace-retention-windows-study
 
 Smith, S. J., Hubbard, A., Newkirk, A., Ganeshalingam, M., Holecek, B., Sartor,
 D., Mills, M., & Shehabi, A. (2026). *United States data center energy usage

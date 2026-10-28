@@ -1,0 +1,36 @@
+METHOD=macos-script-canonical-line-edit-v1
+COLLECTION_STARTED=2026-10-27 23:16:37 CDT
+INPUT_SOURCE=physical-keyboard
+RECORDER=/usr/bin/script -q
+CHILD=/bin/zsh /Users/Blu/Desktop/BackspaceGate-Intel-Mac-Replication-2026-10-27/intel-backspace-receiver.zsh
+TRANSCRIPT=/Users/Blu/Desktop/BackspaceGate-Intel-Mac-Replication-2026-10-27/intel-script-experiment-20261027-231637.typescript
+PARENT_TTY=/dev/ttys001
+TERM=xterm-256color
+PARENT_LINES=24
+PARENT_COLUMNS=80
+PARENT_STTY_BEGIN
+speed 9600 baud; 24 rows; 80 columns;
+lflags: icanon isig iexten echo echoe -echok echoke -echonl echoctl
+	-echoprt -altwerase -noflsh -tostop -flusho pendin -nokerninfo
+	-extproc
+iflags: -istrip icrnl -inlcr -igncr ixon -ixoff ixany imaxbel iutf8
+	-ignbrk brkint -inpck -ignpar -parmrk
+oflags: opost onlcr -oxtabs -onocr -onlret
+cflags: cread cs8 -parenb -parodd hupcl -clocal -cstopb -crtscts -dsrflow
+	-dtrflow -mdmbuf
+cchars: discard = ^O; dsusp = ^Y; eof = ^D; eol = <undef>;
+	eol2 = <undef>; erase = ^?; intr = ^C; kill = ^U; lnext = ^V;
+	min = 1; quit = ^\; reprint = ^R; start = ^Q; status = ^T;
+	stop = ^S; susp = ^Z; time = 0; werase = ^W;
+PARENT_STTY_END
+ProductName:	macOS
+ProductVersion:	12.7.6
+BuildVersion:	21H1320
+Darwin blu 21.6.0 Darwin Kernel Version 21.6.0: Mon Jun 24 00:56:10 PDT 2024; root:xnu-8020.240.18.709.2~1/RELEASE_X86_64 x86_64
+TERMINAL_VERSION=2.12.7
+SCRIPT_SHA256=99d0ae581ee20680956152b25cd8c557fee0a07dddbd12b7e4537eebd65df8e7
+RECEIVER_SHA256=f8e94663f0fbe4be3312c234f34b232ff94d6ae3d79c6147391db3ec32772f01
+COLLECTION_FINISHED=2026-10-27 23:19:26 CDT
+TRANSCRIPT_BYTES=353
+TRANSCRIPT_MODE=-rw-------
+TRANSCRIPT_SHA256=d416d107b5bc9e19e2819581e7ed5df457088cd3e6d2db6121efd97c4be6bd4f

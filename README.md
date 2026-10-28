@@ -11,6 +11,11 @@ The completed September 21 terminal case that motivated this study is preserved
 separately as the [original-observation foundation](foundation/original-observation/).
 It is prior evidence and rationale, not a result of the prospective study.
 
+Two October 27 mechanistic follow-ups are indexed separately in
+[`replications/`](replications/): a byte-preserved recorded-PTY replication on a
+2015 Intel Mac and `@oliviamckee`'s independent Windows ConPTY study. Neither is
+an outcome of the prospective ten-card challenge.
+
 ## Abstract
 
 Text deleted from a terminal's visible input line may remain recoverable in a
@@ -297,11 +302,13 @@ of this confirmatory challenge.
 - [Foundation technical documentation](docs/)
 - [Existing foundation and validation utilities](analysis/)
 - [Provenance records](provenance/)
+- [Cross-platform replications and immutable external links](replications/)
 - [Credits and contribution record](CREDITS.md)
 
-The repository is presently private. Original iPhone videos from the foundation
-case remain indexed by checksum and are managed separately; first-frame previews
-are included. Model weights and credentials are excluded.
+This repository is public. Original iPhone videos from the foundation case
+remain indexed by checksum and are managed separately; first-frame previews are
+included. Model weights, credentials, and unrelated private material are
+excluded.
 
 ## ACK
 
@@ -309,8 +316,10 @@ Taylor McCoy conceived the confirmatory challenge, controls the physical target
 generation and blinding, and will preserve the ground-truth record. Blu (OpenAI
 Codex, Blu Private lane) formalized the protocol, exact-null calculation,
 evidence boundaries, and reproducible repository structure. The original case
-and prospective study were refined collaboratively. No external funding was
-received, and referenced vendors did not sponsor or endorse this work.
+and prospective study were refined collaboratively. `@oliviamckee` performed
+the independent Windows ConPTY study and its follow-up cursor/Backspace matrix.
+No external funding was received, and referenced vendors did not sponsor or
+endorse this work.
 
 ## References
 
@@ -334,6 +343,10 @@ https://doi.org/10.2307/2347111
 Mistral AI. (2025). *Ministral 3 14B Instruct 2512 GGUF* [Large language model].
 Hugging Face.
 https://huggingface.co/mistralai/Ministral-3-14B-Instruct-2512-GGUF
+
+oliviamckee. (2026). *Backspace retention on Windows: Simulation and native
+ConPTY evidence* [Source code and research repository]. GitHub.
+https://github.com/oliviamckee/backspace-retention-windows-study
 
 R Core Team. (2026). *R: A language and environment for statistical
 computing*. R Foundation for Statistical Computing.

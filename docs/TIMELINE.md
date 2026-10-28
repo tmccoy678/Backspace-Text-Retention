@@ -1,6 +1,8 @@
 # Evidence timeline
 
-Times below are America/Chicago on September 21, 2026 unless marked UTC.
+Times below are America/Chicago unless marked UTC.
+
+## September 21, 2026
 
 | Time | Event | Preserved evidence |
 | --- | --- | --- |
@@ -16,3 +18,13 @@ Times below are America/Chicago on September 21, 2026 unless marked UTC.
 
 The exact message timestamps in [CONVERSATION-EXCERPTS.md](CONVERSATION-EXCERPTS.md)
 come from the local Codex JSONL session and are recorded in UTC.
+
+## October 27, 2026
+
+| Time | Event | Preserved evidence |
+| --- | --- | --- |
+| 11:16 PM | A recorded-PTY replication began on a 2015 Intel Mac with `/usr/bin/script -q`, a deterministic child, and canonical line editing. | Replication launcher, receiver, metadata, and child-PTY state |
+| 11:19 PM | Collection closed with a 353-byte transcript. | Byte-preserved `.typescript`; SHA-256 `d416d107...be6bd4f` |
+| 11:20 PM | The recovery candidate, committed line, byte offsets, erase count, and artifact hash were frozen before operator disclosure. | Frozen recovery record |
+| 11:20 PM onward | Taylor did not provide an explicit exact-match confirmation; the run remains unscored for that endpoint. | Conversation chronology and frozen recovery record |
+| 11:36–11:39 PM | `@oliviamckee` collected a four-case Windows ConPTY matrix varying starting column and serialized Backspace byte. | External repository commit `5815c0136ff8...` |

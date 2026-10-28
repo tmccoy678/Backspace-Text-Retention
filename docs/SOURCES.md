@@ -33,3 +33,15 @@ The model was Mistral AI's `Ministral-3-14B-Instruct-2512-Q5_K_M.gguf`.
 Its name, size, SHA-256, license, and observed runtime are recorded in
 [`provenance/MODEL-MANIFEST.md`](../provenance/MODEL-MANIFEST.md). The 9.6 GB
 weight file is not included.
+
+## Independent Windows replication
+
+Olivia's public repository preserves the independent Windows ConPTY study,
+native host source, exact transcripts, metadata, SHA-256 manifest, and verifier:
+
+- [`oliviamckee/backspace-retention-windows-study`](https://github.com/oliviamckee/backspace-retention-windows-study)
+- [Cursor and Backspace byte matrix, immutable commit `5815c0136ff8`](https://github.com/oliviamckee/backspace-retention-windows-study/commit/5815c0136ff88b03c7d6c455962aacb7e2a8bd60)
+
+The Windows artifacts remain external rather than being copied into this
+repository. The cross-repository comparison is summarized in
+[`replications/README.md`](../replications/README.md).
