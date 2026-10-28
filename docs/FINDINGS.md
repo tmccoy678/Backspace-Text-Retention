@@ -113,13 +113,23 @@ the [first-attempt audit](../replications/intel-mac-2026-10-27/FIRST-ORDINARY-SH
 
 `@oliviamckee` independently recorded a native Windows ConPTY output stream
 while the operating system's line editor withheld the abandoned draft from a
-`ReadConsoleW` child. A follow-up matrix crossed starting column 0 versus 4 with
-the backward-edit input serialized as `0x7f` versus `0x08`. On that
-configuration, column 0
-produced four `08 20 08` triplets and one `0D 20 0D` edge erase; column 4
-produced five `08 20 08` triplets. The serialized byte did not change output
-within either column pair. The result supports a cursor-boundary explanation
-for the edge form without claiming a universal cross-platform erase grammar.
+`ReadConsoleW` child. The native physical trial used 19 Backspace presses, zero
+Delete presses, and zero Home presses. It therefore did not replicate the Mac's
+physical key label: the Mac operator used a key labeled Delete as a backward-
+edit action, while the Windows operator used Backspace.
+
+A follow-up matrix crossed starting column 0 versus 4 with **Backspace**
+serialized as `0x7f` versus `0x08`; it did not compare Backspace with Delete.
+On that configuration, column 0 produced four `08 20 08` triplets and one
+`0D 20 0D` edge erase; column 4 produced five `08 20 08` triplets. The
+serialized Backspace byte did not change output within either column pair. The
+result supports a cursor-boundary explanation for the edge form without
+claiming a universal cross-platform erase grammar.
+
+The earlier Python `P3` harness deliberately mapped a physical Windows Del key
+to backward erase, so it did not establish native Windows forward-Delete
+behavior. The native `N0` control used scripted forward-Delete sequences; no
+physical Delete event occurred in the native `N1` trial.
 
 The Windows source, exact artifacts, hashes, and verifier remain in Olivia's
 repository at immutable commit `5815c0136ff88b03c7d6c455962aacb7e2a8bd60`.

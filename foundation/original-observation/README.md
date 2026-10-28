@@ -403,11 +403,15 @@ under [`replications/intel-mac-2026-10-27/`](../../replications/intel-mac-2026-1
 
 An independent Windows ConPTY study by `@oliviamckee` recorded the ConPTY output
 pipe while a `ReadConsoleW` child received only the committed replacement. Its
-follow-up 2 x 2 matrix found that starting column determined whether the final
-erase used `0D 20 0D`, whereas serializing the backward-edit input as `0x7f`
-versus `0x08` did not change output within either column pair. Those external artifacts remain
-in their source repository and are linked through the
-[replication index](../../replications/).
+native physical trial used 19 Backspace presses and zero Delete presses. Its
+follow-up 2 x 2 matrix varied how scripted Backspace actions were serialized
+(`0x7f` versus `0x08`), not Backspace versus Delete. Starting column determined
+whether the final erase used `0D 20 0D`; the serialized Backspace byte did not
+change output within either column pair. An earlier Python harness remapped a
+physical Del key to backward erase, and a separate native control used scripted
+forward-Delete sequences; neither condition was the physical native trial.
+Those external artifacts remain in their source repository and are linked
+through the [replication index](../../replications/).
 
 ### Limitations
 

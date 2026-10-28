@@ -80,5 +80,8 @@ future replications; do not rewrite the preserved source artifact in place.
 Olivia's independent Windows ConPTY study used a different operating-system
 mechanism but measured the same separation: the sequential recorder retained
 the abandoned draft while the line-oriented child received only the committed
-replacement. Her follow-up matrix further localized the Windows edge-erase
-encoding. See the [cross-platform index](../README.md).
+replacement. Its native physical trial used Backspace, not Delete: metadata
+records 19 Backspace presses and zero Delete presses. Her follow-up matrix
+varied the byte used to serialize scripted Backspace actions (`0x7f` versus
+`0x08`); it was not a Backspace-versus-Delete comparison. See the
+[cross-platform index](../README.md).

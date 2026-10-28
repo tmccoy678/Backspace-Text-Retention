@@ -30,10 +30,23 @@ Windows evidence:
 - [Public review comment that prompted the matrix](https://github.com/oliviamckee/backspace-retention-windows-study/commit/1c2df2adc0e32b60260032fd6dcfa258aa24d1de#commitcomment-206991204)
 
 The Windows host recorded only the ConPTY output pipe while `ReadConsoleW`
-received the committed replacement. Olivia's four-case follow-up found that the
-starting column determined whether the last erase used the left-edge
-`0D 20 0D` form; serializing the backward-edit input as `0x7f` versus `0x08`
-did not change output within either column pair.
+received the committed replacement. In the native physical trial (`N1`), the
+operator erased the draft with 19 physical **Backspace** presses; the metadata
+records zero physical Delete presses and zero Home presses. This differs from
+the motivating Mac path, where the backward-edit key was physically labeled
+Delete.
+
+Olivia's four-case follow-up was a **Backspace serialization matrix**, not a
+Backspace-versus-Delete comparison. It scripted five Backspace actions per case
+and crossed starting column 0 versus 4 with Backspace serialized as `0x7f`
+versus `0x08`. Starting column determined whether the last erase used the
+left-edge `0D 20 0D` form; the serialized Backspace byte did not change output
+within either column pair.
+
+Two other Windows conditions remain distinct. The earlier Python `P3` harness
+mapped a physical Del key to backward erase and therefore did not represent
+native Windows forward-Delete semantics. The native `N0` control sent scripted
+forward-Delete sequences, but no physical Delete event occurred in `N1`.
 
 The repositories are connected by citations and claim boundaries rather than
 by copying independently authored evidence. That keeps checksums, provenance,
