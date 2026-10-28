@@ -283,9 +283,11 @@ submitted line suggests.
 ### Invocation, notice, and informed permission
 
 The recording was not an unobserved macOS background service or evidence of
-Apple receiving the data. The researchers launched a local wrapper that
-explicitly invoked `/usr/bin/script` and named a local transcript file. That
-action authorized recording at the process level. It did not, however, present
+Apple receiving the data. The researchers launched the local Blu Offline
+recording wrapper: a launcher layer around the child command that explicitly
+invoked `/usr/bin/script` and named a local transcript file. It did not wrap or
+modify the model. That action authorized recording at the process level. It
+did not, however, present
 an interactive warning in the ordinary Blu Offline path that visually deleted
 draft text would remain recoverable. Apple's manual documents output recording,
 backspaces, and unexpected log contents, but the practical composition-history

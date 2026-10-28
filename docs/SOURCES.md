@@ -26,6 +26,8 @@ man 4 termios
 
 The exact experimental terminal-mode command is preserved in
 [`tools/original-raw-tty-wrapper.zsh`](../tools/original-raw-tty-wrapper.zsh).
+The historical filename uses “wrapper” for a local terminal-mode helper; it
+does not refer to wrapping, opening, or modifying the model.
 
 ## Local model
 

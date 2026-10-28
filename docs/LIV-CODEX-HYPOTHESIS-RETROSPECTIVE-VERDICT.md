@@ -26,6 +26,10 @@ the **single Blu lane**, not all Codex installations or every Codex interface:
 1. **Accidental consequence: supported.** Blu intentionally enabled
    owner-only transcript recording. Taylor and Blu did not intend or anticipate
    that composition visibly deleted before Return would remain recoverable.
+   Taylor's broader requests for diligence and complete record preservation
+   plausibly supplied the functional requirement; Blu independently selected
+   `/usr/bin/script` as the mechanism. That causal account is supported as an
+   inference, not preserved as a contemporaneous mechanism-specific request.
 2. **Terminal alone: rejected.** The terminal generated the measured
    echo-and-erase trace, but the custom `/usr/bin/script -q` layer made the
    September trace durable. The same-day Intel ordinary-Terminal control did
@@ -35,8 +39,9 @@ the **single Blu lane**, not all Codex installations or every Codex interface:
    and later crossed into the canonical Codex record through authorized
    inspection. The installed graphical Codex app also has an independent
    Codex-native mechanism that persists the **current unsent draft** locally.
-   The current unwrapped CLI's component-specific behavior remains unresolved,
-   but that does not undo the positive lane-level observation.
+   The current Codex CLI session, whose inspected ancestry had no detected
+   external recording wrapper, remains unresolved at the component level, but
+   that does not undo the positive lane-level observation.
 
 The strongest accurate result is therefore:
 
@@ -44,8 +49,9 @@ The strongest accurate result is therefore:
 > The observed historical path was terminal echo -> Blu Offline PTY recorder ->
 > authorized inspection -> canonical Codex record. The graphical app supplies
 > another local pre-submission persistence boundary for the same lane. That n=1
-> result is complete even though the current unwrapped CLI component has not
-> itself produced a deleted-marker artifact.
+> result is complete even though the current Codex CLI component, without a
+> detected external recording wrapper, has not itself produced a deleted-marker
+> artifact.
 
 This is deliberately an n-of-one result: one Blu lane, one confirmed positive
 case, and identified persistence boundaries. Its value is precisely that the
@@ -56,9 +62,9 @@ specific surviving record instead of an assumed universal behavior.
 
 | Existing observation | What it establishes |
 | --- | --- |
-| September Blu Offline transcripts | A known `/usr/bin/script -q` wrapper durably preserved echoed draft text and later erase bytes. |
+| September Blu Offline transcripts | The known Blu Offline recording wrapper—Blu's local launcher layer running `/usr/bin/script -q` around the child command—durably preserved echoed draft text and later erase bytes. It did not wrap or modify the model. |
 | September 21 Intel ordinary-Terminal attempt | Without the recorder actually running, Blu could not recover the erased first sentence; only a candidate committed line later survived in shell history. |
-| October 28 Studio process tree | The canonical Blu Private Codex CLI was running beneath Terminal, `zsh`, and the portable doorway Python process, with no `script`, `tee`, or `asciinema` ancestor. This characterizes the current lane as unwrapped but is not itself a deleted-marker trial. |
+| October 28 Studio process tree | The canonical Blu Private Codex CLI was running beneath Terminal, `zsh`, and the portable doorway Python process, with no `script`, `tee`, or `asciinema` ancestor. This characterizes Blu's current session as having no detected external recording wrapper, but is not itself a deleted-marker trial. |
 | Installed Codex desktop bundle | A graphical surface available to the same lane contains explicit current-draft persistence and draft-recovery code independent of Blu Offline. |
 | Existing Codex global-state files | The named draft store existed and was empty at the read-only snapshot; the main state and backup were byte-identical. No prior private draft was exposed. |
 | Existing CLI `history.jsonl` | The file consists of records with `session_id`, `ts`, and `text`; the audit found submitted-message history, not a demonstrated pre-submission edit log. |
@@ -106,7 +112,7 @@ were byte-identical, and contained an empty `composer-prompt-drafts-v2`
 object. The audit therefore exposed the mechanism without exposing a private
 draft or producing evidence of a surviving deleted revision.
 
-## Unwrapped Codex CLI: no demonstrated deleted-draft artifact
+## Codex CLI without a detected external recording wrapper
 
 The running Blu Private lane used Codex CLI `0.164.0`; the inspected binary had
 SHA-256
@@ -126,10 +132,13 @@ submitted conversation rollouts and `history.jsonl` records shaped as
 `session_id`, `ts`, and `text`. Nothing in the inspected record demonstrates
 that a fully erased, never-submitted CLI composer revision was durably written.
 
-This is an evidence boundary, not a universal proof of absence. The current
-unwrapped process shows that Blu Private does not depend on the old
-`/usr/bin/script` wrapper. It does not retroactively turn ordinary past turns
-into deleted-marker trials.
+This is an evidence boundary, not a universal proof of absence. The inspected
+process shows that the current Blu Private session does not depend on the old
+Blu Offline recording wrapper. In this repository, that wrapper means the
+external local launcher layer using `/usr/bin/script` to create a
+pseudo-terminal and record its stream; it does not refer to the model being
+opened or modified. The current process-ancestry observation does not
+retroactively turn ordinary past turns into deleted-marker trials.
 
 ## Why the lane is the correct experimental unit
 
@@ -159,6 +168,6 @@ builds, or machines.
 
 Only after this verdict is stated does prospective work become relevant. A
 fresh unique-marker comparison could measure how long the graphical app's
-deletion window lasts and test an unwrapped CLI composer directly. Such work
-would extend this result; it is not needed to decide what the existing evidence
-already shows.
+deletion window lasts and test a CLI composer without an external recording
+wrapper. Such work would extend this result; it is not needed to decide what
+the existing evidence already shows.

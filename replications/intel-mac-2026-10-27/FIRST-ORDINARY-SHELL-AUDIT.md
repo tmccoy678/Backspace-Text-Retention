@@ -70,7 +70,9 @@ from publication.
 
 The evidence does **not** justify the categorical inference that a recorder
 could not have existed. It supports the narrower statement that the operator
-reported using an ordinary shell outside the wrapper, no recorder was observed
-in the surviving process state or history, and no first-attempt recording
-artifact was found in the inspected locations. The saved output proves that the
-ordinary-shell interaction occurred but does not preserve the abandoned draft.
+reported using an ordinary shell outside Blu's recording wrapper—the local
+launcher layer that would have run `/usr/bin/script` around the child command—no
+recorder was observed in the surviving process state or history, and no
+first-attempt recording artifact was found in the inspected locations. The
+saved output proves that the ordinary-shell interaction occurred but does not
+preserve the abandoned draft.
