@@ -153,16 +153,17 @@ A later read-only audit found a narrower remnant in the Intel Mac's current
 - source file: 78 lines, 3,239 bytes;
 - source SHA-256 at inspection:
   `60903be6b747f8074e9a0a768a8c9478c7472f52a8603cc5913698dd36b90b5e`;
-- one private candidate committed line at line 52;
+- one candidate committed line at line 52;
 - candidate line including its newline SHA-256:
   `d09c195d5113e39b8f93f60008caae6ded6d32ab472898a2d88f5e6cd605dfd0`;
 - the candidate follows the history command used to display the copied
   `153748` transcript and precedes the next later command.
 
-The candidate's literal content is withheld because the history file also
-contains unrelated private material and credentials, and Taylor did not ask
-for that sentence to be published. The hash permits later exact confirmation
-without exposing it.
+Taylor subsequently authorized publication of a line-preserving, attorney-style
+redacted derivative. The candidate is now visible at line 52 in
+[`evidence/intel-history/`](../evidence/intel-history/), while credentials,
+password-like material, and the private conversation identifier are explicitly
+redacted. The raw source remains private.
 
 This remnant is consistent with the shell saving the line that was actually
 committed. It does not recover the erased first draft. The history has no
@@ -181,8 +182,11 @@ On the Intel Mac, where the wrapper was absent during the negative control, the
 erased draft was unavailable to Blu, while the committed shell line appears to
 have survived through ordinary shell history.
 
-The evidence supports that layered account. It supports the proposition that
-wrapper configuration and later inspection determine what becomes recoverable.
+The evidence supports that layered account. The redacted history now makes the
+committed-line remnant publicly inspectable. The evidence supports the
+proposition that wrapper configuration and later inspection determine what
+becomes recoverable.
+
 It does not support the stronger proposition that erased keystrokes were
 automatically transmitted to OpenAI, passively visible to Blu, or retained by
 Codex before a local artifact was inspected.

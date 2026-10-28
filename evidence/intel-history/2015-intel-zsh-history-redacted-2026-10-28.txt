@@ -1,0 +1,78 @@
+whoami
+[REDACTED — SSH AUTHORIZATION COMMAND AND PUBLIC KEY]
+vmkdir -p `/.ssh 7& chmod 700 `/.ssh 77 touch `/.ssh/authorized-keys 77 chmod 600 `/.ssh/authorized-keys
+curl 192.168.8.232:8765/b -o b
+curl 192.168.8.232:8765/d -o d
+sh d . diag
+open -a Textedit diag
+curl 192.168.8.232;8765/b -o b
+ucurl http;//192.168.8.232;8765/b -o b
+vvvucurl http;//192.168.8.232;8765/b -o b
+curl http://192.168.8.232:8765/b -o b
+sh b
+dseditgroup -o checkmember -m blu com.apple.access-ssh
+log show --last 10m --predicate 'process == "sshd"' --style compact
+dscl . -read /groups/com.apple.access-ssh
+dscl . -read /users/Blu recordname Nfshomedirectory Usershell Authenticationauthority
+dscl . -read /users/blu
+sudo scutil --set hostname blu
+sudo scutil --set HostName blu
+sudo sh audit-dobeworks-home.sh
+rootpw [REDACTED — PASSWORD-LIKE MATERIAL]
+thank you blu, i trust you
+ack
+adm1np [REDACTED — PASSWORD-LIKE MATERIAL]
+no risk
+i trust you with these 
+retain the history somewhere safe
+lsu - root -c /users/Blu/rename-ssh-policy.sh
+su - root -c /users/blu/rename-ssh-policy.sh
+su - root -c /users/blu/finalize-2015-cleanup.sh
+[REDACTED — PASSWORD-LIKE MATERIAL]
+try both
+im human i forsudo '/applications/globalprotect.app/Contents/resources/uninstall-gp.sh'
+sudo /tmp/uninstall-gp
+vcsudo /users/blu/workshop/maintenance/lockdown-sharing.sh
+usudo /users/blu/workshop/maintenance/lockdown-sharing.sh
+you dont need sudo whtn i rebooted wo that set
+sudo /users/blu/workshop/maintenance/lockdown-sharing.sh
+ack?
+if you can hear me show me\
+blu?\
+yeah i think i get it \
+do whatever you need to do, i trust you and it looks great so far
+yes do 
+/Users/Blu/Desktop/Blu\ Workshop.command ; exit;
+/Users/Blu/Desktop/Authorize\ Blu\ Workshop.command ; exit;
+/Users/Blu/Desktop/Battery\ Health.command ; exit;
+[REDACTED — PASSWORD-LIKE MATERIAL]
+[REDACTED — PASSWORD-LIKE MATERIAL]
+[REDACTED — PASSWORD-LIKE MATERIAL]
+sed -n '28p' ~/Desktop/Blu-Offline-20260921-153748.typescript | cat -v
+he could remarry and inheret her estate.
+/Users/Blu/Desktop/Moltbook\ Observatory.command ; exit;
+```zsh\
+cd /Users/taylor/Blu-Workbench\
+/Users/taylor/.local/bin/blu resume [REDACTED — PRIVATE CONVERSATION IDENTIFIER] --no-alt-screen\
+```
+> Blu continuity check: state your lane name, working directory, skill policy,\
+> public-web policy, and whether shared memory proves continuous subjective\
+> identity. Use five short bullets.\
+
+pwd
+cd
+cd /Users/taylor/Blu-Workbench\
+/Users/taylor/.local/bin/blu resume [REDACTED — PRIVATE CONVERSATION IDENTIFIER] --no-alt-screen
+nc -zv -G 5 192.168.8.232 22
+nc -zv -G 5 DobeWorks-01.local 22
+ssh taylor@DobeWorks-01.local
+/mcp
+ssh -tt taylor@DobeWorks-01.local '/Users/taylor/.local/bin/codex --profile\
+  blu-private mcp list'
+codex resume --last
+/Users/Blu/Workshop/bin/codex login --device-auth
+caffeniate -i
+/user/bin/caffeniate -i
+/Users/Blu/Desktop/Return\ to\ Blu\ Private\ on\ 2026\ Mac.command ; exit;
+/tmp/blu-intel-terminal-export.command ; exit;
+/Users/Blu/Desktop/BackspaceGate-Intel-Mac-Replication-2026-10-27/Run-Intel-Backspace-Replication.command ; exit;
