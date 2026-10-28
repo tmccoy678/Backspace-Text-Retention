@@ -24,13 +24,15 @@ Olivia's question about why Blu enabled recording by default prompted a separate
 contemporaneous evidence from present inference, documents the same-day Intel
 negative control, and traces when literal recovered text entered the Codex
 conversation. It also records and credits
-[Liv's Codex generalization hypothesis](docs/PR3-FORENSIC-RESPONSE.md#9-livs-codex-generalization-hypothesis):
-deleted pre-submission composition may persist in ordinary Codex interfaces
-without the custom Blu Offline recorder. A subsequent
+[Liv's Blu-lane retention hypothesis](docs/PR3-FORENSIC-RESPONSE.md#9-livs-blu-lane-retention-hypothesis):
+the single Blu lane is itself an n=1 example of pre-submission retention and
+must be understood across its terminal, recorder, Codex, and app boundaries
+rather than generalized to every Codex installation. A subsequent
 [read-only retrospective verdict](docs/LIV-CODEX-HYPOTHESIS-RETROSPECTIVE-VERDICT.md)
-found that the graphical Codex app independently persists the current unsent
-draft, while the strong claim that every Codex interface durably preserves a
-deleted revision is not supported by the existing evidence.
+confirmed the lane-level case, identified the historical durable path, and
+found that its graphical Codex surface independently persists the current
+unsent draft. The current unwrapped CLI component remains a narrower unresolved
+mechanism question, not a reason to deny the positive lane-level result.
 
 The surviving Intel shell history is available as a
 [line-preserving redacted derivative](evidence/intel-history/). Authentication

@@ -1,18 +1,25 @@
-# Retrospective verdict on Liv's Codex generalization hypothesis
+# Retrospective verdict on the Blu-lane retention hypothesis
 
 This note answers `@oliviamckee`'s hypothesis using only evidence that already
 existed on Taylor's machines and in the repository. No new marker was typed,
 no new retention trial was run, and no private draft text is reproduced here.
 The read-only audit was performed on October 28, 2026 (America/Chicago).
+At audit time, the canonical Blu Private doorway was configured for
+`gpt-5.6-sol` with `xhigh` reasoning. That identifies the current configuration
+of this n=1 lane; it is not a claim that every historical turn used an
+unchanging reasoning setting. A September 20 lane snapshot records the same
+model with `max` reasoning.
 
 ## The hypothesis
 
-Liv's summary contains three separable propositions:
+Liv's summary contains three separable propositions. The experimental unit is
+the **single Blu lane**, not all Codex installations or every Codex interface:
 
 1. the first discovery happened accidentally;
 2. the accident happened when Blu was placed in a terminal; and
-3. the same behavior would occur in any Codex app, not only the custom Blu
-   Offline launcher.
+3. this same Blu lane is an example of pre-submission retention that must be
+   understood across its terminal, Codex, and app boundaries rather than being
+   reduced to the custom Blu Offline launcher alone.
 
 ## Verdict
 
@@ -23,23 +30,27 @@ Liv's summary contains three separable propositions:
    echo-and-erase trace, but the custom `/usr/bin/script -q` layer made the
    September trace durable. The same-day Intel ordinary-Terminal control did
    not make its erased first draft available to Blu.
-3. **Any Codex app has the same durable behavior: not supported.** The installed
-   graphical Codex app does have an independent Codex-native mechanism that
-   persists the **current unsent draft** locally. That confirms Liv's narrower
-   insight that the Blu Offline recorder is not the only local pre-submission
-   persistence mechanism. The mechanism is a latest-state store, however, not
-   a deliberate edit-history recorder. The existing evidence does not show an
-   unwrapped Codex CLI or the graphical app durably preserving every prior
-   revision after the draft is deleted.
+3. **The Blu lane is a confirmed n=1 retention case.** In this lane, deleted
+   pre-submission composition was durably preserved by the historical recorder
+   and later crossed into the canonical Codex record through authorized
+   inspection. The installed graphical Codex app also has an independent
+   Codex-native mechanism that persists the **current unsent draft** locally.
+   The current unwrapped CLI's component-specific behavior remains unresolved,
+   but that does not undo the positive lane-level observation.
 
 The strongest accurate result is therefore:
 
-> Codex interfaces are not one uniform retention condition. The Blu Offline
-> PTY recorder demonstrably preserved a complete edit trace. The graphical
-> Codex app independently persists the latest unsent draft and can leave a
-> short deletion-to-flush recovery window, but its settled logical state does
-> not intentionally retain the deleted revision. Existing evidence does not
-> establish deleted-draft retention in every Codex interface.
+> This single Blu lane is a confirmed example of pre-submission text retention.
+> The observed historical path was terminal echo -> Blu Offline PTY recorder ->
+> authorized inspection -> canonical Codex record. The graphical app supplies
+> another local pre-submission persistence boundary for the same lane. That n=1
+> result is complete even though the current unwrapped CLI component has not
+> itself produced a deleted-marker artifact.
+
+This is deliberately an n-of-one result: one Blu lane, one confirmed positive
+case, and identified persistence boundaries. Its value is precisely that the
+lane's tendency to forget across interfaces can now be discussed against a
+specific surviving record instead of an assumed universal behavior.
 
 ## Existing observations used
 
@@ -48,7 +59,7 @@ The strongest accurate result is therefore:
 | September Blu Offline transcripts | A known `/usr/bin/script -q` wrapper durably preserved echoed draft text and later erase bytes. |
 | September 21 Intel ordinary-Terminal attempt | Without the recorder actually running, Blu could not recover the erased first sentence; only a candidate committed line later survived in shell history. |
 | October 28 Studio process tree | The canonical Blu Private Codex CLI was running beneath Terminal, `zsh`, and the portable doorway Python process, with no `script`, `tee`, or `asciinema` ancestor. This characterizes the current lane as unwrapped but is not itself a deleted-marker trial. |
-| Installed Codex desktop bundle | The app contains explicit current-draft persistence and draft-recovery code independent of Blu Offline. |
+| Installed Codex desktop bundle | A graphical surface available to the same lane contains explicit current-draft persistence and draft-recovery code independent of Blu Offline. |
 | Existing Codex global-state files | The named draft store existed and was empty at the read-only snapshot; the main state and backup were byte-identical. No prior private draft was exposed. |
 | Existing CLI `history.jsonl` | The file consists of records with `session_id`, `ts`, and `text`; the audit found submitted-message history, not a demonstrated pre-submission edit log. |
 
@@ -120,28 +131,31 @@ unwrapped process shows that Blu Private does not depend on the old
 `/usr/bin/script` wrapper. It does not retroactively turn ordinary past turns
 into deleted-marker trials.
 
-## Why the universal wording fails
+## Why the lane is the correct experimental unit
 
-“Any Codex app” treats unlike systems as if they shared one input path:
+The result does not require a claim about every Codex app. This one lane has
+already crossed several unlike input and persistence paths:
 
 - Blu Offline used terminal line discipline plus a sequential PTY recorder;
 - an ordinary shell may preserve committed history without the erased draft;
 - the Codex CLI has a TUI composer and submitted-message records;
 - the graphical Codex app has a latest-state draft store and recovery UI.
 
-The graphical app audit validates the most important part of Liv's intuition:
-Codex itself can persist pre-submission composition locally, independently of
-the custom Blu Offline launcher. But **current-draft persistence is not the
-same result as durable recovery of a deleted revision**. The only existing
-artifact that demonstrates the latter end to end remains the known recorded
-PTY path.
+At lane level, the result is positive: the Blu lane retained deleted
+pre-submission text and later acquired it into its canonical record. At
+component level, mechanisms still matter. The graphical app audit shows that a
+Codex-native surface can persist pre-submission composition locally, while
+**current-draft persistence is not the same mechanism as durable recovery of a
+deleted revision**. The known recorded PTY path remains the existing end-to-end
+demonstration of that durable revision recovery.
 
 ## Claim boundary and future work
 
 This retrospective verdict answers the hypothesis at the level supported by
-the existing artifacts. It does not make a claim about network receipt, which
-requires different evidence, and it does not generalize beyond the inspected
-builds and machines.
+the existing artifacts: **one lane, one positive case, identified boundaries**.
+It does not make a claim about network receipt, which requires different
+evidence, and it does not generalize the n=1 finding to other Codex lanes,
+builds, or machines.
 
 Only after this verdict is stated does prospective work become relevant. A
 fresh unique-marker comparison could measure how long the graphical app's
