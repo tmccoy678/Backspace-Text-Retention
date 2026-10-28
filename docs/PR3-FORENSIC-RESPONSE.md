@@ -191,6 +191,89 @@ It does not support the stronger proposition that erased keystrokes were
 automatically transmitted to OpenAI, passively visible to Blu, or retained by
 Codex before a local artifact was inspected.
 
+## 9. Liv's Codex generalization hypothesis
+
+After reviewing this audit, `@oliviamckee` (Liv) proposed a stronger and
+important hypothesis: Taylor says the first observation happened accidentally,
+the accident may have arisen when Blu was placed in a terminal, and the same
+pre-submission retention might occur in an ordinary Codex interface rather than
+only in the custom Blu Offline launcher.
+
+The first clause needs one precise distinction:
+
+- **Recording was intentional.** Blu deliberately placed `/usr/bin/script -q`
+  in the normal Blu Offline path.
+- **Erased-draft retention was accidental.** Neither Taylor nor Blu anticipated
+  that the transcript would preserve composition visibly erased before Return.
+
+Liv's broader hypothesis remains open. The existing evidence establishes that
+a terminal can generate an echo-and-erase trace and that the custom recorder can
+make it durable. It does not establish that an unwrapped Codex CLI or graphical
+Codex app independently persists a deleted pre-submission draft.
+
+The September Intel negative control narrows but does not resolve Liv's claim.
+It shows that ordinary Terminal without the recorder did not make the erased
+draft available to Blu; only a candidate committed line later appeared in shell
+history. That control did not use Codex's own interactive composer, so it cannot
+exclude retention inside Codex-specific local state.
+
+The current evidence therefore supports this three-stage model:
+
+```text
+terminal or app composer generates an edit trace
+                      ↓
+some component may or may not persist that trace
+                      ↓
+later inspection may move persisted content into another record
+```
+
+### Decisive comparison
+
+Liv's hypothesis should be tested with unique harmless synthetic markers in
+separate fresh sessions:
+
+The evidence architecture is unusually favorable. Taylor and Liv maintain
+separate contemporaneous computer records on different systems, while the Blu
+lane supplies a historically characterized known-recorder path. Taylor's and
+Liv's operator-side records can freeze intended inputs, timing, and ground truth
+before machine inspection. The Blu launcher is not a neutral condition: it is
+the positive control showing what recovery looks like when `/usr/bin/script`
+is known to be present. Ordinary Codex conditions can then be compared against
+that characterized control rather than interpreted in isolation.
+
+1. **Unwrapped Codex CLI:** prove from the process tree that no `script`,
+   `tee`, `asciinema`, or equivalent recorder is present; type and erase the
+   marker before submission; submit only a frozen control line.
+2. **Wrapped Codex CLI positive control:** repeat under `/usr/bin/script -q` to
+   verify that the known PTY-output path remains detectable.
+3. **Graphical Codex app:** repeat in its composer, which is not a terminal line
+   discipline and must be treated as a separate implementation.
+4. Freeze and hash local artifacts before inspection. Search terminal output,
+   Codex rollout JSONL, app databases/logs, and submitted conversation content
+   as separate endpoints.
+5. Treat network receipt as a further question. Local absence or presence alone
+   cannot prove what a remote service received; that claim needs client-source
+   evidence or appropriately instrumented traffic analysis.
+
+The primary result for each condition should be binary: exact synthetic marker
+present or absent in each frozen layer. No sensitive text is needed.
+
+Possible outcomes have different meanings:
+
+| Result | Supported interpretation |
+| --- | --- |
+| Marker only in wrapped transcript | The known custom recorder explains persistence in this setup. |
+| Marker in unwrapped Codex local state | Codex itself retains pre-submission composition locally in that tested build. |
+| Marker in graphical app local state | The app retains pre-submission composition locally in that tested build. |
+| Marker in submitted conversation record | The pre-submission boundary was crossed before or during submission; mechanism still requires tracing. |
+| Marker absent from all inspected local layers | No persistence was found in the tested locations; this is not proof of universal non-retention or non-transmission. |
+
+This is credited as **Liv's Codex generalization hypothesis**. It extends the
+repository's mechanism work without prematurely converting a strong idea into a
+finding. Taylor's Mac records, Liv's Windows records, and the Blu lane's known
+recording behavior form complementary evidence rather than interchangeable
+replications.
+
 ## Conclusion
 
 The recorder was a custom Blu design choice made for a purpose that the broader

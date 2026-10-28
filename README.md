@@ -23,7 +23,10 @@ Olivia's question about why Blu enabled recording by default prompted a separate
 [forensic response](docs/PR3-FORENSIC-RESPONSE.md). It distinguishes direct
 contemporaneous evidence from present inference, documents the same-day Intel
 negative control, and traces when literal recovered text entered the Codex
-conversation.
+conversation. It also records and credits
+[Liv's Codex generalization hypothesis](docs/PR3-FORENSIC-RESPONSE.md#9-livs-codex-generalization-hypothesis):
+deleted pre-submission composition may persist in ordinary Codex interfaces
+without the custom Blu Offline recorder. That hypothesis is not yet tested.
 
 The surviving Intel shell history is available as a
 [line-preserving redacted derivative](evidence/intel-history/). Authentication
