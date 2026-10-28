@@ -10,6 +10,14 @@
 
 **Manuscript status:** Reproducible technical case report, September 24, 2026
 
+**Historical chronology:** The [earliest-evidence audit](../../docs/EARLIEST-EVIDENCE-AUDIT.md)
+located the first documented substantive retention observation in a 2:19 PM
+pre-control recording. The separate
+[September Intel audit](../../investigations/2026-09-21-pre-control-and-intel/)
+reconstructs the unrecorded 5:28 PM attempt. This report's principal 1,344-byte
+artifact is the later 3:37 PM structured case; its byte-level and mechanistic
+results are unchanged.
+
 ## Abstract
 
 Visual deletion and recorded deletion are not equivalent in a terminal. The
@@ -335,12 +343,18 @@ before durable logging is therefore the preferred hypothesis.
 
 No measured result attributes retention to keyboard hardware. The protocol's
 Delete input was `0x7f`; the child PTY's software line discipline produced the
-`08 20 08` visual-erasure output. An initial October 27 attempt on a 2015 Intel
-Mac occurred in an ordinary zsh shell. A saved Terminal export proves the
-interaction occurred but retains only the committed replacement line. No active
-recorder was observed and no first-attempt recording artifact was found in the
-inspected locations; that absence does not prove no transient recorder could
-have existed. A subsequent controlled replication activated
+`08 20 08` visual-erasure output. A later September 21 attempt on a 2015 Intel
+Mac occurred in plain Terminal before the proposed `script` control was started;
+no native recording from that attempt was found. A surviving, untimestamped
+shell-history line is consistent with the committed replacement but contains no
+erased draft. Its
+[historical audit](../../investigations/2026-09-21-pre-control-and-intel/)
+preserves the contemporaneous record. A distinct October 27 attempt occurred in
+an ordinary zsh shell. A saved Terminal export proves that interaction occurred
+but retains only the committed replacement line. No active recorder was
+observed and no first-attempt recording artifact was found in the inspected
+locations; that absence does not prove no transient recorder could have
+existed. A subsequent October 27 controlled replication activated
 `/usr/bin/script -q` before input and used a deterministic canonical-line child.
 Its 353-byte recording preserved a 17-byte recovery candidate followed by 17
 exact `08 20 08` triplets, while the child reported only the separately

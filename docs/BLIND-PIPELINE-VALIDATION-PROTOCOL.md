@@ -6,10 +6,10 @@
 
 This validation estimates whether the repository's read-only byte-inspection
 pipeline can recover previously unseen synthetic draft strings from the same
-byte structure observed in the discovery transcript. It tests fixture parsing
-and exact transcription. It does not estimate the probability that every
-interpretation of the historical experiment is correct, and it does not test a
-cloud model's access to unsubmitted typing.
+byte structure observed in the two-sentence foundation transcript. It tests
+fixture parsing and exact transcription. It does not estimate the probability
+that every interpretation of the historical experiment is correct, and it does
+not test a cloud model's access to unsubmitted typing.
 
 ## Blinding and fixation
 
