@@ -6,6 +6,12 @@ Pipeline success; frozen recovery candidate; operator exact-match confirmation
 not recorded. This mechanistic replication is not an outcome of the prospective
 ten-card challenge.
 
+This controlled run was **not** the first Intel attempt. The earlier attempt
+occurred in an ordinary Terminal zsh session and is documented separately in
+[`FIRST-ORDINARY-SHELL-AUDIT.md`](FIRST-ORDINARY-SHELL-AUDIT.md). Its surviving
+Terminal export proves the interaction occurred but does not retain the deleted
+draft.
+
 ## Design
 
 On October 27, 2026, Taylor entered a made-up, nonsensitive ASCII draft without
@@ -57,6 +63,10 @@ service received the abandoned draft.
   parent terminal modes
 - `evidence/*.child-pty.txt`: child PTY modes captured before input
 - `evidence/*.recovery.md`: recovery record frozen before disclosure
+- `evidence/intel-first-ordinary-shell-terminal-saved-output.txt`: exact
+  surviving export from the earlier ordinary-shell attempt
+- `FIRST-ORDINARY-SHELL-AUDIT.md`: search method, metadata, and bounded negative
+  finding for that earlier attempt
 - `protocol/Run-Intel-Backspace-Replication.command`: exact collection launcher
 - `protocol/intel-backspace-receiver.zsh`: exact deterministic receiver
 - `CHECKSUMS.sha256`: hashes for every preserved source artifact

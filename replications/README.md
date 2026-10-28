@@ -11,6 +11,11 @@ terminal-state records, collection scripts, frozen recovery, and checksums from
 a physical-keyboard replication on a 2015 Intel MacBook Pro. The recorder was
 active before input and the child used native canonical line editing.
 
+The same directory separately audits the earlier ordinary-shell attempt and
+publishes its surviving 128-byte Terminal export. That first attempt did not
+produce a found recorder artifact and must not be conflated with the later
+controlled run.
+
 Status: the artifact-recovery pipeline succeeded and the candidate was frozen
 before disclosure. Operator exact-match confirmation was not recorded, so the
 run is not scored as a confirmed exact match.

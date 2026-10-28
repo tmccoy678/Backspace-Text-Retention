@@ -32,8 +32,10 @@ that shared context or matching language proves continuous subjective identity.
 Olivia independently implemented and documented the Windows ConPTY study. She
 preserved failed controls, exact transcripts, metadata, hashes, source, and a
 verifier; identified the unmatched unrecorded Intel attempt; and ran the
-follow-up cursor/Backspace matrix. Her artifacts and authorship remain in her
-public repository and are cited at an immutable commit.
+follow-up cursor/Backspace matrix. Her request for the underlying first-attempt
+record prompted the earliest-evidence audit and publication of the surviving
+Terminal export with a narrower claim boundary. Her artifacts and authorship
+remain in her public repository and are cited at an immutable commit.
 
 ## Upstream work
 

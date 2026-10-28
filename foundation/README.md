@@ -14,6 +14,7 @@ is not an outcome from the prospective card challenge:
 - [Original diagnostic results](../docs/EXPERIMENT-RESULTS.md)
 - [Claim boundaries and corrections](../docs/FINDINGS.md)
 - [Evidence timeline](../docs/TIMELINE.md)
+- [Earliest-evidence and launcher-origin audit](../docs/EARLIEST-EVIDENCE-AUDIT.md)
 
 Keeping the foundation separate prevents the completed retrospective case from
 being mistaken for confirmatory evidence from the not-yet-run blinded study.
