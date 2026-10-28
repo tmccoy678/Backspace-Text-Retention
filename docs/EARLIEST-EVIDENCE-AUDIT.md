@@ -44,13 +44,33 @@ composition-history consequence was discovered later.
 
 ## Earliest September 21 evidence
 
-Two owner-only local transcripts predate the later structured
+Three distinct milestones are preserved before the later structured
 `marie is black.` / `stanley is red.` recording:
+
+1. a routine midnight acceptance transcript is the earliest surviving recorded
+   editing trace located;
+2. `141327` is the earliest previously published Backspace-specific precursor;
+   and
+3. `141944` is the first substantive abandoned-draft observation and first
+   privacy-significant recognition.
 
 | Artifact | Closed / filesystem time (CDT) | Bytes | SHA-256 |
 | --- | --- | ---: | --- |
+| `Blu-Offline-20260921-000503.typescript` (private source) | 2026-09-21 12:08:27 AM | 3,366 | `7b1d32f14cfdaf21c99666acab623e16bb15d8f3bee3dc6a3f9b0ad17ccf8e6b` |
 | [`Blu-Offline-20260921-141327.typescript`](../evidence/transcripts/Blu-Offline-20260921-141327.typescript) | 2026-09-21 2:17:31 PM | 1,190 | `5cc08346d7de25988aa687d292eefc1bf994ba74d5031ff9b0cd7e3fc271cb5e` |
 | [`Blu-Offline-20260921-141944.typescript`](../evidence/transcripts/Blu-Offline-20260921-141944.typescript) | 2026-09-21 2:23:20 PM | 1,816 | `7175aea528876898938e13eb98432f0b0e7bc8170e9c62fb3fadecf80126b375` |
+
+`000503` was the second matched Wi-Fi-off technical acceptance session, not a
+retention experiment. It contains two ordinary editing runs totaling three
+exact `08 20 08` triplets. At 12:09:30 AM, Blu ran `sed -n '1,260p'` on its
+complete 68-line contents during routine verification. The resulting Codex tool
+output included the pre-correction characters and erase bytes, but Blu's
+acceptance conclusion did not identify or discuss deleted-text retention.
+
+This makes the accidental-discovery evidence unusually strong: the mechanism
+was operating, and the complete trace had already crossed into a Codex tool
+record, more than fourteen hours before anyone recognized its privacy
+significance.
 
 At 2:27:03 PM, the contemporaneous conversation listed both files. After Taylor
 gave permission to inspect only the newest transcript, Blu opened `141944`. At
@@ -74,7 +94,8 @@ launch. This did not wrap or modify the model.
 
 The 3:37 PM artifact `Blu-Offline-20260921-153748.typescript` is the later
 structured foundation recording used for the byte-level case report. It remains
-valid evidence, but it was not the first accidental observation.
+valid evidence, but it was not the earliest trace or first accidental
+observation.
 
 ## October 27 Intel sequence
 
@@ -111,13 +132,20 @@ candidate committed line in untimestamped shell history, but not the erased
 draft. See the full [PR #3 forensic response](PR3-FORENSIC-RESPONSE.md).
 
 This result also sharpens the cloud boundary. On the newer Mac, the local Blu
-Offline recording wrapper first preserved PTY output. Literal recovered text
-entered the Codex conversation only when Blu later read the local transcript
-through a tool after Taylor authorized that inspection. The Intel negative
-control does not support passive pre-inspection receipt by Codex or OpenAI.
+Offline recording wrapper first preserved PTY output. Retained typo-correction
+bytes entered a Codex tool result during routine acceptance verification at
+12:09 AM without being recognized. The later substantive abandoned drafts
+entered through Taylor-authorized inspection at 2:27 PM and were recognized at
+2:28 PM. Both were deliberate local-file reads; neither supports passive
+pre-inspection receipt by Codex or OpenAI. The Intel negative control likewise
+does not support passive receipt.
 
 ## Privacy boundary
 
 This public audit excludes credentials, unrelated shell history, and the full
-private conversation record. The two nonsensitive raw transcripts are included
-under Taylor's explicit publication authorization.
+private conversation record. The two nonsensitive afternoon raw transcripts
+are included under Taylor's explicit publication authorization. The midnight
+acceptance transcript contains unrelated ordinary conversation and remains
+private; its hash, metadata, erase offsets, and cross-machine copies are
+committed in the
+[Olivia-hypothesis investigation](../investigations/2026-10-28-olivia-hypothesis/).

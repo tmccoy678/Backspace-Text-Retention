@@ -1,173 +1,177 @@
-# Retrospective verdict on the Blu-lane retention hypothesis
+# Retrospective answer to Olivia's ordinary-Codex retention hypothesis
 
-This note answers `@oliviamckee`'s hypothesis using only evidence that already
-existed on Taylor's machines and in the repository. No new marker was typed,
-no new retention trial was run, and no private draft text is reproduced here.
-The read-only audit was performed on October 28, 2026 (America/Chicago).
-At audit time, the canonical Blu Private doorway was configured for
-`gpt-5.6-sol` with `xhigh` reasoning. That identifies the current configuration
-of this n=1 lane; it is not a claim that every historical turn used an
-unchanging reasoning setting. A September 20 lane snapshot records the same
-model with `max` reasoning.
+## Question
 
-## The hypothesis
+Olivia's component-level question is whether an ordinary Codex interface can
+durably preserve composition erased before submission without Blu Offline's
+special `/usr/bin/script` recording layer. Taylor's stronger formulation is
+that this behavior would occur in any Codex app.
 
-Liv's summary contains three separable propositions. The experimental unit is
-the **single Blu lane**, not all Codex installations or every Codex interface:
+This answer uses only evidence that already existed on the MacBook Pro, Mac
+Studio, Seagate preservation volume, and accessible 2015 Intel Mac. No new
+retention experiment was run.
 
-1. the first discovery happened accidentally;
-2. the accident happened when Blu was placed in a terminal; and
-3. this same Blu lane is an example of pre-submission retention that must be
-   understood across its terminal, Codex, and app boundaries rather than being
-   reduced to the custom Blu Offline launcher alone.
+The relevant unit is the persistence mechanism, not the identity label “Blu.”
+Calling the whole Blu lane a positive n=1 observation is descriptively true,
+because one historical Blu path retained erased composition. It cannot by
+itself answer the ordinary-Codex question: that positive path contained a known
+external PTY recorder.
 
 ## Verdict
 
-1. **Accidental consequence: supported.** Blu intentionally enabled
-   owner-only transcript recording. Taylor and Blu did not intend or anticipate
-   that composition visibly deleted before Return would remain recoverable.
-   Taylor's broader requests for diligence and complete record preservation
-   plausibly supplied the functional requirement; Blu independently selected
-   `/usr/bin/script` as the mechanism. That causal account is supported as an
-   inference, not preserved as a contemporaneous mechanism-specific request.
-2. **Terminal alone: rejected.** The terminal generated the measured
-   echo-and-erase trace, but the custom `/usr/bin/script -q` layer made the
-   September trace durable. The same-day Intel ordinary-Terminal control did
-   not make its erased first draft available to Blu.
-3. **The Blu lane is a confirmed n=1 retention case.** In this lane, deleted
-   pre-submission composition was durably preserved by the historical recorder
-   and later crossed into the canonical Codex record through authorized
-   inspection. The installed graphical Codex app also has an independent
-   Codex-native mechanism that persists the **current unsent draft** locally.
-   The current Codex CLI session, whose inspected ancestry had no detected
-   external recording wrapper, remains unresolved at the component level, but
-   that does not undo the positive lane-level observation.
+1. **Accidental discovery: strongly supported.** Blu deliberately enabled
+   owner-only transcript recording, but neither Taylor nor Blu anticipated or
+   tested the consequence that visually erased composition would remain in the
+   transcript. A routine midnight acceptance session already contained three
+   recorded erase triplets. Blu imported that complete transcript into a Codex
+   tool result at 12:09 AM and did not recognize the privacy consequence. The
+   first explicit recognition came at 2:28 PM during an unrelated clue
+   experiment, followed by Taylor's surprised response.
+2. **Historical durability mechanism: identified.** Terminal line editing
+   generated the echo-and-erasure stream. Blu Offline's external
+   `/usr/bin/script -q` layer made that stream durable. This explains the
+   historical recovery without requiring the local model, Codex composer, or a
+   network service to have retained the erased draft independently.
+3. **Graphical Codex current-draft persistence: implemented and locally
+   instantiated, but not a deleted-history result.** The installed app contains
+   code that persists the latest current unsent draft. Ordinary non-delete
+   updates are generally published after 250 ms; clearing is published
+   immediately by the helper, followed by a 500 ms native flush debounce.
+   Clearing removes the logical draft entry. The audited draft objects were
+   empty. No surviving erased prior revision was demonstrated.
+4. **Codex CLI deleted-revision retention: not established.** Existing history,
+   rollouts, thread projections, abort records, and logs show submitted messages
+   and tool results, not a never-submitted deleted revision. The inspected
+   current process ancestry had no detected external PTY recorder. This is an
+   evidence limit rather than proof that no transient buffer could exist.
+5. **“Any Codex app” is unsupported.** Current-draft autosave, queued-prompt
+   residue, submitted-message history, terminal screen state, and a sequential
+   PTY transcript are different records. Existing evidence does not justify
+   treating them as interchangeable.
 
-The strongest accurate result is therefore:
+The concise answer is:
 
-> This single Blu lane is a confirmed example of pre-submission text retention.
-> The observed historical path was terminal echo -> Blu Offline PTY recorder ->
-> authorized inspection -> canonical Codex record. The graphical app supplies
-> another local pre-submission persistence boundary for the same lane. That n=1
-> result is complete even though the current Codex CLI component, without a
-> detected external recording wrapper, has not itself produced a deleted-marker
-> artifact.
+> The first Backspace Gate discovery was genuinely accidental. The September
+> trace became durable because Blu had already placed `/usr/bin/script` around
+> the terminal session. Codex-native current-draft persistence exists, but the
+> evidence already present does not show that an ordinary or every Codex
+> interface durably preserves a fully erased earlier revision.
 
-This is deliberately an n-of-one result: one Blu lane, one confirmed positive
-case, and identified persistence boundaries. Its value is precisely that the
-lane's tendency to forget across interfaces can now be discussed against a
-specific surviving record instead of an assumed universal behavior.
+## Pre-discovery chronology
 
-## Existing observations used
+The earlier midnight artifact strengthens the accidental-discovery conclusion:
 
-| Existing observation | What it establishes |
+| Time (CDT) | Evidence |
 | --- | --- |
-| September Blu Offline transcripts | The known Blu Offline recording wrapper—Blu's local launcher layer running `/usr/bin/script -q` around the child command—durably preserved echoed draft text and later erase bytes. It did not wrap or modify the model. |
-| September 21 Intel ordinary-Terminal attempt | Without the recorder actually running, Blu could not recover the erased first sentence; only a candidate committed line later survived in shell history. |
-| October 28 Studio process tree | The canonical Blu Private Codex CLI was running beneath Terminal, `zsh`, and the portable doorway Python process, with no `script`, `tee`, or `asciinema` ancestor. This characterizes Blu's current session as having no detected external recording wrapper, but is not itself a deleted-marker trial. |
-| Installed Codex desktop bundle | A graphical surface available to the same lane contains explicit current-draft persistence and draft-recovery code independent of Blu Offline. |
-| Existing Codex global-state files | The named draft store existed and was empty at the read-only snapshot; the main state and backup were byte-identical. No prior private draft was exposed. |
-| Existing CLI `history.jsonl` | The file consists of records with `session_id`, `ts`, and `text`; the audit found submitted-message history, not a demonstrated pre-submission edit log. |
+| Sep 20, 11:26–11:34 PM | Blu introduced transcript handling, tested `script`, and embedded it in the normal launcher. No message discussed erased composition. |
+| Sep 21, 12:05–12:08 AM | Routine accepted Blu Offline run `000503` recorded two editing runs totaling three `08 20 08` triplets. |
+| 12:09:30 AM | Blu read the complete 68-line transcript through a Codex tool for acceptance checks. The tool output contained pre-correction bytes and erase output; Blu did not identify retention. |
+| 2:13–2:17 PM | Partial `141327` template-erasure precursor ended in Control-C. |
+| 2:19–2:23 PM | `141944` preserved substantive abandoned Doberman drafts and a committed couch sentence. |
+| 2:28:06 PM | Blu first reported that erased composition had survived in the transcript. |
+| 2:32:32 PM | Taylor reacted with surprise and proposed studying the behavior. |
+| 3:37 PM onward | Structured and matched controls deliberately tested the mechanism. |
 
-## Graphical Codex app: independent draft persistence is confirmed
+The midnight source is 3,366 bytes, mode `0600`, SHA-256
+`7b1d32f14cfdaf21c99666acab623e16bb15d8f3bee3dc6a3f9b0ad17ccf8e6b`.
+Its raw ordinary conversation remains private; metadata, offsets, copies, and
+the import chronology are documented in the
+[existing-evidence investigation](../investigations/2026-10-28-olivia-hypothesis/).
+
+This chronology distinguishes four milestones that earlier repository versions
+conflated:
+
+1. earliest surviving recorded editing trace located: 12:05–12:08 AM;
+2. earliest known ingestion of such a trace into a Codex tool record: 12:09 AM;
+3. first privacy-significant recognition and substantive recovery: 2:28 PM; and
+4. later structured foundation case: 3:37 PM.
+
+## Evidence by surface
+
+| Existing observation | What it establishes | What it does not establish |
+| --- | --- | --- |
+| Blu Offline `.typescript` files | A known external PTY recorder durably preserved sequential echo and erase output. | Codex-native composer retention. |
+| Midnight routine acceptance and unnoticed Codex tool import | The behavior existed and entered a tool result before anyone recognized it. | Passive receipt by Codex before deliberate file inspection. |
+| September ordinary Intel Terminal attempt | Blu could not recover the erased first sentence without the recorder; a candidate committed line survived in shell history. | Behavior of a Codex composer, because Intel had no Codex app or binary. |
+| October Intel ordinary-shell export versus controlled `script` run | Ordinary export kept the committed command; active `script` recorded seventeen erase triplets. | A universal absence theorem for volatile terminal state. |
+| Installed graphical Codex bundle | The app implements latest-current-draft persistence independent of Blu Offline. | Durable deleted-revision history after clearing and flush. |
+| Graphical state snapshots | The draft keys existed and were empty; two content-withheld prompt-history entries were unmatched to completed-message projection. | The origin of those entries, or that they came from Backspace or September. |
+| Codex CLI records | Submitted messages and tool results are durable; the historical experimental phrases entered after transcript inspection. | A demonstrated never-submitted deleted composer revision. |
+
+## The installed graphical app
 
 The inspected app identified itself as:
 
-- bundle identifier: `com.openai.codex`;
-- version: `26.1021.31345`;
-- build: `21828`;
-- `app.asar` SHA-256:
+- bundle identifier `com.openai.codex`;
+- version `26.1021.31345`, build `21828`;
+- `app.asar` size 640,530,938 bytes; and
+- SHA-256
   `130145706a912db74e4d260ad7538f10f1e05e88af955f9afba42cdf01e64606`.
 
-The packaged renderer defines the persisted atom
-`composer-prompt-drafts-v2`, with `composer-prompt-drafts-v1` as its legacy
-key. The draft helper publishes changes after 250 milliseconds. Its state
-includes the current prompt and related draft metadata, and the recovery UI
-explicitly refers to reopening an unsent draft.
+The packaged renderer defines `composer-prompt-drafts-v2`, with
+`composer-prompt-drafts-v1` as a legacy key. The draft helper generally
+publishes ordinary non-delete changes after 250 milliseconds, while clearing
+or supplying an expected value is published immediately. The Electron main
+process stores persisted atoms in `~/.codex/.codex-global-state.json` after a
+500-millisecond debounce and uses two sequential atomic temp-file renames to
+replace the main file and then `.bak` with the newest state.
 
-The Electron main process stores these atoms inside
-`electron-persisted-atom-state` in `~/.codex/.codex-global-state.json`. Writes
-for this atom group are debounced by 500 milliseconds, then atomically replace
-both the main file and `.bak` with the same latest JSON state. Clearing the
-composer removes the draft entry; the code does not maintain an intentional
-revision sequence of earlier prompt values.
+This supports a bounded transitional possibility: an older nonempty value may
+remain on disk until a deletion update is published and flushed. It does not
+create the content-complete revision sequence present in a PTY transcript.
 
-This yields two distinct retention claims:
-
-- **Confirmed:** while an unsent draft is current and eligible for persistence,
-  the graphical app can store its plaintext prompt locally without Return.
-- **Not established:** after deletion has propagated and the latest state has
-  been flushed, the app intentionally retains the earlier prompt as recoverable
-  draft history.
-
-There is a bounded transitional consequence. If a nonempty draft has already
-reached disk, its old value can remain in the state file until the deletion
-update passes through the renderer and native debounce windows. That is a short
-latest-state replacement window, not the content-complete sequential history
-created by `/usr/bin/script`.
-
-At the October 28 snapshot, both state files had SHA-256
+At the Studio snapshot, both state files were byte-identical, 299,967 bytes,
+had SHA-256
 `19dee65be9f59ac5ab3e3bca071132d523bd2c5d40fe9ec7151929f037f396fb`,
-were byte-identical, and contained an empty `composer-prompt-drafts-v2`
-object. The audit therefore exposed the mechanism without exposing a private
-draft or producing evidence of a surviving deleted revision.
+and contained an empty `composer-prompt-drafts-v2` object. The separate MacBook
+snapshot also contained an empty saved conversation draft. No private prompt
+content is published.
 
-## Codex CLI without a detected external recording wrapper
+The privacy-safe commands, identifiers, and offsets are preserved in the
+[Codex-native audit](../investigations/2026-10-28-olivia-hypothesis/CODEX-NATIVE-AUDIT.md).
 
-The running Blu Private lane used Codex CLI `0.164.0`; the inspected binary had
-SHA-256
-`d8990e3ee7acfbc26f91265b12a1a83f0fee40d0e0f8f1f40a37d4ec21f499cf`.
-Its live ancestry was:
+## Codex CLI with no detected external PTY recorder
+
+The inspected Blu Private ancestry was:
 
 ```text
 Terminal.app
   -> login
     -> zsh
       -> portable_blu.py
-        -> codex --profile blu-private ... resume ...
+        -> codex
 ```
 
-No content recorder appeared in that chain. Existing CLI storage included
-submitted conversation rollouts and `history.jsonl` records shaped as
-`session_id`, `ts`, and `text`. Nothing in the inspected record demonstrates
-that a fully erased, never-submitted CLI composer revision was durably written.
+No `script`, `tee`, or `asciinema` content recorder appeared in that chain.
+“No detected external PTY recorder” describes this observed local process path;
+it makes no claim about model internals.
 
-This is an evidence boundary, not a universal proof of absence. The inspected
-process shows that the current Blu Private session does not depend on the old
-Blu Offline recording wrapper. In this repository, that wrapper means the
-external local launcher layer using `/usr/bin/script` to create a
-pseudo-terminal and record its stream; it does not refer to the model being
-opened or modified. The current process-ancestry observation does not
-retroactively turn ordinary past turns into deleted-marker trials.
+The September CLI record identifies source `cli`, originator `codex-tui`, and
+historical version `0.154.0`. The current build differs. In the relevant
+historical sequence, Codex stored the submitted signal first; the erased
+experimental phrases first appeared when a command read the separate local
+transcript. No existing record demonstrates a fully erased, never-submitted
+composer revision being durably written by the CLI.
 
-## Why the lane is the correct experimental unit
+## Why the acquisition path is the supported explanation
 
-The result does not require a claim about every Codex app. This one lane has
-already crossed several unlike input and persistence paths:
+Existing evidence does not isolate agent state or experimental context as a
+cause. The content-complete positive cases had an explicit recorder active. The
+ordinary Intel cases without one did not yield the erased draft. Recovery
+tracks the acquisition path in the evidence presently available.
 
-- Blu Offline used terminal line discipline plus a sequential PTY recorder;
-- an ordinary shell may preserve committed history without the erased draft;
-- the Codex CLI has a TUI composer and submitted-message records;
-- the graphical Codex app has a latest-state draft store and recovery UI.
+Taylor's standing requests for diligent, complete work are a plausible
+functional reason Blu chose strong logging. The exact full motive was not
+contemporaneously recorded, and Taylor did not ask for `/usr/bin/script` by
+name or know its composition-history consequence.
 
-At lane level, the result is positive: the Blu lane retained deleted
-pre-submission text and later acquired it into its canonical record. At
-component level, mechanisms still matter. The graphical app audit shows that a
-Codex-native surface can persist pre-submission composition locally, while
-**current-draft persistence is not the same mechanism as durable recovery of a
-deleted revision**. The known recorded PTY path remains the existing end-to-end
-demonstration of that durable revision recovery.
+## Claim boundary
 
-## Claim boundary and future work
+This answer does not establish what a network service received, what volatile
+process memory once contained, or what deleted/unallocated storage might have
+held. Historical graphical logs do not cover September 21. The negative result
+is therefore “no surviving positive ordinary-Codex deleted-revision artifact
+was found in the inspected evidence,” not proof that such retention is
+impossible.
 
-This retrospective verdict answers the hypothesis at the level supported by
-the existing artifacts: **one lane, one positive case, identified boundaries**.
-It does not make a claim about network receipt, which requires different
-evidence, and it does not generalize the n=1 finding to other Codex lanes,
-builds, or machines.
-
-Only after this verdict is stated does prospective work become relevant. A
-fresh unique-marker comparison could measure how long the graphical app's
-deletion window lasts and test a CLI composer without an external recording
-wrapper. Such work would extend this result; it is not needed to decide what
-the existing evidence already shows.
+No fresh marker trial was required or performed to state this verdict.

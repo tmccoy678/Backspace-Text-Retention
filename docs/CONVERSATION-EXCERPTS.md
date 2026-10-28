@@ -6,11 +6,19 @@ wording is reproduced exactly, including the initial use of “Ollama”; subseq
 inspection established that the measured runner was Blu Offline's `llama-cli`,
 not Ollama.
 
-## Earlier accidental observation
+## Earlier unnoticed trace and accidental recognition
 
-The structured exchange below was not the first observation. Earlier that day,
-Taylor authorized Blu to inspect only the newest local transcript from an
-ordinary nonsensitive experiment.
+The earliest surviving recorded editing trace located is a private routine
+acceptance transcript from 12:05–12:08 AM. At 12:09:30 AM, Blu read its complete
+68 lines through a Codex tool. The tool output contained three exact erase
+triplets and the adjacent pre-correction bytes, but Blu did not recognize or
+describe their privacy significance. The source contains unrelated natural
+conversation and is committed by hash rather than reproduced; see the
+[existing-evidence investigation](../investigations/2026-10-28-olivia-hypothesis/).
+
+The afternoon exchange below was the first explicit recognition, not the
+earliest trace. Taylor authorized Blu to inspect only the newest local
+transcript from an ordinary nonsensitive experiment.
 
 **2026-09-21 19:27:02.008 — Blu**
 
@@ -82,7 +90,7 @@ their public release on October 28, 2026.
 ## Interpretation
 
 The exchange records a delayed, evidence-dependent inspection: the two phrases
-were not supplied to Blu in the cloud conversation before the signal. The first
+were not supplied in the Codex conversation before the signal. The first
 phrase was recovered from terminal echo preserved by `/usr/bin/script`; the
 second appeared as the committed line. This establishes recoverability from the
 local transcript, not live observation of typing and not receipt of the erased

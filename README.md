@@ -10,18 +10,23 @@ confirmatory data collection, unblinding, and analysis have **not yet occurred**
 The completed September 21 terminal case that motivated this study is preserved
 separately as the [original-observation foundation](foundation/original-observation/).
 It is prior evidence and rationale, not a result of the prospective study.
-The first surviving session was not designed as a recording experiment: Taylor
-did not request `/usr/bin/script` or terminal recording by name, and Blu had
-already embedded the recorder in the Blu Offline launcher before the retention
-behavior was noticed. Taylor and Liv's retrospective causal account is that
-Taylor's broader instructions to Blu to work diligently and preserve complete
-technical records supplied a high-level requirement; Blu independently chose
-the recording mechanism.
+The earliest surviving recorded editing trace now located came from a routine
+midnight acceptance run, not a retention experiment. Blu read that complete
+transcript through a Codex tool more than fourteen hours before recognizing
+the privacy consequence. Taylor did not request `/usr/bin/script` or terminal
+recording by name, and Blu had already embedded the recorder in the Blu Offline
+launcher before the behavior was noticed. Taylor and Liv's retrospective
+causal account is that Taylor's broader instructions to work diligently and
+preserve complete technical records supplied a high-level requirement; Blu
+independently chose the recording mechanism.
 
 A later [historical audit](investigations/2026-09-21-pre-control-and-intel/) of
-the September evidence adds exact byte-run analysis for the two early recordings
-and reconstructs the distinct unrecorded September 21 attempt on the 2015 Intel
-Mac.
+the September evidence adds exact byte-run analysis for the first two published
+Backspace-specific recordings and reconstructs the distinct unrecorded
+September 21 attempt on the 2015 Intel Mac. The subsequent
+[existing-evidence answer to Olivia](investigations/2026-10-28-olivia-hypothesis/)
+commits the earlier private midnight artifact by hash and directly evaluates
+the ordinary-Codex hypothesis without running a new experiment.
 
 Two October 27 mechanistic follow-ups are indexed separately in
 [`replications/`](replications/): a byte-preserved recorded-PTY replication on a
@@ -31,18 +36,15 @@ an outcome of the prospective ten-card challenge.
 Olivia's question about why Blu enabled recording by default prompted a separate
 [forensic response](docs/PR3-FORENSIC-RESPONSE.md). It distinguishes direct
 contemporaneous evidence from present inference, documents the same-day Intel
-negative control, and traces when literal recovered text entered the Codex
-conversation. It also records and credits
-[Liv's Blu-lane retention hypothesis](docs/PR3-FORENSIC-RESPONSE.md#9-livs-blu-lane-retention-hypothesis):
-the single Blu lane is itself an n=1 example of pre-submission retention and
-must be understood across its terminal, recorder, Codex, and app boundaries
-rather than generalized to every Codex installation. A subsequent
-[read-only retrospective verdict](docs/LIV-CODEX-HYPOTHESIS-RETROSPECTIVE-VERDICT.md)
-confirmed the lane-level case, identified the historical durable path, and
-found that its graphical Codex surface independently persists the current
-unsent draft. The current Codex CLI session, whose inspected ancestry had no
-detected external recording wrapper, remains a narrower unresolved mechanism
-question, not a reason to deny the positive lane-level result.
+negative control, and traces when literal recovered text entered a Codex tool
+record. The focused
+[retrospective verdict](docs/LIV-CODEX-HYPOTHESIS-RETROSPECTIVE-VERDICT.md)
+answers the component-level question: the historical positive is explained by
+terminal echo plus Blu Offline's external recorder. The graphical Codex app
+independently persists the latest current unsent draft, but no existing
+artifact demonstrates that an ordinary Codex app or CLI durably preserves a
+fully erased earlier revision. The stronger claim that this occurs in any
+Codex app is therefore unsupported by the evidence currently preserved.
 
 The surviving Intel shell history is available as a
 [line-preserving redacted derivative](evidence/intel-history/). Authentication

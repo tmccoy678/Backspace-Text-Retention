@@ -1,6 +1,6 @@
 # September 21 pre-control evidence and Intel-attempt audit
 
-This folder analyzes the two earliest recordings published under
+This folder analyzes the first two Backspace-specific recordings published under
 [`evidence/transcripts/`](../../evidence/transcripts/) and documents the later,
 unrecorded September 21 attempt on the 2015 Intel Mac. The source machines were
 searched with read-only intent on October 28, 2026; one auxiliary SQLite
@@ -8,6 +8,14 @@ coordination-file timestamp side effect is disclosed in
 [`SEARCH-COVERAGE.md`](SEARCH-COVERAGE.md). The three evidence artifacts covered
 by this audit are identified by SHA-256 in
 [`EVIDENCE.sha256`](EVIDENCE.sha256).
+
+A subsequent expanded pass located an earlier private routine-acceptance
+recording, `Blu-Offline-20260921-000503.typescript`. It is now the earliest
+surviving recorded editing trace located, and it had already been read without
+recognition through a Codex tool at 12:09 AM. Its unrelated natural conversation
+remains private; its hash, metadata, erase-run offsets, and preservation copies
+are committed in the
+[existing-evidence answer to Olivia](../2026-10-28-olivia-hypothesis/).
 
 This audit answers the artifact questions raised by
 [`@oliviamckee` on PR #2](https://github.com/tmccoy678/Backspace-Text-Retention/pull/2#issuecomment-6461455009):
@@ -17,10 +25,10 @@ search.
 
 ## Main findings
 
-### The first documented substantive observation located predates the published controlled case
+### The first published substantive Backspace-specific observation predates the controlled case
 
-`Blu-Offline-20260921-141944.typescript` is the earliest surviving recording
-found in which meaningful erased drafts were noticed and then inspected. It is
+`Blu-Offline-20260921-141944.typescript` is the earliest published recording in
+which meaningful erased drafts were noticed and then inspected. It is
 1,816 bytes and contains seven runs totaling 69 exact `08 20 08` erase
 triplets. The recoverable composition includes successive abandoned text such
 as `the purple `, `the doberman bit `, and
@@ -33,9 +41,11 @@ marie is my favorite doberman and she is sleeping on the couch.
 
 At 2:27:15 PM CDT, the contemporaneous assistant opened that exact transcript.
 At 2:28:06 PM it reported the privacy-relevant observation: the transcript had
-recorded text erased during composition. This is the first documented discovery
-in the surviving records. It occurred more than an hour before the 3:37 PM
-two-sentence case currently centered in the foundation manuscript.
+recorded text erased during composition. This is the first documented
+privacy-significant recognition in the surviving records. It occurred more
+than an hour before the 3:37 PM two-sentence case currently centered in the
+foundation manuscript and more than fourteen hours after the unnoticed
+midnight trace.
 
 `Blu-Offline-20260921-141327.typescript` is an even earlier, partial session.
 It is 1,190 bytes and contains two erase runs totaling 35 `08 20 08` triplets,
@@ -111,8 +121,8 @@ September attempt and the October replication are distinct.
 
 | File | Evidentiary role |
 | --- | --- |
-| [`Blu-Offline-20260921-141327.typescript`](../../evidence/transcripts/Blu-Offline-20260921-141327.typescript) | Earliest partial pre-control recording |
-| [`Blu-Offline-20260921-141944.typescript`](../../evidence/transcripts/Blu-Offline-20260921-141944.typescript) | First documented substantive retention observation located |
+| [`Blu-Offline-20260921-141327.typescript`](../../evidence/transcripts/Blu-Offline-20260921-141327.typescript) | First published partial Backspace-specific precursor |
+| [`Blu-Offline-20260921-141944.typescript`](../../evidence/transcripts/Blu-Offline-20260921-141944.typescript) | First published substantive retention observation and first privacy-significant recognition |
 | [`evidence/intel-screen-20260921-162939.png`](evidence/intel-screen-20260921-162939.png) | Intel-side inspection of the copied 3:37 PM Apple-silicon transcript |
 
 The screenshot is evidence of Intel access to the copied transcript, not of a

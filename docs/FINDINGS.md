@@ -1,15 +1,24 @@
 # Findings and claim boundary
 
-## 1. Earliest observation and structured foundation recording
+## 1. Earliest trace, first recognition, and structured foundation recording
 
-The retention behavior was first noticed at 2:28 PM on September 21 while Blu,
-with Taylor's permission, inspected the newest owner-only local transcript.
-The two earlier byte-preserved transcripts and their hashes are published under
-Taylor's explicit authorization and indexed in
-[`EARLIEST-EVIDENCE-AUDIT.md`](EARLIEST-EVIDENCE-AUDIT.md). The first records a
-harmless placeholder phrase being edited and erased without a committed
-replacement. The second preserves nonsensitive Doberman composition followed by
-a submitted sentence.
+The earliest surviving recorded editing trace located is the normal
+`Blu-Offline-20260921-000503.typescript` acceptance session, closed at
+12:08:27 AM on September 21. It contains two erase runs totaling three exact
+`08 20 08` triplets. Blu read the complete transcript through a Codex tool at
+12:09:30 AM for routine acceptance checks and did not identify the retention
+consequence.
+
+The privacy-significant behavior was first recognized at 2:28 PM while Blu,
+with Taylor's permission, inspected `141944` during an unrelated clue
+experiment. Taylor's surprised response and proposal to study the behavior came
+after Blu reported it. The previously published `141327` partial precursor and
+`141944` substantive transcript recognized at discovery remain byte-preserved
+under Taylor's authorization and are indexed in
+[`EARLIEST-EVIDENCE-AUDIT.md`](EARLIEST-EVIDENCE-AUDIT.md). The midnight source
+contains unrelated ordinary conversation and remains private; its hash,
+metadata, byte offsets, and preservation copies are documented in the
+[Olivia-hypothesis investigation](../investigations/2026-10-28-olivia-hypothesis/).
 
 The later structured foundation recording,
 `Blu-Offline-20260921-153748.typescript`, contains the UTF-8 text
@@ -135,7 +144,8 @@ These observations do not establish that:
 
 - OpenAI, ChatGPT, Codex, Ollama, or another application receives deleted drafts;
 - a Codex CLI session with no detected external recording wrapper, or a
-  graphical Codex app, locally persists a draft erased before submission;
+  graphical Codex app, durably preserves a fully erased prior revision after
+  the deletion update;
 - a network service received any experimental text;
 - the same rates generalize beyond these six repeated turns in one process;
 - the model's complete internal token sequence is recoverable from its answer;
@@ -155,11 +165,14 @@ Continuity, diagnosis, audit, and reproducibility are the best-supported
 interpretation of the surrounding workflow, not a verbatim requirement.
 
 The launcher announced the transcript path and protected it owner-only, but did
-not warn that erased composition could remain recoverable. Literal recovered
-text entered the Codex conversation only after Taylor authorized Blu to inspect
-the local transcript through a tool. A same-day Intel control without the
-recorder produced no recoverable erased draft for Blu. The complete evidence
-and present design judgment appear in
+not warn that erased composition could remain recoverable. The midnight
+acceptance transcript's retained corrections entered a Codex tool result during
+routine verification at 12:09 AM without being recognized. The later
+substantive abandoned drafts entered through authorized inspection at 2:27 PM
+and were recognized at 2:28 PM. Neither event supports passive pre-inspection
+receipt by Codex. A same-day Intel control without the recorder produced no
+recoverable erased draft for Blu. The complete evidence and present design
+judgment appear in
 [`PR3-FORENSIC-RESPONSE.md`](PR3-FORENSIC-RESPONSE.md).
 
 Taylor later authorized publication of the Intel `.zsh_history` as a
@@ -168,57 +181,47 @@ candidate committed line and surrounding command order while visibly replacing
 authentication material, password-like strings, and the private conversation
 identifier. The raw source is not public.
 
-## 10. Liv's Blu-lane retention hypothesis
+## 10. Olivia's ordinary-Codex retention hypothesis
 
-`@oliviamckee` proposed that accidental erased-draft retention may occur in an
-ordinary Codex interface, not only in the custom transcript-enabled Blu Offline
-launcher. Taylor clarified the key unit of analysis: **Blu is exactly one lane**.
-The claim is not that every Codex installation behaves identically. A read-only
-retrospective audit has answered the single-lane hypothesis to the limit of the
-evidence already present on Taylor's machines.
+`@oliviamckee` proposed that erased pre-submission composition might be
+available in an ordinary Codex interface even when it is not normally recorded,
+rather than being unique to Blu Offline's special launcher. Taylor's stronger
+formulation is that the behavior would occur in any Codex app.
 
-At audit time, that canonical lane was configured as `gpt-5.6-sol` with
-`xhigh` reasoning. This is configuration metadata for the current n=1 lane,
-not a generalization to other Codex instances or a claim that the lane's
-historical reasoning setting never changed.
+The existing-evidence answer is surface-specific:
 
-Blu's analysis separates three propositions: the unintended retention
-consequence was accidental; the terminal generated the measured edit trace but
-the recorder made it durable; and the Blu lane is a valid n=1 positive case even
-though its individual surfaces use different mechanisms.
+- **Accidental discovery is strongly supported.** A routine midnight session
+  already contained recorded corrections and was read into a Codex tool result
+  without anyone noticing. The privacy consequence was recognized more than
+  fourteen hours later during an unrelated experiment.
+- **The historical complete trace has an identified recorder.** Terminal line
+  editing generated it; `/usr/bin/script -q` made it durable.
+- **The graphical app implements current-draft persistence.** It stores the
+  latest unsent prompt after bounded delays, but clearing removes the logical
+  entry. The audited stores were empty, and no deleted prior revision was
+  demonstrated.
+- **The CLI has no demonstrated deleted-draft artifact.** Its inspected records
+  contain submitted messages and tool output. Its process ancestry had no
+  detected external PTY recorder.
+- **The universal claim is unsupported.** Current-draft state, submitted
+  history, queued-prompt residue, and a sequential PTY recording are not the
+  same retention behavior.
 
-The current record separates the intended recorder from its unintended privacy
-consequence: Blu intentionally enabled transcripts; retaining composition erased
-before Return was accidental. The Intel negative control shows that ordinary
-Terminal alone did not make an erased draft recoverable to Blu, but it did not
-exercise Codex's own interactive composer.
+Describing the whole Blu lane as a historical positive observation is valid,
+but it cannot confirm Olivia's ordinary-Codex mechanism: the positive case used
+a known external recorder. The ordinary-Codex deleted-revision question remains
+unresolved by the evidence already present.
 
-The installed graphical Codex app supplies the previously missing second path.
-Its packaged code persists the current prompt in `composer-prompt-drafts-v2`,
-publishes draft changes after 250 milliseconds, and writes the latest persisted
-atom state to `~/.codex/.codex-global-state.json` after a 500-millisecond native
-debounce. The main state and `.bak` are replaced with the same latest state.
-Clearing the composer deletes the logical draft entry rather than maintaining
-an intentional revision history.
+The evidence does not isolate agent awareness of an experiment as a cause.
+Recoverability follows the identified acquisition path: content-complete
+positive cases had a recorder active, while ordinary Intel Terminal attempts
+without one did not yield the erased draft. Taylor's standing instruction to be
+diligent is a plausible functional reason for Blu's strong logging, but the
+exact full motive was not contemporaneously recorded and Taylor did not request
+`/usr/bin/script` by name.
 
-The lane-level result is confirmed. Deleted pre-submission composition was
-durably preserved in the historical Blu path and later crossed into the
-canonical Codex record through authorized inspection. The graphical app shows
-that a Codex-native surface available to the same lane independently stores the
-current unsent draft. The known PTY recorder remains the identified mechanism
-for the historical complete recoverable edit trace. The current Blu Private
-Codex CLI process had no detected external recording wrapper in its ancestry,
-but the existing record is not a deleted-marker trial. Its narrower
-component-specific behavior remains unresolved without weakening the positive
-n=1 lane finding.
-
-The full evidence, installed-build hashes, state snapshot, and bounded verdict
-are in the
-[retrospective verdict](LIV-CODEX-HYPOTHESIS-RETROSPECTIVE-VERDICT.md).
-Network receipt remains a distinct endpoint requiring different evidence.
-
-Taylor and Liv's separate contemporaneous computer records provide operator-side
-chronology and ground truth across different systems. The Blu lane is an
-important known-recorder positive control, not a neutral Codex condition. Its
-characterized `/usr/bin/script` path gives the ordinary Codex conditions a
-concrete recovery baseline.
+The complete bounded answer, application audit, source commitments, and privacy
+limits are in the
+[retrospective verdict](LIV-CODEX-HYPOTHESIS-RETROSPECTIVE-VERDICT.md) and the
+[existing-evidence investigation](../investigations/2026-10-28-olivia-hypothesis/).
+Network receipt remains a separate endpoint requiring different evidence.
