@@ -6,6 +6,28 @@ wording is reproduced exactly, including the initial use of “Ollama”; subseq
 inspection established that the measured runner was Blu Offline's `llama-cli`,
 not Ollama.
 
+## Earlier accidental observation
+
+The structured exchange below was not the first observation. Earlier that day,
+Taylor authorized Blu to inspect only the newest local transcript from an
+ordinary nonsensitive experiment.
+
+**2026-09-21 19:27:02.008 — Blu**
+
+> Thanks for confirming. I’ll inspect only the newest local transcript, find the toy exchange, and compare it with my guess. I won’t open the older conversations.
+
+**2026-09-21 19:28:06.639 — Blu**
+
+> The important privacy discovery: the transcript records **text you erased while composing**, not just what you finally submitted. That was harmless here, but I wouldn’t put sensitive writing into this transcript-enabled mode until we change that behavior.
+>
+> I read only the newest transcript as promised. There’s another recent one from 14:13 that I left alone—was that the clue-making attempt?
+
+The inspected file was `Blu-Offline-20260921-141944.typescript`; the earlier
+unopened file was `Blu-Offline-20260921-141327.typescript`. Their public metadata
+and hashes appear in
+[`EARLIEST-EVIDENCE-AUDIT.md`](EARLIEST-EVIDENCE-AUDIT.md). The raw files remain
+private because they contain unrelated composition history.
+
 ## Procedure proposed before the test
 
 **2026-09-21 20:32:29.945 — Taylor**

@@ -20,10 +20,26 @@ CHILD_PTY = (
     / "evidence"
     / "intel-script-experiment-20261027-231637.child-pty.txt"
 )
+FIRST_ATTEMPT_OUTPUT = (
+    REPLICATION
+    / "evidence"
+    / "intel-first-ordinary-shell-terminal-saved-output.txt"
+)
 ERASE = b"\x08\x20\x08"
 
 
 class IntelReplicationTests(unittest.TestCase):
+    def test_first_attempt_output_identity_and_scope(self) -> None:
+        data = FIRST_ATTEMPT_OUTPUT.read_bytes()
+        self.assertEqual(len(data), 128)
+        self.assertEqual(
+            hashlib.sha256(data).hexdigest(),
+            "a90e2c11eb1e46f275f8dd5ab27ea7ae0aaa2265ef068f19b58004766b2492b8",
+        )
+        self.assertIn(b"piggy is running", data)
+        self.assertIn(b"zsh: command not found: piggy", data)
+        self.assertNotIn(b"Script started on", data)
+
     def test_transcript_identity_and_declared_boundaries(self) -> None:
         data = TRANSCRIPT.read_bytes()
         self.assertEqual(len(data), 353)

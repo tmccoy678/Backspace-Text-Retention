@@ -72,9 +72,9 @@ rendered line and (b) the control bytes that perform that visible erasure. The
 term is descriptive, not established terminal nomenclature.
 
 The study asked two bounded questions: (a) what exact bytes remained in the
-discovery recording after visible deletion, and (b) would changing only the
-child PTY from canonical echoing input to `-echo -icanon` change whether erased
-synthetic markers reached the local model?
+later structured foundation recording after visible deletion, and (b) would
+changing only the child PTY from canonical echoing input to `-echo -icanon`
+change whether erased synthetic markers reached the local model?
 
 ## Methods
 
@@ -107,12 +107,12 @@ physical key action → Terminal → script child PTY → llama-cli → local mo
 ```
 
 Ollama, an autonomous agent framework, and `llama-server` were not in the
-measured path. The ordinary discovery launcher supplied a local system prompt.
+measured path. The ordinary Blu Offline launcher supplied a local system prompt.
 The matched diagnostic replaced it with an empty system prompt. The official
 model card identifies the model as an Apache-2.0 GGUF intended for local use
 with llama.cpp (Mistral AI, 2026).
 
-### Discovery procedure
+### Structured foundation procedure
 
 At the `llama-cli` interactive prompt, the researchers entered the 15-character
 sentence `marie is black.`, pressed Delete once per character without pressing
@@ -142,7 +142,7 @@ transcript contained marker-plus-erasure input echo. Full wording appears in
 
 ### Evidence integrity
 
-The discovery transcript was 1,344 bytes with SHA-256
+The structured foundation transcript was 1,344 bytes with SHA-256
 `e2e3e56c7f81420a870501594e55aa908ef63c01d46794ef2072e9123014f016`.
 The canonical and raw diagnostic recordings had SHA-256 values
 `8a48aeff436c1a58a4859cc36bebdf63b2586759321eb87be1d7b1951322ee0b`
@@ -191,7 +191,7 @@ process per condition, order was fixed, and independence was not established.
 
 ## Results
 
-### Discovery recording
+### Structured foundation recording
 
 The transcript contained the following contiguous structure:
 
@@ -278,7 +278,7 @@ The recording was not an unobserved macOS background service or evidence of
 Apple receiving the data. The researchers launched a local wrapper that
 explicitly invoked `/usr/bin/script` and named a local transcript file. That
 action authorized recording at the process level. It did not, however, present
-an interactive warning in the ordinary discovery path that visually deleted
+an interactive warning in the ordinary Blu Offline path that visually deleted
 draft text would remain recoverable. Apple's manual documents output recording,
 backspaces, and unexpected log contents, but the practical composition-history
 consequence was not surfaced at the moment of use.
@@ -336,8 +336,11 @@ before durable logging is therefore the preferred hypothesis.
 No measured result attributes retention to keyboard hardware. The protocol's
 Delete input was `0x7f`; the child PTY's software line discipline produced the
 `08 20 08` visual-erasure output. An initial October 27 attempt on a 2015 Intel
-Mac lacked an active `script` recorder and therefore produced no inspectable
-`.typescript` artifact. A subsequent controlled replication activated
+Mac occurred in an ordinary zsh shell. A saved Terminal export proves the
+interaction occurred but retains only the committed replacement line. No active
+recorder was observed and no first-attempt recording artifact was found in the
+inspected locations; that absence does not prove no transient recorder could
+have existed. A subsequent controlled replication activated
 `/usr/bin/script -q` before input and used a deterministic canonical-line child.
 Its 353-byte recording preserved a 17-byte recovery candidate followed by 17
 exact `08 20 08` triplets, while the child reported only the separately
@@ -355,12 +358,13 @@ in their source repository and are linked through the
 
 ### Limitations
 
-The discovery was one session, and the diagnostic reused one process per
-condition. Condition order was not randomized. Model answers are response-based
-evidence, not complete prompt traces. The videos document the physical display
-and chronology but do not independently establish process input. The literature
-was not systematically reviewed, so the work does not claim that terminal
-developers were previously unaware of stream-level retention.
+The structured foundation recording was one session, and the diagnostic reused
+one process per condition. Condition order was not randomized. Model answers
+are response-based evidence, not complete prompt traces. The videos document
+the physical display and chronology but do not independently establish process
+input. The literature was not systematically reviewed, so the work does not
+claim that terminal developers were previously unaware of stream-level
+retention.
 
 ### Future directions
 

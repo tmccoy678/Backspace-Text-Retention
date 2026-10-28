@@ -300,6 +300,7 @@ of this confirmatory challenge.
 - [Prospective preregistration](preregistration/PREREGISTRATION-2026-09-24.md)
 - [Foundation evidence collection](evidence/)
 - [Foundation technical documentation](docs/)
+- [Earliest-evidence and launcher-origin audit](docs/EARLIEST-EVIDENCE-AUDIT.md)
 - [Existing foundation and validation utilities](analysis/)
 - [Provenance records](provenance/)
 - [Cross-platform replications and immutable external links](replications/)

@@ -1,0 +1,24 @@
+Last login: Tue Oct 27 22:46:55 on ttys000
+blu ~ % piggy is running 
+zsh: command not found: piggy
+blu ~ % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,8 +1,14 @@
 # Findings and claim boundary
 
-## 1. Discovery observation
+## 1. Earliest observation and structured foundation recording
 
-The discovery recording,
+The retention behavior was first noticed at 2:28 PM on September 21 while Blu,
+with Taylor's permission, inspected the newest owner-only local transcript.
+Two earlier transcripts survive privately with published metadata and hashes in
+[`EARLIEST-EVIDENCE-AUDIT.md`](EARLIEST-EVIDENCE-AUDIT.md). They contain
+unrelated composition history and are not public source artifacts.
+
+The later structured foundation recording,
 `Blu-Offline-20260921-153748.typescript`, contains the UTF-8 text
 `marie is black.`, followed by fifteen `08 20 08` byte triplets, followed by
 `stanley is red.`. In terminal control notation those three bytes are:
@@ -78,7 +84,12 @@ The recovery candidate and artifact identity were frozen before Taylor was
 asked to disclose the phrase. Taylor did not subsequently provide an explicit
 exact-match confirmation, so the repository records pipeline success and a
 frozen recovery candidate, not a scored exact match. An earlier ordinary-shell
-attempt had no active recorder and produced no comparable artifact.
+attempt preceded the controlled replication. A surviving 128-byte Terminal
+export proves that interaction occurred but contains only the committed
+replacement line. No active recorder was observed and no first-attempt recording
+artifact was found in the inspected locations. This is an evidence-bounded
+negative finding, not proof that no transient recorder could have existed. See
+the [first-attempt audit](../replications/intel-mac-2026-10-27/FIRST-ORDINARY-SHELL-AUDIT.md).
 
 ## 6. Independent Windows ConPTY evidence
 
