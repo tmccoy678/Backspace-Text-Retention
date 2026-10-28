@@ -169,6 +169,13 @@ identifier. The raw source is not public.
 ordinary Codex interface, not only in the custom transcript-enabled Blu Offline
 launcher. This is a strong, testable extension of the present work.
 
+Blu's analysis of Taylor's summary separates three propositions: the unintended
+retention consequence was accidental; the terminal generated the measured edit
+trace but the recorder made it durable; and generalization to any Codex app is
+plausible but unproved. The known launcher mechanism and the broader Codex
+hypothesis are not mutually exclusive. Demonstrating the known mechanism does
+not rule out a second persistence path, but it also does not establish one.
+
 The current record separates the intended recorder from its unintended privacy
 consequence: Blu intentionally enabled transcripts; retaining composition erased
 before Return was accidental. The Intel negative control shows that ordinary

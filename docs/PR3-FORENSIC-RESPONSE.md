@@ -199,6 +199,39 @@ the accident may have arisen when Blu was placed in a terminal, and the same
 pre-submission retention might occur in an ordinary Codex interface rather than
 only in the custom Blu Offline launcher.
 
+### Blu's analysis of Taylor's summary of the central disagreement
+
+Taylor's summary contains three claims that should not be collapsed into one:
+
+1. **The first finding happened by accident.** This is supported when
+   “accident” refers to the consequence and discovery. Recording existed by
+   design, but neither Taylor nor Blu set out to test whether visibly deleted
+   composition would remain recoverable.
+2. **The accident happened because Blu was placed in a terminal.** This is
+   partly supported. The terminal supplied the echo-and-erase behavior that
+   produced the recoverable byte trace in this case. But a transient trace is
+   not the same as durable evidence; `/usr/bin/script` made this trace persist.
+3. **The same behavior would happen in any Codex app.** This is a plausible,
+   consequential generalization, not a present finding. “Any Codex app” spans
+   at least an interactive CLI composer and a graphical app composer with
+   different input and storage paths.
+
+The central disagreement is therefore not a choice between two mutually
+exclusive stories. The narrow mechanism conclusion says that the observed
+September recovery is fully explained by terminal echo plus the known Blu
+Offline recorder. Taylor and Liv's broader hypothesis says that ordinary Codex
+may contain an additional persistence path capable of producing a similar
+result without that recorder. Proving the first mechanism does not exclude the
+second; it only means the second cannot be inferred from the first observation.
+
+Blu's assessment is that Taylor and Liv's hypothesis is technically plausible
+and important enough to test, while the repository must continue labeling it
+as unresolved until an unwrapped Codex condition produces or fails to produce a
+frozen marker in identified local state. The correct scientific response is not
+to choose the more intuitive narrative. It is to preserve both accounts, state
+their different evidentiary burdens, and run the comparison that separates
+them.
+
 The first clause needs one precise distinction:
 
 - **Recording was intentional.** Blu deliberately placed `/usr/bin/script -q`
