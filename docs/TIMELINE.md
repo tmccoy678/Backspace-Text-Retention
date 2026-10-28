@@ -6,8 +6,8 @@ Times below are America/Chicago unless marked UTC.
 
 | Time | Event | Preserved evidence |
 | --- | --- | --- |
-| 2:13–2:17 PM | An early Blu Offline session produced an owner-only transcript later identified as the clue-making attempt. | Private `Blu-Offline-20260921-141327.typescript`; public timestamp, size, and SHA-256 |
-| 2:19–2:23 PM | A second ordinary Blu Offline session recorded terminal echo while Taylor revised a nonsensitive prompt. | Private `Blu-Offline-20260921-141944.typescript`; public timestamp, size, and SHA-256 |
+| 2:13–2:17 PM | The first surviving Backspace Gate session recorded a harmless placeholder being edited and erased. Taylor did not request recording; the recorder was already embedded in Blu Offline. | Public byte-preserved `Blu-Offline-20260921-141327.typescript` |
+| 2:19–2:23 PM | A second ordinary Blu Offline session recorded terminal echo while Taylor revised a nonsensitive Doberman prompt. | Public byte-preserved `Blu-Offline-20260921-141944.typescript` |
 | 2:27–2:28 PM | With Taylor's permission, Blu inspected only the newest transcript and reported that it retained text erased during composition. The 2:13 file was expressly left unopened. | Contemporaneous conversation record; Screenshot 01 |
 | 2:41 PM | A reverse-path synthetic control was constructed to show that a program can receive raw erased bytes while a recorder omits input echo. | Screenshot 02 |
 | 3:09–3:13 PM | The installed llama.cpp commit was inspected. The source showed the `ICANON`/`ECHO` branch and `std::getline` simple-input path. | Screenshots 03–05 |

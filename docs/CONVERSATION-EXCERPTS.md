@@ -23,10 +23,11 @@ ordinary nonsensitive experiment.
 > I read only the newest transcript as promised. There’s another recent one from 14:13 that I left alone—was that the clue-making attempt?
 
 The inspected file was `Blu-Offline-20260921-141944.typescript`; the earlier
-unopened file was `Blu-Offline-20260921-141327.typescript`. Their public metadata
-and hashes appear in
-[`EARLIEST-EVIDENCE-AUDIT.md`](EARLIEST-EVIDENCE-AUDIT.md). The raw files remain
-private because they contain unrelated composition history.
+unopened file was `Blu-Offline-20260921-141327.typescript`. Their metadata,
+hashes, and byte-preserved originals appear in
+[`EARLIEST-EVIDENCE-AUDIT.md`](EARLIEST-EVIDENCE-AUDIT.md) and
+[`evidence/transcripts/`](../evidence/transcripts/). Taylor explicitly authorized
+their public release on October 28, 2026.
 
 ## Procedure proposed before the test
 
