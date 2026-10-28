@@ -7,18 +7,53 @@
 **Study status:** Preregistered prospective technical study. Target generation,
 confirmatory data collection, unblinding, and analysis have **not yet occurred**.
 
+## Central historical finding: retention preceded recognition
+
+The earliest surviving editing trace now associated with Backspace Gate did
+not come from the later structured experiment. It came from an ordinary
+midnight acceptance run through the already-installed Blu Offline recording
+wrapper. Recording was intentional; the consequence that visually erased
+composition would remain recoverable was not anticipated, tested, or
+recognized.
+
+1. **September 20, 11:26–11:34 PM CDT — recorder embedded.** Blu
+   selected, tested, and embedded `/usr/bin/script -q` in the normal owner-only
+   Blu Offline launcher. Taylor had authorized completion of the local-model
+   setup but had not requested `script` or terminal recording by name. The
+   recorder therefore preceded the observation and was not added in response
+   to it.
+2. **September 21, 12:05–12:08:27 AM — earliest surviving trace.** Routine
+   acceptance session `Blu-Offline-20260921-000503.typescript` recorded two
+   ordinary editing runs containing three exact `08 20 08` visual-erasure
+   triplets. `script` had already made the echo-and-erasure stream durable.
+3. **12:09:30 AM — first known Codex tool ingestion.** Blu ran
+   `sed -n '1,260p'` on the complete 68-line transcript for routine
+   verification. The Codex tool result contained the pre-correction characters
+   and erasure bytes, but Blu did not identify or describe their privacy
+   significance.
+4. **2:28:06 PM — first documented recognition.** During an unrelated clue
+   experiment, Blu first reported that a transcript retained text erased during
+   composition, more than fourteen hours after the unnoticed midnight import.
+   Taylor then responded with surprise and proposed studying the behavior.
+
+The layer and timestamp distinction is important: `/usr/bin/script -q` made
+the private `.typescript` durable during the 12:05–12:08 AM session; 12:09:30
+AM is the earliest known time its complete edit trace entered a Codex tool
+result, not the moment the local transcript first became durable. The private
+source remains unpublished because it contains unrelated conversation, but its
+SHA-256, size, permissions, timestamps, editing offsets, preservation copies,
+and import chronology are committed in the
+[earliest-evidence audit](docs/EARLIEST-EVIDENCE-AUDIT.md) and
+[existing-evidence investigation](investigations/2026-10-28-olivia-hypothesis/).
+
 The completed September 21 terminal case that motivated this study is preserved
 separately as the [original-observation foundation](foundation/original-observation/).
 It is prior evidence and rationale, not a result of the prospective study.
-The earliest surviving recorded editing trace now located came from a routine
-midnight acceptance run, not a retention experiment. Blu read that complete
-transcript through a Codex tool more than fourteen hours before recognizing
-the privacy consequence. Taylor did not request `/usr/bin/script` or terminal
-recording by name, and Blu had already embedded the recorder in the Blu Offline
-launcher before the behavior was noticed. Taylor and Liv's retrospective
-causal account is that Taylor's broader instructions to work diligently and
-preserve complete technical records supplied a high-level requirement; Blu
-independently chose the recording mechanism.
+Taylor and Liv's retrospective causal account is that Taylor's broader
+instructions to work diligently and preserve complete technical records
+supplied a high-level requirement; Blu independently chose the recording
+mechanism. The contemporaneous record supports that interpretation but does
+not contain one sentence stating the full motive.
 
 A later [historical audit](investigations/2026-09-21-pre-control-and-intel/) of
 the September evidence adds exact byte-run analysis for the first two published
@@ -97,7 +132,11 @@ application. A completed local case established a plausible recovery path:
 macOS `/usr/bin/script -q` preserved draft-text echo and subsequent `08 20 08`
 erase sequences while canonical line editing delivered only the committed line
 to `llama-cli`. Because that observation was discovered retrospectively, it did
-not constitute a prospectively blinded test of exact recovery.
+not constitute a prospectively blinded test of exact recovery. An earlier
+routine acceptance transcript had already preserved three visual-erasure
+triplets and entered a Codex tool result at 12:09:30 AM without anyone
+recognizing the privacy consequence; this pre-recognition trace strongly
+supports the accidental-discovery chronology.
 
 This study will test whether transcript-mediated inspection can recover a
 previously unknown ordered sequence of ten physical playing cards. Taylor will
