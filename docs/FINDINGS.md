@@ -41,13 +41,18 @@ The outer launcher used:
 /usr/bin/script -q TRANSCRIPT llama-cli ... --simple-io
 ```
 
+Here, **Blu Offline recording wrapper** means this local launcher layer around
+the child command. `/usr/bin/script` created a pseudo-terminal and recorded its
+terminal stream to the named local transcript. “Wrapper” does not refer to the
+model being opened, modified, or reverse engineered.
+
 No `script -k` option was used. In the ordinary condition, the terminal echoed
 the editing sequence and `script` recorded that output. This is different from
 claiming that llama.cpp contained a command to record individual keystrokes.
 
 ## 3. Deliberate raw-input condition
 
-The experimental wrapper ran the child pseudo-terminal with:
+The experimental raw-input helper ran the child pseudo-terminal with:
 
 ```sh
 /bin/stty -echo -icanon min 1 time 0
@@ -129,8 +134,8 @@ repository at immutable commit `5815c0136ff88b03c7d6c455962aacb7e2a8bd60`.
 These observations do not establish that:
 
 - OpenAI, ChatGPT, Codex, Ollama, or another application receives deleted drafts;
-- an unwrapped Codex CLI or graphical Codex app locally persists a draft erased
-  before submission;
+- a Codex CLI session with no detected external recording wrapper, or a
+  graphical Codex app, locally persists a draft erased before submission;
 - a network service received any experimental text;
 - the same rates generalize beyond these six repeated turns in one process;
 - the model's complete internal token sequence is recoverable from its answer;
@@ -201,10 +206,11 @@ durably preserved in the historical Blu path and later crossed into the
 canonical Codex record through authorized inspection. The graphical app shows
 that a Codex-native surface available to the same lane independently stores the
 current unsent draft. The known PTY recorder remains the identified mechanism
-for the historical complete recoverable edit trace. The current unwrapped Blu
-Private CLI process had no content recorder in its ancestry, but the existing
-record is not a deleted-marker trial. Its narrower component-specific behavior
-remains unresolved without weakening the positive n=1 lane finding.
+for the historical complete recoverable edit trace. The current Blu Private
+Codex CLI process had no detected external recording wrapper in its ancestry,
+but the existing record is not a deleted-marker trial. Its narrower
+component-specific behavior remains unresolved without weakening the positive
+n=1 lane finding.
 
 The full evidence, installed-build hashes, state snapshot, and bounded verdict
 are in the

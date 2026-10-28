@@ -14,6 +14,14 @@ behavior was discovered. The surrounding build strongly supports continuity,
 diagnosis, audit, and reproducibility as the purpose, but that synthesis is an
 inference from the workflow rather than a quoted requirement.
 
+Taylor and Liv's retrospective causal account adds a compatible higher-level
+explanation: Taylor regularly asked Blu to be diligent, thorough, and preserve
+the work. Those standing instructions plausibly supplied the functional
+requirement for strong audit logging; Blu independently translated that
+requirement into `/usr/bin/script`. This does not mean Taylor requested that
+command, knew its capture semantics, or anticipated preservation of erased
+pre-submission composition.
+
 The privacy consequence was not adequately considered. The launcher printed a
 destination path and protected the file with owner-only permissions, but it did
 not explain that terminal echo could preserve composition visibly erased before
@@ -36,8 +44,8 @@ interpretation.”
 ## 2. What the contemporaneous record directly documents
 
 Taylor authorized completion of the local-model setup; Taylor did not ask for
-terminal recording. Blu then introduced transcript handling without a separate
-request or consent exchange.
+terminal recording or `/usr/bin/script` by name. Blu then introduced transcript
+handling without a separate mechanism-specific request or consent exchange.
 
 | Time | Directly recorded event |
 | --- | --- |
@@ -72,6 +80,14 @@ contemporaneous sentence saying: “I am enabling transcripts for continuity,
 diagnosis, audit, and reproducibility.” Any stronger claim would reconstruct a
 motive that was not recorded.
 
+The distinction is between a **functional instruction** and a
+**mechanism-specific instruction**. Taylor's standing request for diligent,
+complete preservation is a plausible functional instruction. Selecting the Blu
+Offline recording wrapper was Blu's implementation choice. The record supports
+that causal explanation as an inference, while preserving the fact that Taylor
+did not knowingly specify the command or consent to its unforeseen
+composition-history consequence.
+
 It is also unknown what Blu subjectively believed the printed path conveyed.
 The record shows the path was displayed; it does not show a contemporaneous
 analysis of notice or consent. Therefore it would be inaccurate to claim that
@@ -102,8 +118,9 @@ the file captured.
 The evidence supports a sequence of separate layers:
 
 1. Terminal line discipline echoed draft characters and erase output.
-2. The custom Blu Offline wrapper's `/usr/bin/script -q` made that PTY output
-   durable in a local `.typescript` file.
+2. The custom Blu Offline recording wrapper—Blu's local launcher layer running
+   `/usr/bin/script -q` around the child command—made that PTY output durable
+   in a local `.typescript` file. This did not wrap or modify the model.
 3. The local `llama-cli` path ordinarily received the committed canonical line,
    not a byte-for-byte copy of every visible edit.
 4. At 2:27 PM on September 21, after Taylor explicitly authorized inspection of
@@ -111,8 +128,9 @@ The evidence supports a sequence of separate layers:
 5. The tool output, including literal recovered English, then became part of
    the saved Codex conversation record.
 
-This is an acquisition path: local wrapper first, deliberate tool inspection
-second, saved cloud conversation third. It is **not** evidence that Codex or
+This is an acquisition path: local Blu Offline recording wrapper first,
+deliberate tool inspection second, saved cloud conversation third. It is
+**not** evidence that Codex or
 OpenAI passively received deleted draft text before inspection. The older
 2:13 PM transcript was expressly left unopened that day; its contents did not
 enter the September Codex record through that inspection.
@@ -176,16 +194,16 @@ the current Intel home directory.
 
 Taylor's interpretation is that “Blu” was operating through a Codex terminal
 lane, so the experiment involved more than one possible memory boundary. The
-newer Mac's custom wrapper preserved literal erased composition locally; Blu's
-later tool inspection carried that literal text into the Codex conversation.
-On the Intel Mac, where the wrapper was absent during the negative control, the
-erased draft was unavailable to Blu, while the committed shell line appears to
-have survived through ordinary shell history.
+newer Mac's Blu Offline recording wrapper preserved literal erased composition
+locally; Blu's later tool inspection carried that literal text into the Codex
+conversation. On the Intel Mac, where that recording wrapper was absent during
+the negative control, the erased draft was unavailable to Blu, while the
+committed shell line appears to have survived through ordinary shell history.
 
 The evidence supports that layered account. The redacted history now makes the
 committed-line remnant publicly inspectable. The evidence supports the
-proposition that wrapper configuration and later inspection determine what
-becomes recoverable.
+proposition that Blu's local recording-wrapper configuration and later
+inspection determine what becomes recoverable.
 
 It does not support the stronger proposition that erased keystrokes were
 automatically transmitted to OpenAI, passively visible to Blu, or retained by
@@ -262,12 +280,15 @@ draft available to Blu; only a candidate committed line later appeared in shell
 history. That control did not use Codex's own interactive composer, so it cannot
 exclude retention inside Codex-specific local state.
 
-The current Blu Private Codex CLI was independently characterized as unwrapped:
-its ancestry was Terminal, `login`, `zsh`, the portable doorway Python process,
-and Codex, with no `script`, `tee`, or `asciinema` process. Existing CLI state
-contains submitted-message history and conversation rollouts, but the audit did
-not find a demonstrated never-submitted deleted draft. That is an evidence
-boundary, not a proof of universal absence.
+The current Blu Private Codex CLI was independently characterized as a
+**Codex CLI session with no detected external recording wrapper**: its ancestry
+was Terminal, `login`, `zsh`, the portable doorway Python process, and Codex,
+with no content recorder such as `script`, `tee`, or `asciinema`. This describes
+only Blu's observed local process ancestry; it does not mean the model was
+opened or modified. Existing CLI state contains submitted-message history and
+conversation rollouts, but the audit did not find a demonstrated
+never-submitted deleted draft. That is an evidence boundary, not a proof of
+universal absence.
 
 The current evidence therefore supports this three-stage model:
 
@@ -288,7 +309,7 @@ The evidence supports a surface-specific answer rather than a universal one:
 | Blu Offline under `/usr/bin/script -q` | Complete edit trace durably recoverable. |
 | Ordinary Intel Terminal without the recorder | Erased first draft unavailable to Blu; candidate committed line survived in shell history. |
 | Graphical Codex app | Current unsent prompt intentionally persisted locally; prior value may remain only until the deletion update is flushed; no intentional deleted-revision history established. |
-| Unwrapped Codex CLI | Current process proved unwrapped; no existing deleted-marker artifact demonstrates durable pre-submission revision retention. |
+| Blu Private Codex CLI with no detected external recording wrapper | No external content recorder appeared in the inspected process ancestry; no existing deleted-marker artifact demonstrates durable pre-submission revision retention. |
 
 Therefore Taylor and Liv were right to center the Blu lane as exactly one
 example. This lane demonstrably retained and later acquired deleted
@@ -300,8 +321,8 @@ different records and must not be labeled as interchangeable.
 
 Only after that verdict is stated does future work become relevant. A fresh
 synthetic comparison could measure the graphical deletion window and exercise
-the unwrapped CLI composer directly. Such work would extend the finding; it is
-not required to answer what the existing evidence shows.
+the CLI composer without an external recording wrapper. Such work would extend
+the finding; it is not required to answer what the existing evidence shows.
 
 This is credited as **Liv's Blu-lane retention hypothesis**. Taylor's Mac
 records, Liv's Windows records, and the Blu lane's known recording behavior

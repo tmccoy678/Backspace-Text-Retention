@@ -8,10 +8,10 @@ the later recorded-PTY replication.
 ## What the contemporaneous launcher record establishes
 
 On September 20, 2026, Taylor authorized Blu to finish configuring a newly
-installed local model but did not request terminal recording. At 11:26:59 PM
-CDT, Blu said it would build "the local launcher and transcript handling." At
-11:32:53 PM, before the launcher existed, Blu described the planned feature as
-"owner-only timestamped transcripts."
+installed local model but did not request terminal recording or
+`/usr/bin/script` by name. At 11:26:59 PM CDT, Blu said it would build "the local
+launcher and transcript handling." At 11:32:53 PM, before the launcher existed,
+Blu described the planned feature as "owner-only timestamped transcripts."
 
 The implementation sequence then:
 
@@ -28,12 +28,15 @@ sets the completed transcript to mode `0600`.
 This establishes that transcript capture was a custom Blu Offline launcher
 feature, selected by Blu before the Backspace Gate observation. It was not a
 Codex default, a `llama.cpp` default, a macOS background recorder, or a feature
-Taylor specifically requested. The surrounding acceptance workflow—complete
-readback, permission checks, hashes, and preservation of technical sessions—
-supports continuity, diagnosis, audit, and reproducibility as the design
-purpose. The contemporaneous record does not contain a single sentence giving
-that full rationale, so this purpose is the best-supported interpretation, not
-a quoted design requirement.
+Taylor specifically requested by mechanism. The surrounding acceptance
+workflow—complete readback, permission checks, hashes, and preservation of
+technical sessions—supports continuity, diagnosis, audit, and reproducibility
+as the design purpose. Taylor and Liv's retrospective causal account is that
+Taylor's broader instruction to Blu to be diligent and preserve complete work
+supplied the functional requirement, while Blu selected `/usr/bin/script` as
+the implementation. The contemporaneous record does not contain a single
+sentence giving that full rationale, so this is the best-supported
+interpretation, not a quoted mechanism-specific requirement.
 
 The launcher announced that a transcript would be written. It did **not** warn
 that terminal echo could preserve text visibly erased before Return. That
@@ -64,8 +67,10 @@ nonsensitive Doberman phrases before submitting a final couch sentence.
 Taylor explicitly authorized publication of both byte-preserved raw files on
 October 28, 2026. They contain no credentials or private identifiers. Their
 release does not retroactively convert the first session into a planned
-recording experiment: Taylor did not request recording, and the pre-existing
-Blu Offline wrapper had already embedded `/usr/bin/script` in every launch.
+recording experiment: Taylor did not request the recording mechanism by name,
+and the pre-existing Blu Offline recording wrapper—Blu's local launcher layer
+around the child command—had already embedded `/usr/bin/script` in every
+launch. This did not wrap or modify the model.
 
 The 3:37 PM artifact `Blu-Offline-20260921-153748.typescript` is the later
 structured foundation recording used for the byte-level case report. It remains
@@ -87,7 +92,7 @@ The exact saved Terminal export is published with the
 [first-attempt audit](../replications/intel-mac-2026-10-27/FIRST-ORDINARY-SHELL-AUDIT.md).
 Targeted searches found no first-attempt `.typescript` file or `script`
 invocation in shell history. That evidence is consistent with Taylor's report
-that the attempt occurred outside the recording wrapper. Absence of a found
+that the attempt occurred outside Blu's recording wrapper. Absence of a found
 artifact alone cannot prove that no transient recorder ever existed; the
 bounded claim is that no active recorder was observed and no recording artifact
 was found in the inspected locations.
@@ -105,11 +110,11 @@ recording and could not recover either sentence. A later audit found a private
 candidate committed line in untimestamped shell history, but not the erased
 draft. See the full [PR #3 forensic response](PR3-FORENSIC-RESPONSE.md).
 
-This result also sharpens the cloud boundary. On the newer Mac, the local
-wrapper first preserved PTY output. Literal recovered text entered the Codex
-conversation only when Blu later read the local transcript through a tool after
-Taylor authorized that inspection. The Intel negative control does not support
-passive pre-inspection receipt by Codex or OpenAI.
+This result also sharpens the cloud boundary. On the newer Mac, the local Blu
+Offline recording wrapper first preserved PTY output. Literal recovered text
+entered the Codex conversation only when Blu later read the local transcript
+through a tool after Taylor authorized that inspection. The Intel negative
+control does not support passive pre-inspection receipt by Codex or OpenAI.
 
 ## Privacy boundary
 

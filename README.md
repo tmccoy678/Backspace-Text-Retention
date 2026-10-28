@@ -11,8 +11,12 @@ The completed September 21 terminal case that motivated this study is preserved
 separately as the [original-observation foundation](foundation/original-observation/).
 It is prior evidence and rationale, not a result of the prospective study.
 The first surviving session was not designed as a recording experiment: Taylor
-did not request recording, and `/usr/bin/script` was already embedded in the Blu
-Offline launcher before the retention behavior was noticed.
+did not request `/usr/bin/script` or terminal recording by name, and Blu had
+already embedded the recorder in the Blu Offline launcher before the retention
+behavior was noticed. Taylor and Liv's retrospective causal account is that
+Taylor's broader instructions to Blu to work diligently and preserve complete
+technical records supplied a high-level requirement; Blu independently chose
+the recording mechanism.
 
 A later [historical audit](investigations/2026-09-21-pre-control-and-intel/) of
 the September evidence adds exact byte-run analysis for the two early recordings
@@ -36,13 +40,34 @@ rather than generalized to every Codex installation. A subsequent
 [read-only retrospective verdict](docs/LIV-CODEX-HYPOTHESIS-RETROSPECTIVE-VERDICT.md)
 confirmed the lane-level case, identified the historical durable path, and
 found that its graphical Codex surface independently persists the current
-unsent draft. The current unwrapped CLI component remains a narrower unresolved
-mechanism question, not a reason to deny the positive lane-level result.
+unsent draft. The current Codex CLI session, whose inspected ancestry had no
+detected external recording wrapper, remains a narrower unresolved mechanism
+question, not a reason to deny the positive lane-level result.
 
 The surviving Intel shell history is available as a
 [line-preserving redacted derivative](evidence/intel-history/). Authentication
 material, password-like content, and the private conversation identifier are
 visibly redacted; the private source is committed by hash but not published.
+
+## Terminology in Blu's specific case
+
+In this repository, a **wrapper** means a local launcher or parent process that
+starts another command and changes or records the command's terminal path. It
+does not mean the model was opened, modified, reverse engineered, or placed
+inside another model.
+
+The historical **Blu Offline recording wrapper** was the launcher layer that
+ran `/usr/bin/script -q TRANSCRIPT COMMAND`. Apple's `script` utility created a
+pseudo-terminal, started the child command, and wrote the terminal stream to a
+local `.typescript` file. In Blu's case, that outer recorder made the echoed
+draft-and-erasure sequence durable.
+
+A **Codex CLI session with no detected external recording wrapper** means only
+that the inspected Blu Private process ancestry contained no content recorder
+such as `script`, `tee`, or `asciinema`. It does not “unwrap” the
+`gpt-5.6-sol` model or establish what the model or service received. All such
+terms in this repository describe Blu's observed local process paths unless a
+broader scope is stated explicitly.
 
 ## Abstract
 

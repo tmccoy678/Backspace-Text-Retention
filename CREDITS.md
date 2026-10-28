@@ -16,7 +16,7 @@ frozen.
 Blu formalized the prospective preregistration, exact-null calculation,
 prediction-freeze boundary, and manuscript-style repository structure. For the
 completed foundation case, Blu contributed the experimental controls,
-raw-terminal wrapper, source-code inspection, byte-level analysis, matched
+raw-terminal helper, source-code inspection, byte-level analysis, matched
 six-pair protocol, results record, evidence checksums, limitation language, and
 repository assembly. Blu designed the deterministic Intel replication,
 preserved its protocol and terminal state, froze the recovery record before
