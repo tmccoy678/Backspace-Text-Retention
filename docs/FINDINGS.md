@@ -129,6 +129,8 @@ repository at immutable commit `5815c0136ff88b03c7d6c455962aacb7e2a8bd60`.
 These observations do not establish that:
 
 - OpenAI, ChatGPT, Codex, Ollama, or another application receives deleted drafts;
+- an unwrapped Codex CLI or graphical Codex app locally persists a draft erased
+  before submission;
 - a network service received any experimental text;
 - the same rates generalize beyond these six repeated turns in one process;
 - the model's complete internal token sequence is recoverable from its answer;
@@ -160,3 +162,29 @@ line-preserving [redacted derivative](../evidence/intel-history/). It exposes th
 candidate committed line and surrounding command order while visibly replacing
 authentication material, password-like strings, and the private conversation
 identifier. The raw source is not public.
+
+## 10. Liv's Codex generalization hypothesis
+
+`@oliviamckee` proposed that accidental erased-draft retention may occur in an
+ordinary Codex interface, not only in the custom transcript-enabled Blu Offline
+launcher. This is a strong, testable extension of the present work.
+
+The current record separates the intended recorder from its unintended privacy
+consequence: Blu intentionally enabled transcripts; retaining composition erased
+before Return was accidental. The Intel negative control shows that ordinary
+Terminal alone did not make an erased draft recoverable to Blu, but it did not
+exercise Codex's own interactive composer. The hypothesis therefore remains
+open rather than disproved.
+
+The proposed comparison freezes harmless synthetic markers across unwrapped
+Codex CLI, recorder-wrapped Codex CLI, and the graphical Codex app, then scores
+terminal output, local Codex state, app state, and submitted conversation
+content separately. Network receipt remains a distinct endpoint requiring
+different evidence. The full design and outcome interpretations are recorded in
+the [forensic response](PR3-FORENSIC-RESPONSE.md#9-livs-codex-generalization-hypothesis).
+
+Taylor and Liv's separate contemporaneous computer records provide operator-side
+chronology and ground truth across different systems. The Blu lane is an
+important known-recorder positive control, not a neutral Codex condition. Its
+characterized `/usr/bin/script` path gives the ordinary Codex conditions a
+concrete recovery baseline.
