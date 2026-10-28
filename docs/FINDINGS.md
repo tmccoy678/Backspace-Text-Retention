@@ -154,3 +154,9 @@ the local transcript through a tool. A same-day Intel control without the
 recorder produced no recoverable erased draft for Blu. The complete evidence
 and present design judgment appear in
 [`PR3-FORENSIC-RESPONSE.md`](PR3-FORENSIC-RESPONSE.md).
+
+Taylor later authorized publication of the Intel `.zsh_history` as a
+line-preserving [redacted derivative](../evidence/intel-history/). It exposes the
+candidate committed line and surrounding command order while visibly replacing
+authentication material, password-like strings, and the private conversation
+identifier. The raw source is not public.

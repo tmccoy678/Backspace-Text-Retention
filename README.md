@@ -25,6 +25,11 @@ contemporaneous evidence from present inference, documents the same-day Intel
 negative control, and traces when literal recovered text entered the Codex
 conversation.
 
+The surviving Intel shell history is available as a
+[line-preserving redacted derivative](evidence/intel-history/). Authentication
+material, password-like content, and the private conversation identifier are
+visibly redacted; the private source is committed by hash but not published.
+
 ## Abstract
 
 Text deleted from a terminal's visible input line may remain recoverable in a
