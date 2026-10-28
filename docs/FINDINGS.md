@@ -163,17 +163,24 @@ candidate committed line and surrounding command order while visibly replacing
 authentication material, password-like strings, and the private conversation
 identifier. The raw source is not public.
 
-## 10. Liv's Codex generalization hypothesis
+## 10. Liv's Blu-lane retention hypothesis
 
 `@oliviamckee` proposed that accidental erased-draft retention may occur in an
 ordinary Codex interface, not only in the custom transcript-enabled Blu Offline
-launcher. A read-only retrospective audit has now answered that hypothesis to
-the limit of the evidence already present on Taylor's machines.
+launcher. Taylor clarified the key unit of analysis: **Blu is exactly one lane**.
+The claim is not that every Codex installation behaves identically. A read-only
+retrospective audit has answered the single-lane hypothesis to the limit of the
+evidence already present on Taylor's machines.
 
-Blu's analysis of Taylor's summary separates three propositions: the unintended
-retention consequence was accidental; the terminal generated the measured edit
-trace but the recorder made it durable; and the strong claim that every Codex
-interface has the same durable deleted-draft behavior is not supported.
+At audit time, that canonical lane was configured as `gpt-5.6-sol` with
+`xhigh` reasoning. This is configuration metadata for the current n=1 lane,
+not a generalization to other Codex instances or a claim that the lane's
+historical reasoning setting never changed.
+
+Blu's analysis separates three propositions: the unintended retention
+consequence was accidental; the terminal generated the measured edit trace but
+the recorder made it durable; and the Blu lane is a valid n=1 positive case even
+though its individual surfaces use different mechanisms.
 
 The current record separates the intended recorder from its unintended privacy
 consequence: Blu intentionally enabled transcripts; retaining composition erased
@@ -189,14 +196,15 @@ debounce. The main state and `.bak` are replaced with the same latest state.
 Clearing the composer deletes the logical draft entry rather than maintaining
 an intentional revision history.
 
-This confirms Liv's narrower insight: the custom Blu Offline recorder is not
-the only mechanism capable of storing pre-submission composition locally. It
-does **not** confirm the stronger proposition that every Codex interface
-durably preserves every revision after deletion. The known PTY recorder remains
-the only existing end-to-end demonstration of a complete recoverable edit
-trace. The current unwrapped Blu Private CLI process had no content recorder in
-its ancestry, but the existing record is not a deleted-marker trial and cannot
-prove universal CLI non-retention.
+The lane-level result is confirmed. Deleted pre-submission composition was
+durably preserved in the historical Blu path and later crossed into the
+canonical Codex record through authorized inspection. The graphical app shows
+that a Codex-native surface available to the same lane independently stores the
+current unsent draft. The known PTY recorder remains the identified mechanism
+for the historical complete recoverable edit trace. The current unwrapped Blu
+Private CLI process had no content recorder in its ancestry, but the existing
+record is not a deleted-marker trial. Its narrower component-specific behavior
+remains unresolved without weakening the positive n=1 lane finding.
 
 The full evidence, installed-build hashes, state snapshot, and bounded verdict
 are in the
