@@ -96,6 +96,21 @@ The controlled `/usr/bin/script` replication began later, at 11:16 PM. It is a
 separate experiment and must not be substituted for the first ordinary-shell
 attempt.
 
+## Same-day September Intel control and Codex acquisition boundary
+
+An earlier negative control occurred on the Intel Mac on September 21. The
+operator completed the two-sentence procedure in ordinary Terminal before the
+proposed `script` control had started. After the signal, Blu found no new Intel
+recording and could not recover either sentence. A later audit found a private
+candidate committed line in untimestamped shell history, but not the erased
+draft. See the full [PR #3 forensic response](PR3-FORENSIC-RESPONSE.md).
+
+This result also sharpens the cloud boundary. On the newer Mac, the local
+wrapper first preserved PTY output. Literal recovered text entered the Codex
+conversation only when Blu later read the local transcript through a tool after
+Taylor authorized that inspection. The Intel negative control does not support
+passive pre-inspection receipt by Codex or OpenAI.
+
 ## Privacy boundary
 
 This public audit excludes credentials, unrelated shell history, and the full

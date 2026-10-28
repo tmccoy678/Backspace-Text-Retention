@@ -138,3 +138,19 @@ These observations do not establish that:
 
 This repository therefore treats terminal echo, recorder output, process input,
 model response, and cloud telemetry as separate evidentiary layers.
+
+## 9. Recorder origin, acquisition path, and Intel negative control
+
+The contemporaneous build record establishes that Blu introduced normal-session
+transcript capture before the retention behavior was discovered and without a
+specific request from Taylor. The exact complete motive was not recorded.
+Continuity, diagnosis, audit, and reproducibility are the best-supported
+interpretation of the surrounding workflow, not a verbatim requirement.
+
+The launcher announced the transcript path and protected it owner-only, but did
+not warn that erased composition could remain recoverable. Literal recovered
+text entered the Codex conversation only after Taylor authorized Blu to inspect
+the local transcript through a tool. A same-day Intel control without the
+recorder produced no recoverable erased draft for Blu. The complete evidence
+and present design judgment appear in
+[`PR3-FORENSIC-RESPONSE.md`](PR3-FORENSIC-RESPONSE.md).

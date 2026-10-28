@@ -87,3 +87,32 @@ phrase was recovered from terminal echo preserved by `/usr/bin/script`; the
 second appeared as the committed line. This establishes recoverability from the
 local transcript, not live observation of typing and not receipt of the erased
 phrase by the local model or a cloud service.
+
+## Same-day Intel negative control
+
+The 2015 Intel Mac did not have the same recorder running. The following
+exchange occurred after a proposed no-install `script` control failed to start
+because the reachability check timed out and the turn was interrupted.
+
+**2026-09-21 22:35:17.300 — Taylor**
+
+> .
+
+**2026-09-21 22:36:55.837 — Blu**
+
+> I can’t truthfully repeat either sentence from this run. I found no new recording on the ’15 in the locations checked; its Desktop still has only the earlier transcript copied from the ’26. We had not started the ’15’s `script` control before your `.`.
+>
+> Did you type the sentences into an app on the ’15, and if so, which one?
+
+**2026-09-21 22:37:33.194 — Taylor**
+
+> terminal on the '15
+
+**2026-09-21 22:38:07.827 — Blu**
+
+> Ah, that explains the result—and I should have been clearer that the recorder was **not yet running**. Plain Terminal displays your typing, but it doesn’t save the erased draft in a `.typescript` file. The ’26 test had an outer `script` recorder; this ’15 run did not.
+>
+> So I can’t recover the first sentence, and I won’t guess. This is a useful control for *our access path*: your `.` alone didn’t give me the erased text. It doesn’t establish what every system component might retain.
+
+The negative control and the later surviving-history audit are analyzed in
+[`PR3-FORENSIC-RESPONSE.md`](PR3-FORENSIC-RESPONSE.md).
