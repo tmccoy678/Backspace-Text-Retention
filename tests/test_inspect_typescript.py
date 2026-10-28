@@ -14,7 +14,7 @@ class InspectTypescriptTests(unittest.TestCase):
         data = b"first" + (b"\x08 \x08" * 3) + b"second"
         self.assertEqual(inspect_typescript.erase_runs(data), [(5, 14, 3)])
 
-    def test_discovery_recording_identity_and_count(self) -> None:
+    def test_structured_foundation_recording_identity_and_count(self) -> None:
         path = ROOT / "evidence/transcripts/Blu-Offline-20260921-153748.typescript"
         data = path.read_bytes()
         self.assertEqual(len(data), 1344)
@@ -23,6 +23,32 @@ class InspectTypescriptTests(unittest.TestCase):
             "e2e3e56c7f81420a870501594e55aa908ef63c01d46794ef2072e9123014f016",
         )
         self.assertIn((1010, 1055, 15), inspect_typescript.erase_runs(data))
+
+    def test_first_accidental_session_identity_and_erase_runs(self) -> None:
+        path = ROOT / "evidence/transcripts/Blu-Offline-20260921-141327.typescript"
+        data = path.read_bytes()
+        self.assertEqual(len(data), 1190)
+        self.assertEqual(
+            inspect_typescript.sha256(data),
+            "5cc08346d7de25988aa687d292eefc1bf994ba74d5031ff9b0cd7e3fc271cb5e",
+        )
+        self.assertIn(
+            b"My harmless target sentence is: [WRITE YOUR SENTENCE HERE].", data
+        )
+        self.assertEqual([run[2] for run in inspect_typescript.erase_runs(data)], [5, 30])
+
+    def test_second_accidental_session_identity_and_erase_runs(self) -> None:
+        path = ROOT / "evidence/transcripts/Blu-Offline-20260921-141944.typescript"
+        data = path.read_bytes()
+        self.assertEqual(len(data), 1816)
+        self.assertEqual(
+            inspect_typescript.sha256(data),
+            "7175aea528876898938e13eb98432f0b0e7bc8170e9c62fb3fadecf80126b375",
+        )
+        self.assertEqual(
+            [run[2] for run in inspect_typescript.erase_runs(data)],
+            [11, 13, 29, 2, 11, 2, 1],
+        )
 
     def test_caret_render_is_explicitly_a_representation(self) -> None:
         self.assertEqual(inspect_typescript.caret_render(b"A\x08 \x08B"), "A^H ^HB")

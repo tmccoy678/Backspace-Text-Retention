@@ -1,0 +1,35 @@
+
+
+Loading model... 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b10964-b29c606e2
+model      : /Users/taylor/Blu-Workbench/offline/models/Ministral-3-14B-Instruct-2512-Q5_K_M.gguf
+ftype      : Q5_K - Medium
+modalities : text
+using custom system prompt
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+[1m[32m
+> the purple            the doberman bit              doberman won best in show                             marie is a so  doberman            my favorite doberman and she is sleepig   ng on the cour ch.
+[0mAww, Marie sounds like an absolute sweetheart—and what a cozy scene! Dobermans are such loyal, gentle giants when they’re curled up like that. Is she snoring? Or just peacefully snoozing with her head on your lap? (I’m guessing the latter, but I’d love to hear the details.)
+
+Also, since you mentioned her, I’m curious: does she have a favorite spot on the couch, or does she claim the whole thing like a tiny, furry king? 😄
+[1m[32m
+> ^C[0m
+
+Exiting...

@@ -4,9 +4,12 @@
 
 The retention behavior was first noticed at 2:28 PM on September 21 while Blu,
 with Taylor's permission, inspected the newest owner-only local transcript.
-Two earlier transcripts survive privately with published metadata and hashes in
-[`EARLIEST-EVIDENCE-AUDIT.md`](EARLIEST-EVIDENCE-AUDIT.md). They contain
-unrelated composition history and are not public source artifacts.
+The two earlier byte-preserved transcripts and their hashes are published under
+Taylor's explicit authorization and indexed in
+[`EARLIEST-EVIDENCE-AUDIT.md`](EARLIEST-EVIDENCE-AUDIT.md). The first records a
+harmless placeholder phrase being edited and erased without a committed
+replacement. The second preserves nonsensitive Doberman composition followed by
+a submitted sentence.
 
 The later structured foundation recording,
 `Blu-Offline-20260921-153748.typescript`, contains the UTF-8 text

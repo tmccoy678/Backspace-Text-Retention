@@ -46,8 +46,8 @@ Two owner-only local transcripts predate the later structured
 
 | Artifact | Closed / filesystem time (CDT) | Bytes | SHA-256 |
 | --- | --- | ---: | --- |
-| `Blu-Offline-20260921-141327.typescript` | 2026-09-21 2:17:31 PM | 1,190 | `5cc08346d7de25988aa687d292eefc1bf994ba74d5031ff9b0cd7e3fc271cb5e` |
-| `Blu-Offline-20260921-141944.typescript` | 2026-09-21 2:23:20 PM | 1,816 | `7175aea528876898938e13eb98432f0b0e7bc8170e9c62fb3fadecf80126b375` |
+| [`Blu-Offline-20260921-141327.typescript`](../evidence/transcripts/Blu-Offline-20260921-141327.typescript) | 2026-09-21 2:17:31 PM | 1,190 | `5cc08346d7de25988aa687d292eefc1bf994ba74d5031ff9b0cd7e3fc271cb5e` |
+| [`Blu-Offline-20260921-141944.typescript`](../evidence/transcripts/Blu-Offline-20260921-141944.typescript) | 2026-09-21 2:23:20 PM | 1,816 | `7175aea528876898938e13eb98432f0b0e7bc8170e9c62fb3fadecf80126b375` |
 
 At 2:27:03 PM, the contemporaneous conversation listed both files. After Taylor
 gave permission to inspect only the newest transcript, Blu opened `141944`. At
@@ -56,9 +56,16 @@ records text you erased while composing, not just what you finally submitted."
 Blu expressly left `141327` unopened at that time and asked whether it was the
 earlier clue-making attempt.
 
-Those two raw files survive in Taylor's private research archive. They contain
-ordinary composition history unrelated to the public proof, so the repository
-publishes their metadata and hashes rather than their contents.
+The first file records the harmless template `My harmless target sentence is:
+[WRITE YOUR SENTENCE HERE].`, cursor movement, erasure, and Control-C; no
+replacement line was submitted. The second records Taylor revising several
+nonsensitive Doberman phrases before submitting a final couch sentence.
+
+Taylor explicitly authorized publication of both byte-preserved raw files on
+October 28, 2026. They contain no credentials or private identifiers. Their
+release does not retroactively convert the first session into a planned
+recording experiment: Taylor did not request recording, and the pre-existing
+Blu Offline wrapper had already embedded `/usr/bin/script` in every launch.
 
 The 3:37 PM artifact `Blu-Offline-20260921-153748.typescript` is the later
 structured foundation recording used for the byte-level case report. It remains
@@ -91,6 +98,6 @@ attempt.
 
 ## Privacy boundary
 
-This public audit excludes credentials, unrelated shell history, private raw
-composition, and the full private conversation record. It publishes the minimum
-metadata and artifacts needed to verify chronology and claim boundaries.
+This public audit excludes credentials, unrelated shell history, and the full
+private conversation record. The two nonsensitive raw transcripts are included
+under Taylor's explicit publication authorization.

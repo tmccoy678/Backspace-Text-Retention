@@ -10,6 +10,9 @@ confirmatory data collection, unblinding, and analysis have **not yet occurred**
 The completed September 21 terminal case that motivated this study is preserved
 separately as the [original-observation foundation](foundation/original-observation/).
 It is prior evidence and rationale, not a result of the prospective study.
+The first surviving session was not designed as a recording experiment: Taylor
+did not request recording, and `/usr/bin/script` was already embedded in the Blu
+Offline launcher before the retention behavior was noticed.
 
 Two October 27 mechanistic follow-ups are indexed separately in
 [`replications/`](replications/): a byte-preserved recorded-PTY replication on a
