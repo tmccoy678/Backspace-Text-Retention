@@ -7,12 +7,12 @@ before the repeated runs. No private text was entered.
 | Observed endpoint | Canonical line editing | Raw `-echo -icanon` |
 | --- | ---: | ---: |
 | Model answer contained that trial's exact marker | 0/6 | 6/6 |
-| Transcript contained `marker + backspace` input-echo sequence | 6/6 | 0/6 |
+| Transcript contained marker echo followed by visual-erasure output | 6/6 | 0/6 |
 | `NONE` in the model answer | 6/6 | 0/6 |
 | Confirmed `/clear` between trials | 5/5 | 5/5 |
 
 The raw-mode transcript still contains each marker because the model printed it
-in its answer. Three raw answers also included Delete (`0x7f`) characters after
+in its answer. Three raw answers also included ASCII `DEL` (`0x7f`) bytes after
 the marker; that was noticed after scoring and is exploratory, not a declared
 endpoint. The normal Desktop launch path was not changed or used for these
 trials.

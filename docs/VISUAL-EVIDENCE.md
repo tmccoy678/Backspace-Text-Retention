@@ -1,6 +1,7 @@
 # How to photograph an invisible byte
 
-A raw backspace byte (`0x08`) is a control instruction, not a printable glyph.
+An ASCII `BS` (Backspace) byte (`0x08`) is a control instruction, not a
+printable glyph.
 Opening the untouched transcript in an ordinary editor may therefore show an
 apparently blank region or may move the cursor backward. No character encoding
 can make that raw byte visibly print itself as `\b`, `^H`, or `08`; each of those

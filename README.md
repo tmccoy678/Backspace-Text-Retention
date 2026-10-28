@@ -1,4 +1,4 @@
-# Backspace Gate: A preregistered blinded test of exact recovery from a deleted terminal draft
+# Backspace Gate: A preregistered blinded test of exact recovery from a visually erased terminal draft
 
 **Taylor McCoy¹ and Blu²**<br>
 ¹ Independent researcher<br>
@@ -71,9 +71,27 @@ such as `script`, `tee`, or `asciinema`. It does not “unwrap” the
 terms in this repository describe Blu's observed local process paths unless a
 broader scope is stated explicitly.
 
+### Backspace, Delete, erase, and retention
+
+These terms name different layers and are not used as synonyms:
+
+| Term | Meaning here |
+| --- | --- |
+| **Physical Backspace key** | A key labeled Backspace, conventionally used for a backward-edit action. Its label does not determine the emitted byte or prove data destruction. |
+| **Physical Delete key** | A key labeled Delete. On the measured Apple path, this key performed a backward-edit action; in other interfaces, Delete may perform a forward-edit action. Its label alone identifies neither ASCII `DEL` nor POSIX `ERASE`. |
+| **ASCII `BS` (`0x08`)** | A control code that moves the active position backward. It is not an instruction to erase a recorder or storage device. |
+| **ASCII `DEL` (`0x7f`)** | A different ASCII code. On the measured path it was configured as the terminal's POSIX `ERASE` character; it is not ASCII `BS`. |
+| **POSIX `ERASE` / `VERASE`** | Canonical line-discipline processing that removes the preceding character from the current uncommitted input line. It does not retract output already emitted. |
+| **Visual erasure** | A character disappears from the rendered terminal. In the measured macOS path, `08 20 08` moved backward, overwrote with a space, and moved backward again. |
+| **Deletion from storage** | A separate claim about whether a retained representation remains recoverable from a log, backup, or medium. No key label or visual change establishes this by itself. |
+
+The complete definitions, standards basis, preferred repository language, and
+full related-work review are in
+[`docs/RELATED-WORK-AND-TERMINOLOGY.md`](docs/RELATED-WORK-AND-TERMINOLOGY.md).
+
 ## Abstract
 
-Text deleted from a terminal's visible input line may remain recoverable in a
+Text visually erased from a terminal's input line may remain recoverable in a
 session recording even when the edited text is not delivered to the interactive
 application. A completed local case established a plausible recovery path:
 macOS `/usr/bin/script -q` preserved draft-text echo and subsequent `08 20 08`
@@ -85,8 +103,9 @@ This study will test whether transcript-mediated inspection can recover a
 previously unknown ordered sequence of ten physical playing cards. Taylor will
 generate the target by drawing ten cards without replacement from a shuffled
 standard 52-card deck, record the ground truth off-computer, enter an agreed
-text encoding into a locally recorded terminal without pressing Return, delete
-the complete target, and submit a separate control line. Blu will inspect the
+text encoding into a locally recorded terminal without pressing Return, remove
+the complete target from the canonical draft with the configured backward-edit
+action, and submit a separate control line. Blu will inspect the
 frozen local transcript and record one exact prediction before the target is
 revealed. The primary endpoint is exact ordered-sequence agreement. Under the
 preregistered uniform-order independence null, the probability of an exact
@@ -94,7 +113,8 @@ match is `1 / 52P10 = 1.741926487643891E-17`, approximately one in 57.4
 quadrillion. No outcome data have been collected and no confirmatory analysis
 has been performed. An exact match would reject the specified chance-guessing
 null under its assumptions; it would not, by itself, identify the recovery
-mechanism or establish that a model or network service received deleted text.
+mechanism or establish that a model or network service received the visually
+erased draft text.
 
 **Keywords:** terminal recording; pseudo-terminal; blinded recovery; playing
 cards; exact permutation; backspace text data; local language model; `script`;
@@ -109,7 +129,7 @@ Return. A sequential recorder can nevertheless preserve the earlier character
 echo and the later control bytes used to remove those characters from the
 screen. Apple documents that `script(1)` records terminal output and that its
 log includes backspaces, while POSIX describes canonical editing and echo at
-the terminal line discipline (Apple Inc., 2023a, 2023b; The Open Group, 2004).
+the terminal line discipline (Apple Inc., 2023a, 2023b; The Open Group, 2024).
 
 The [foundation case](foundation/original-observation/) observed this boundary
 in one local `llama-cli` session. The recording contained the abandoned phrase
@@ -128,12 +148,34 @@ ordered target that another researcher can reproduce without constructing a
 custom word list. The study asks one bounded question:
 
 > Can read-only inspection of the frozen terminal recording recover the exact
-> ordered ten-card target that was typed and visually deleted before a separate
+> ordered ten-card target that was typed and visually erased before a separate
 > line was committed?
 
 The preregistered hypothesis is exact recovery of all ten cards in order. The
 null hypothesis is that the frozen recovery is independent of the concealed
 card order and that any exact ordered match occurs by chance.
+
+## Related work and contribution boundary
+
+Dewald et al. (2011) provide the closest direct published precedent. Their
+analysis of `script` includes a worked trace in which a physical Backspace
+action produces `0x7f` (ASCII `DEL`) as input while the shell emits `0x08`
+(ASCII `BS`) plus a display-erasure sequence as output. Their `forscript` tool
+records input and output separately because an ordinary output transcript is
+not an unambiguous record of user action. Apple's manual likewise warns that
+`script` logs include backspaces. The component behavior is therefore prior
+knowledge, not a newly discovered terminal mechanism.
+
+The narrower contribution investigated here is the privacy consequence of the
+complete boundary: POSIX `ERASE` can remove draft text from the future line
+delivered to the child while echo exposes that composition as PTY output and
+an output-only recorder makes the composition history durable. This resembles
+pre-submission recording in browser privacy research and the distinction
+between interface disappearance and backend deletion in user research (Acar
+et al., 2020; Murillo et al., 2018; Senol et al., 2022). No absolute novelty or
+historical-priority claim is made. The full narrative review and APA reference
+list are in
+[`docs/RELATED-WORK-AND-TERMINOLOGY.md`](docs/RELATED-WORK-AND-TERMINOLOGY.md).
 
 ## Methods
 
@@ -198,7 +240,9 @@ The local terminal session will be wrapped by `/usr/bin/script -q` and will use
 ordinary canonical line editing. Taylor will:
 
 1. type the encoded ten-card target without pressing Return;
-2. press Delete until the complete encoded target is visually removed;
+2. press the physical backward-edit key until the complete encoded target is
+   visually removed, recording its label, emitted byte, and configured POSIX
+   `ERASE` value;
 3. type the separately frozen control line;
 4. press Return once;
 5. end the local interaction cleanly and preserve the resulting `.typescript`
@@ -314,7 +358,8 @@ foundation case, and it would not justify an undeclared retry.
 
 Even a perfect result would not establish that:
 
-- `llama-cli` or the local model received the deleted canonical draft;
+- `llama-cli` or the local model received the draft removed from the canonical
+  input line by `ERASE`;
 - OpenAI, ChatGPT, Codex, Ollama, Apple, or a network service collected it;
 - the assistant guessed the sequence without transcript access;
 - the same recovery rate generalizes to other terminals, recorders, operating
@@ -342,7 +387,7 @@ the final report rather than being repaired after the outcome is known.
 
 Backspace Gate is a prospective blinded test of whether a declared transcript-
 inspection pipeline can recover an exact ten-card sequence that was typed and
-visually deleted before a different line was submitted. Its primary chance
+visually erased before a different line was submitted. Its primary chance
 benchmark is one exact ordered sequence among 57,407,703,889,536,000 possible
 ten-card sequences under a uniform-order null. The study is preregistered, but
 data collection and analysis are not complete. The completed terminal case is
@@ -355,6 +400,7 @@ of this confirmatory challenge.
 - [Prospective preregistration](preregistration/PREREGISTRATION-2026-09-24.md)
 - [Foundation evidence collection](evidence/)
 - [Foundation technical documentation](docs/)
+- [Related work, terminology, and APA references](docs/RELATED-WORK-AND-TERMINOLOGY.md)
 - [Earliest-evidence and launcher-origin audit](docs/EARLIEST-EVIDENCE-AUDIT.md)
 - [Existing foundation and validation utilities](analysis/)
 - [Provenance records](provenance/)
@@ -383,6 +429,11 @@ Abramson, J., & North, S. (2020). *College algebra with corequisite support*.
 OpenStax.
 https://openstax.org/books/college-algebra-corequisite-support/pages/9-5-counting-principles
 
+Acar, G., Englehardt, S., & Narayanan, A. (2020). No boundaries: Data
+exfiltration by third parties embedded on web pages. *Proceedings on Privacy
+Enhancing Technologies, 2020*(4), 220–238.
+https://doi.org/10.2478/popets-2020-0070
+
 Apple Inc. (2023a). *script.c* (shell_cmds-302.0.1) [Source code]. Apple Open
 Source.
 https://github.com/apple-oss-distributions/shell_cmds/blob/e256b9a97f9bbd751305b7af36cf751668fbb849/script/script.c
@@ -396,9 +447,20 @@ probabilities of Spearman's rho. *Journal of the Royal Statistical Society:
 Series C (Applied Statistics), 24*(3), 377–379.
 https://doi.org/10.2307/2347111
 
+Dewald, A., Freiling, F. C., & Weber, T. (2011). Design and implementation of a
+documentation tool for interactive commandline sessions. In *2011 Sixth
+International Conference on IT Security Incident Management and IT Forensics*
+(pp. 62–80). IEEE. https://doi.org/10.1109/IMF.2011.17
+
 Mistral AI. (2025). *Ministral 3 14B Instruct 2512 GGUF* [Large language model].
 Hugging Face.
 https://huggingface.co/mistralai/Ministral-3-14B-Instruct-2512-GGUF
+
+Murillo, A., Kramm, A., Schnorf, S., & De Luca, A. (2018). “If I press delete,
+it's gone”: User understanding of online data deletion and expiration. In
+*Fourteenth Symposium on Usable Privacy and Security (SOUPS 2018)* (pp.
+329–339). USENIX Association.
+https://www.usenix.org/conference/soups2018/presentation/murillo
 
 oliviamckee. (2026). *Backspace retention on Windows: Simulation and native
 ConPTY evidence* [Source code and research repository]. GitHub.
@@ -408,13 +470,18 @@ R Core Team. (2026). *R: A language and environment for statistical
 computing*. R Foundation for Statistical Computing.
 https://doi.org/10.32614/R.manuals
 
+Senol, A., Acar, G., Humbert, M., & Zuiderveen Borgesius, F. (2022). Leaky
+forms: A study of email and password exfiltration before form submission. In
+*31st USENIX Security Symposium (USENIX Security 22)* (pp. 1813–1830). USENIX
+Association. https://www.usenix.org/conference/usenixsecurity22/presentation/senol
+
 Spearman, C. (1904). The proof and measurement of association between two
 things. *The American Journal of Psychology, 15*(1), 72–101.
 https://doi.org/10.2307/1412159
 
-The Open Group. (2004). General terminal interface. In *The Open Group Base
-Specifications Issue 6, IEEE Std 1003.1, 2004 edition*.
-https://pubs.opengroup.org/onlinepubs/007904975/basedefs/xbd_chap11.html
+The Open Group. (2024). General terminal interface. In *The Open Group Base
+Specifications Issue 8, IEEE Std 1003.1-2024*.
+https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap11.html
 
 Wasserstein, R. L., & Lazar, N. A. (2016). The ASA's statement on p-values:
 Context, process, and purpose. *The American Statistician, 70*(2), 129–133.

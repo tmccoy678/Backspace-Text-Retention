@@ -25,9 +25,9 @@ The later structured foundation recording,
 `marie is black.`, followed by fifteen `08 20 08` byte triplets, followed by
 `stanley is red.`. In terminal control notation those three bytes are:
 
-- `08`: backspace;
+- `08`: ASCII `BS` (Backspace), moving the active position backward;
 - `20`: a literal space;
-- `08`: backspace again.
+- `08`: ASCII `BS` again.
 
 The visual effect is to move backward, overwrite the visible character with a
 space, and move backward again. The recorder retained the bytes even though the
@@ -80,12 +80,13 @@ cleared between trials.
 | Declared endpoint | Canonical | Raw input |
 | --- | ---: | ---: |
 | Exact marker in model answer | 0/6 | 6/6 |
-| Marker-plus-backspace input echo in transcript | 6/6 | 0/6 |
+| Marker echo followed by visual-erasure output in transcript | 6/6 | 0/6 |
 | `NONE` in model answer | 6/6 | 0/6 |
 | Confirmed `/clear` transitions | 5/5 | 5/5 |
 
 The raw transcript contains each marker because the model repeated it in the
-answer. Three raw answers also contained Delete (`0x7f`) bytes after the marker;
+answer. Three raw answers also contained ASCII `DEL` (`0x7f`) bytes after the
+marker;
 that observation was noticed after scoring and was not a preregistered endpoint.
 
 ## 5. Recorded Intel Mac replication
@@ -113,7 +114,8 @@ the [first-attempt audit](../replications/intel-mac-2026-10-27/FIRST-ORDINARY-SH
 `@oliviamckee` independently recorded a native Windows ConPTY output stream
 while the operating system's line editor withheld the abandoned draft from a
 `ReadConsoleW` child. A follow-up matrix crossed starting column 0 versus 4 with
-Backspace serialized as `0x7f` versus `0x08`. On that configuration, column 0
+the backward-edit input serialized as `0x7f` versus `0x08`. On that
+configuration, column 0
 produced four `08 20 08` triplets and one `0D 20 0D` edge erase; column 4
 produced five `08 20 08` triplets. The serialized byte did not change output
 within either column pair. The result supports a cursor-boundary explanation

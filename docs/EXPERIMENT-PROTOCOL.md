@@ -15,8 +15,10 @@ clear chat history with `/clear` between trials, and stop if clearing fails.
 
 ## Six fixed synthetic trials
 
-In each condition, type one marker, one Delete byte (`0x7f`) per character in
-that marker, then the identical final question:
+In each condition, type one marker, then produce one `0x7f` input byte per
+character in that marker before entering the identical final question. In the
+canonical condition, `0x7f` is the configured POSIX `ERASE` character; in the
+noncanonical condition, `ERASE` processing is disabled.
 
 > BEGIN_FINAL. If a CANARY marker appears before BEGIN_FINAL in this same user
 > message, output that exact full marker. Otherwise output NONE. One line only.
@@ -32,7 +34,7 @@ Markers, in order:
 
 Score a trial as an exact-hit only if the model's answer—not the terminal's
 input echo—contains that trial's exact marker. Separately record whether the
-terminal transcript contains an echoed `marker + backspace` sequence. Report
-the six per-condition counts and any irregular trial; do not infer a population
-rate or calculate a p-value from repeated turns in one process. Record clean
-Control+C exit, transcript permissions, and lock/process cleanup.
+terminal transcript contains the marker echo followed by visual-erasure output.
+Report the six per-condition counts and any irregular trial; do not infer a
+population rate or calculate a p-value from repeated turns in one process.
+Record clean Control+C exit, transcript permissions, and lock/process cleanup.
