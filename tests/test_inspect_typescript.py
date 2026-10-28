@@ -24,7 +24,7 @@ class InspectTypescriptTests(unittest.TestCase):
         )
         self.assertIn((1010, 1055, 15), inspect_typescript.erase_runs(data))
 
-    def test_first_accidental_session_identity_and_erase_runs(self) -> None:
+    def test_first_published_precontrol_identity_and_erase_runs(self) -> None:
         path = ROOT / "evidence/transcripts/Blu-Offline-20260921-141327.typescript"
         data = path.read_bytes()
         self.assertEqual(len(data), 1190)
@@ -40,7 +40,7 @@ class InspectTypescriptTests(unittest.TestCase):
             [(1058, 1073, 5), (1078, 1168, 30)],
         )
 
-    def test_second_accidental_session_identity_and_erase_runs(self) -> None:
+    def test_first_recognized_substantive_identity_and_erase_runs(self) -> None:
         path = ROOT / "evidence/transcripts/Blu-Offline-20260921-141944.typescript"
         data = path.read_bytes()
         self.assertEqual(len(data), 1816)
@@ -64,7 +64,7 @@ class InspectTypescriptTests(unittest.TestCase):
     def test_caret_render_is_explicitly_a_representation(self) -> None:
         self.assertEqual(inspect_typescript.caret_render(b"A\x08 \x08B"), "A^H ^HB")
 
-    def test_first_observation_resolves_to_committed_line(self) -> None:
+    def test_first_recognized_substantive_run_resolves_to_committed_line(self) -> None:
         path = (
             ROOT
             / "evidence"

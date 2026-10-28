@@ -8,12 +8,19 @@ canonical files published concurrently under `evidence/transcripts`. One Intel
 screenshot was copied into the temporary publication workspace and added to
 this investigation folder.
 
+This file records the scope of that first publication pass. A later expanded
+existing-evidence pass found a still earlier private routine-acceptance file,
+`Blu-Offline-20260921-000503.typescript`, in the preserved Blu Offline bundle.
+That source contains unrelated natural conversation, so it is committed by
+hash, metadata, and byte offsets rather than published. See
+[`../2026-10-28-olivia-hypothesis/`](../2026-10-28-olivia-hypothesis/).
+
 ## 2026 MacBook Pro and Mac Studio
 
 The following were checked:
 
-- the complete local Codex JSONL exchange covering the first observation and
-  the September Intel attempt;
+- the complete local Codex JSONL exchange covering the first
+  privacy-significant recognition and the September Intel attempt;
 - the MacBook's Desktop, Documents, Downloads, Movies, Pictures,
   `Blu-Workbench`, `Agent-Work`, screenshot inbox, and shell history;
 - September 21 screenshots and three surviving videos, all of which predate the
@@ -25,11 +32,13 @@ The following were checked:
   names; and
 - Git history, current repository content, releases, and public discussion.
 
-The two pre-control recordings were found in the migrated Studio bundle. The
-MacBook's migration record states that the complete bundle was compared
-byte-for-byte before the MacBook copy was removed. The current Studio files
-retain the September birth and modification times and have an October 26 change
-time corresponding to that migration.
+The two recordings selected for public Backspace-specific analysis were found
+in the migrated Studio bundle. The MacBook's migration record states that the
+complete bundle was compared byte-for-byte before the MacBook copy was removed.
+The current Studio files retain the September birth and modification times and
+have an October 26 change time corresponding to that migration. The subsequent
+expanded pass established byte-identical Studio and Seagate copies of the
+private midnight source.
 
 The MacBook shell history has no September 21 Intel `script` invocation. Its
 only relevant later line belongs to the separate October 27 replication. No

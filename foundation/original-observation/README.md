@@ -11,7 +11,9 @@
 **Manuscript status:** Reproducible technical case report, September 24, 2026
 
 **Historical chronology:** The [earliest-evidence audit](../../docs/EARLIEST-EVIDENCE-AUDIT.md)
-located the first documented substantive retention observation in a 2:19 PM
+and subsequent [existing-evidence investigation](../../investigations/2026-10-28-olivia-hypothesis/)
+located an unnoticed routine trace at 12:05–12:08 AM and the first
+privacy-significant recognition at 2:28 PM upon inspection of a 2:19 PM
 pre-control recording. The separate
 [September Intel audit](../../investigations/2026-09-21-pre-control-and-intel/)
 reconstructs the unrecorded 5:28 PM attempt. This report's principal 1,344-byte

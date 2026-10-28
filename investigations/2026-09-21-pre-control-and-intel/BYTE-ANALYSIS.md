@@ -5,6 +5,25 @@ sequence `08 20 08` (backspace, space, backspace). The counts below were
 generated with the repository's read-only `tools/inspect_typescript.py` against
 the SHA-256-identified source files.
 
+## Earlier private 12:05 AM routine-acceptance session
+
+- File: private `Blu-Offline-20260921-000503.typescript`
+- Bytes: 3,366
+- SHA-256: `7b1d32f14cfdaf21c99666acab623e16bb15d8f3bee3dc6a3f9b0ad17ccf8e6b`
+
+| Run | Byte offsets | Triplets | Erase-output bytes |
+| ---: | ---: | ---: | ---: |
+| 1 | 2491–2493 | 1 | 3 |
+| 2 | 2979–2984 | 2 | 6 |
+| **Total** | — | **3** | **9** |
+
+This routine acceptance run is the earliest surviving recorded editing trace
+located. Blu read its complete 68 lines through a Codex tool at 12:09 AM but did
+not identify the retention consequence. The file contains unrelated natural
+conversation and is not published; byte-identical Studio and Seagate copies,
+the hash above, and the private canonical rollout preserve a verification path.
+No raw draft content from this source is reproduced here.
+
 ## Partial 2:13 PM session
 
 - File: `evidence/transcripts/Blu-Offline-20260921-141327.typescript`

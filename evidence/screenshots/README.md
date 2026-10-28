@@ -6,7 +6,7 @@ contextual records, not substitutes for the original `.typescript` bytes.
 
 | File | Visible subject |
 | --- | --- |
-| `01-discovery-erased-text-observed.png` | Initial observation that erased terminal text remained in a recording |
+| `01-discovery-erased-text-observed.png` | First privacy-significant recognition that erased terminal text remained in a recording |
 | `02-reverse-path-synthetic-control.png` | Reverse-path synthetic-control design |
 | `03-llama-console-termios-source.png` | Installed llama.cpp terminal-mode source |
 | `04-source-analysis-and-correction.png` | Source interpretation and correction |

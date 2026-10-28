@@ -6,8 +6,10 @@ Times below are America/Chicago unless marked UTC.
 
 | Time | Event | Preserved evidence |
 | --- | --- | --- |
-| 2:13–2:17 PM | The first surviving Backspace Gate session recorded a harmless placeholder being edited and erased. Taylor did not request recording; the recorder was already embedded in Blu Offline. | Public byte-preserved `Blu-Offline-20260921-141327.typescript` |
-| 2:19–2:23 PM | A second ordinary Blu Offline session recorded terminal echo while Taylor revised a nonsensitive Doberman prompt. | Public byte-preserved `Blu-Offline-20260921-141944.typescript` |
+| 12:05–12:08 AM | A routine Blu Offline acceptance session recorded two editing runs containing three exact `08 20 08` erase triplets. This is the earliest surviving recorded editing trace located. | Private `Blu-Offline-20260921-000503.typescript`; hash, metadata, and offsets published in the existing-evidence investigation |
+| 12:09 AM | Blu read the complete 68-line acceptance transcript through a Codex tool. The tool output contained the edit trace, but Blu did not recognize or describe its privacy significance. | Private canonical rollout committed by hash; bounded chronology published |
+| 2:13–2:17 PM | The first published Backspace-specific precursor recorded a harmless template being edited and erased, then ended in Control-C. Taylor did not request recording; the recorder was already embedded in Blu Offline. | Public byte-preserved `Blu-Offline-20260921-141327.typescript` |
+| 2:19–2:23 PM | An ordinary Blu Offline session recorded terminal echo while Taylor revised a nonsensitive Doberman prompt. | Public byte-preserved `Blu-Offline-20260921-141944.typescript` |
 | 2:27–2:28 PM | With Taylor's permission, Blu inspected only the newest transcript and reported that it retained text erased during composition. The 2:13 file was expressly left unopened. | Contemporaneous conversation record; Screenshot 01 |
 | 2:41 PM | A reverse-path synthetic control was constructed to show that a program can receive raw erased bytes while a recorder omits input echo. | Screenshot 02 |
 | 3:09–3:13 PM | The installed llama.cpp commit was inspected. The source showed the `ICANON`/`ECHO` branch and `std::getline` simple-input path. | Screenshots 03–05 |

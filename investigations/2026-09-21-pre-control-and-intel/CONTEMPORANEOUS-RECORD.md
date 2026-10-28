@@ -6,10 +6,29 @@ command results relevant to these experiments are reproduced; the
 multi-gigabyte source also contains unrelated private work and is not published
 here.
 
-## First erased-draft observation
+## Earlier unnoticed routine trace
+
+The subsequent existing-evidence audit located
+`Blu-Offline-20260921-000503.typescript`, created during the ordinary second
+Wi-Fi-off acceptance run from approximately **12:05–12:08 AM**. It contains
+two editing runs totaling three exact `08 20 08` erase triplets. At
+**12:09:30 AM**, Blu ran `sed -n '1,260p'` against the complete 68-line file as
+part of routine acceptance verification. The resulting Codex tool output
+contained both the earlier characters and the erase bytes. Blu did not identify
+or describe deleted-composition retention.
+
+This establishes that the mechanism operated, and that its output entered a
+Codex tool record, more than fourteen hours before anyone recognized the
+privacy consequence. The raw transcript contains unrelated natural
+conversation and remains private; its metadata, hash, and erase offsets are
+published in the
+[existing-evidence investigation](../2026-10-28-olivia-hypothesis/).
+
+## First privacy-significant recognition
 
 The `141327` session began as a clue-making attempt but ended at the literal
-prompt template. The next session produced the substantive observation.
+prompt template. The next session produced the first substantive recovery that
+Blu recognized as privacy significant.
 
 **2:24:33 PM — Taylor**
 

@@ -19,9 +19,9 @@ trials.
 
 Evidence (both files mode `0600`):
 
-- `transcripts/Blu-Offline-CanonicalControl-20260921-152512.typescript` — SHA-256
+- `evidence/transcripts/Blu-Offline-CanonicalControl-20260921-152512.typescript` — SHA-256
   `8a48aeff436c1a58a4859cc36bebdf63b2586759321eb87be1d7b1951322ee0b`.
-- `transcripts/Blu-Offline-RawTest-20260921-152605.typescript` — SHA-256
+- `evidence/transcripts/Blu-Offline-RawTest-20260921-152605.typescript` — SHA-256
   `cf3381d776fff22af18f82185f426cf5ee525f160b336463e9bababc91f0081b`.
 
 Both launches exited normally with Control+C. Afterward, the launcher lock was
