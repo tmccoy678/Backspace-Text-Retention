@@ -14,6 +14,11 @@ The first surviving session was not designed as a recording experiment: Taylor
 did not request recording, and `/usr/bin/script` was already embedded in the Blu
 Offline launcher before the retention behavior was noticed.
 
+A later [historical audit](investigations/2026-09-21-pre-control-and-intel/) of
+the September evidence adds exact byte-run analysis for the two early recordings
+and reconstructs the distinct unrecorded September 21 attempt on the 2015 Intel
+Mac.
+
 Two October 27 mechanistic follow-ups are indexed separately in
 [`replications/`](replications/): a byte-preserved recorded-PTY replication on a
 2015 Intel Mac and `@oliviamckee`'s independent Windows ConPTY study. Neither is
