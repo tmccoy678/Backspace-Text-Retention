@@ -167,28 +167,41 @@ identifier. The raw source is not public.
 
 `@oliviamckee` proposed that accidental erased-draft retention may occur in an
 ordinary Codex interface, not only in the custom transcript-enabled Blu Offline
-launcher. This is a strong, testable extension of the present work.
+launcher. A read-only retrospective audit has now answered that hypothesis to
+the limit of the evidence already present on Taylor's machines.
 
 Blu's analysis of Taylor's summary separates three propositions: the unintended
 retention consequence was accidental; the terminal generated the measured edit
-trace but the recorder made it durable; and generalization to any Codex app is
-plausible but unproved. The known launcher mechanism and the broader Codex
-hypothesis are not mutually exclusive. Demonstrating the known mechanism does
-not rule out a second persistence path, but it also does not establish one.
+trace but the recorder made it durable; and the strong claim that every Codex
+interface has the same durable deleted-draft behavior is not supported.
 
 The current record separates the intended recorder from its unintended privacy
 consequence: Blu intentionally enabled transcripts; retaining composition erased
 before Return was accidental. The Intel negative control shows that ordinary
 Terminal alone did not make an erased draft recoverable to Blu, but it did not
-exercise Codex's own interactive composer. The hypothesis therefore remains
-open rather than disproved.
+exercise Codex's own interactive composer.
 
-The proposed comparison freezes harmless synthetic markers across unwrapped
-Codex CLI, recorder-wrapped Codex CLI, and the graphical Codex app, then scores
-terminal output, local Codex state, app state, and submitted conversation
-content separately. Network receipt remains a distinct endpoint requiring
-different evidence. The full design and outcome interpretations are recorded in
-the [forensic response](PR3-FORENSIC-RESPONSE.md#9-livs-codex-generalization-hypothesis).
+The installed graphical Codex app supplies the previously missing second path.
+Its packaged code persists the current prompt in `composer-prompt-drafts-v2`,
+publishes draft changes after 250 milliseconds, and writes the latest persisted
+atom state to `~/.codex/.codex-global-state.json` after a 500-millisecond native
+debounce. The main state and `.bak` are replaced with the same latest state.
+Clearing the composer deletes the logical draft entry rather than maintaining
+an intentional revision history.
+
+This confirms Liv's narrower insight: the custom Blu Offline recorder is not
+the only mechanism capable of storing pre-submission composition locally. It
+does **not** confirm the stronger proposition that every Codex interface
+durably preserves every revision after deletion. The known PTY recorder remains
+the only existing end-to-end demonstration of a complete recoverable edit
+trace. The current unwrapped Blu Private CLI process had no content recorder in
+its ancestry, but the existing record is not a deleted-marker trial and cannot
+prove universal CLI non-retention.
+
+The full evidence, installed-build hashes, state snapshot, and bounded verdict
+are in the
+[retrospective verdict](LIV-CODEX-HYPOTHESIS-RETROSPECTIVE-VERDICT.md).
+Network receipt remains a distinct endpoint requiring different evidence.
 
 Taylor and Liv's separate contemporaneous computer records provide operator-side
 chronology and ground truth across different systems. The Blu lane is an
