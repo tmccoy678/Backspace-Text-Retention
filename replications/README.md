@@ -32,8 +32,8 @@ Windows evidence:
 The Windows host recorded only the ConPTY output pipe while `ReadConsoleW`
 received the committed replacement. Olivia's four-case follow-up found that the
 starting column determined whether the last erase used the left-edge
-`0D 20 0D` form; serializing Backspace as `0x7f` versus `0x08` did not change
-output within either column pair.
+`0D 20 0D` form; serializing the backward-edit input as `0x7f` versus `0x08`
+did not change output within either column pair.
 
 The repositories are connected by citations and claim boundaries rather than
 by copying independently authored evidence. That keeps checksums, provenance,

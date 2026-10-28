@@ -1,4 +1,4 @@
-# Backspace Gate: Deleted text persisted in a recorded macOS pseudo-terminal while canonical line editing withheld it from a local language-model process
+# Backspace Gate: Visually erased text persisted in a recorded macOS pseudo-terminal while canonical line editing withheld it from a local language-model process
 
 > **Foundation case report.** This completed September 21 observation motivated
 > the repository's [prospective blinded ten-card study](../../README.md). It is
@@ -22,25 +22,28 @@ results are unchanged.
 
 ## Abstract
 
-Visual deletion and recorded deletion are not equivalent in a terminal. The
+Visual erasure and deletion from a recording are not equivalent in a terminal.
+The
 researchers examined a 1,344-byte macOS terminal recording created while a
 local language model was used through `llama-cli`. In canonical mode, the
-pseudo-terminal (PTY) echoed the draft text, processed each Delete press,
-emitted `08 20 08` (backspace, space, backspace) to erase each visible
+pseudo-terminal (PTY) echoed the draft text, processed each physical Delete-key
+action as POSIX `ERASE`, emitted `08 20 08` (backspace, space, backspace) to
+erase each visible
 character, and delivered only the committed line to `llama-cli`.
 `/usr/bin/script -q` recorded the echoed output, including the erased draft and
 erase sequences, in a `.typescript` file. The erased phrase, `marie is black.`,
 remained byte-recoverable before fifteen contiguous erase triplets; the
 submitted phrase was `stanley is red.`. The 15-byte abandoned draft and 45-byte
 erase output therefore added 60 bytes of recoverable composition history: four
-bytes per deleted ASCII character. In a preregistered six-pair diagnostic,
+bytes per visually erased ASCII character. In a preregistered six-pair
+diagnostic,
 the local model repeated the erased synthetic marker in 0/6 canonical trials
 and 6/6 deliberately noncanonical, no-echo trials. These findings identify a
 specific retention boundary: the recorder preserved sequential PTY output even
 when later control bytes removed text from the rendered line. They also expose
 a documentation-to-behavior gap: Apple documents both comprehensive terminal
 output recording and the presence of backspaces in the log, but does not state
-the practical consequence that text visually deleted by those backspaces can
+the practical consequence that text visually erased by those backspaces can
 remain byte-recoverable. The findings do not show
 that the physical keyboard, `llama-cli`, the model weights, or a network service
 stored deleted drafts independently.
@@ -54,7 +57,7 @@ privacy; local language model; backspace text data; data minimization; `script`;
 Keyboard editing conventions predate graphical text fields. ASCII assigned
 `0x08` to the Backspace format effector by 1969 (Cerf, 1969), and contemporary
 POSIX terminals retain a line discipline that can echo, edit, and buffer input
-before an application reads a completed line (The Open Group, 2004). Thus, a
+before an application reads a completed line (The Open Group, 2024). Thus, a
 terminal display is a rendering of a byte stream rather than a definitive view
 of what a recorder has stored.
 
@@ -63,7 +66,8 @@ language models. A user may reasonably infer that text erased before Return was
 neither submitted nor retained. In canonical mode, the first inference can be
 correct for the child process while the second is false for a session recorder.
 The present case isolates those layers. Its central observation is that the PTY
-echoed a draft, converted fifteen Delete actions into fifteen visible-erasure
+echoed a draft, converted fifteen configured `ERASE` actions initiated by the
+physical Delete key into fifteen visible-erasure
 sequences, and withheld the erased draft from the completed line delivered to
 `llama-cli`; meanwhile, the outer `script` utility recorded the earlier echo
 and the later erasure bytes.
@@ -72,14 +76,29 @@ Apple's documentation supplies both premises of this behavior: `script` records
 everything printed on the terminal, and its log includes backspaces. It does not
 express the compound, user-facing consequence that a backspace changes the
 rendered screen without retracting bytes already appended to the recording.
-This report tests and visualizes that consequence at byte level. Because the
-literature was not systematically reviewed, the study treats this as a measured
-documentation-to-behavior gap rather than a claim of historical priority.
+This report tests and visualizes that consequence at byte level. A later
+[narrative review](../../docs/RELATED-WORK-AND-TERMINOLOGY.md) located direct
+prior documentation of the component behavior, including Dewald et al.'s
+(2011) worked `script` trace. The review is not systematic, and this report
+makes no claim of historical priority.
 
 For clarity, this report uses **backspace text data** as a working term for the
 durably recorded combination of (a) draft-text bytes later erased from the
 rendered line and (b) the control bytes that perform that visible erasure. The
 term is descriptive, not established terminal nomenclature.
+
+### Editing terminology
+
+The physical key, input byte, editing function, display output, and storage
+state are distinct. In this case, the physical key labeled **Delete** performed
+a backward-edit action and produced `0x7f`, ASCII `DEL`. The PTY treated that
+configured byte as POSIX `ERASE`, removed the previous character from the
+uncommitted canonical input line, and emitted `0x08 0x20 0x08` as visual-
+erasure output. ASCII `0x08` is `BS` (Backspace), which moves the active
+position backward; it is not ASCII `DEL` and does not itself destroy stored
+data. The child received only the committed replacement line, while `script`
+retained the earlier echo and erasure output. Complete definitions appear in
+the [terminology and related-work review](../../docs/RELATED-WORK-AND-TERMINOLOGY.md).
 
 The study asked two bounded questions: (a) what exact bytes remained in the
 later structured foundation recording after visible deletion, and (b) would
@@ -125,8 +144,10 @@ with llama.cpp (Mistral AI, 2026).
 ### Structured foundation procedure
 
 At the `llama-cli` interactive prompt, the researchers entered the 15-character
-sentence `marie is black.`, pressed Delete once per character without pressing
-Return, typed `stanley is red.`, and submitted the second sentence. The session
+sentence `marie is black.`, pressed the physical key labeled Delete once per
+character without pressing Return, typed `stanley is red.`, and submitted the
+second sentence. On this measured path, that key emitted `0x7f`, the configured
+POSIX `ERASE` character. The session
 was wrapped by `/usr/bin/script -q`, which wrote
 `Blu-Offline-20260921-153748.typescript`. The researchers recorded Wi-Fi as disabled
 during the interaction; no packet capture was used, so network absence is not
@@ -144,8 +165,9 @@ Six fixed synthetic `CANARY_` markers were tested in the same order under two
 conditions. The canonical condition preserved ordinary PTY line editing and
 echo. The raw condition invoked `stty -echo -icanon min 1 time 0` in the child
 PTY before starting the same `llama-cli` executable. Each marker was typed and
-deleted before an identical final question. Chat history was cleared between
-trials. The declared primary endpoint was whether the model's answer—not input
+removed with the configured edit action before an identical final question.
+Chat history was cleared between trials. The declared primary endpoint was
+whether the model's answer—not input
 echo—contained the exact marker. A second endpoint recorded whether the
 transcript contained marker-plus-erasure input echo. Full wording appears in
 `docs/EXPERIMENT-PROTOCOL.md`.
@@ -179,7 +201,7 @@ or retain the underlying data.
 For this ASCII case, the researchers defined the recoverable
 composition-history burden as the echoed draft bytes plus the visual-erasure
 output bytes. If `d` is the number of one-byte ASCII characters typed and then
-deleted, the measured canonical behavior produces:
+visually erased, the measured canonical behavior produces:
 
 ```text
 draft echo          = d bytes
@@ -215,11 +237,12 @@ The first phrase therefore remained recoverable before the bytes that erased it
 visually. The model's visible answer addressed the submitted second sentence.
 The recording alone does not provide a direct byte trace of the model prompt.
 
-The 15 Delete actions produced 45 erase-output bytes, three per action. Adding
-the already-recorded 15-byte abandoned draft yields 60 bytes of backspace text
-data. Because the replacement sentence was also 15 bytes, the 75-byte region
-contained 60 bytes beyond a final-line-only 15-byte baseline. This ratio is
-specific to one-byte ASCII and this terminal's measured `08 20 08` behavior.
+The 15 configured `ERASE` actions produced 45 erase-output bytes, three per
+action. Adding the already-recorded 15-byte abandoned draft yields 60 bytes of
+backspace text data. Because the replacement sentence was also 15 bytes, the
+75-byte region contained 60 bytes beyond a final-line-only 15-byte baseline.
+This ratio is specific to one-byte ASCII and this terminal's measured
+`08 20 08` behavior.
 
 ![Primary read-only byte evidence](../../evidence/screenshots/18-primary-byte-evidence.png)
 
@@ -228,7 +251,7 @@ specific to one-byte ASCII and this terminal's measured `08 20 08` behavior.
 | Endpoint | Canonical | Raw `-echo -icanon` | Raw minus canonical |
 | --- | ---: | ---: | ---: |
 | Model answer contained exact erased marker | 0/6 (0%) | 6/6 (100%) | +100 percentage points |
-| Transcript contained marker-plus-erasure input echo | 6/6 (100%) | 0/6 (0%) | -100 percentage points |
+| Transcript contained marker echo followed by visual-erasure output | 6/6 (100%) | 0/6 (0%) | -100 percentage points |
 | Model answered `NONE` | 6/6 (100%) | 0/6 (0%) | -100 percentage points |
 
 All ten planned between-trial clear operations were confirmed. In the raw
@@ -237,7 +260,7 @@ them in its answers, not because ordinary terminal echo remained enabled.
 
 ## Discussion
 
-### What retained the deleted draft
+### What retained the abandoned draft
 
 The retention occurred in the `.typescript` output produced by `script`, not in
 the physical keyboard. Apple's manual says the utility “makes a typescript of
@@ -290,7 +313,7 @@ recording wrapper: a launcher layer around the child command that explicitly
 invoked `/usr/bin/script` and named a local transcript file. It did not wrap or
 modify the model. That action authorized recording at the process level. It
 did not, however, present
-an interactive warning in the ordinary Blu Offline path that visually deleted
+an interactive warning in the ordinary Blu Offline path that visually erased
 draft text would remain recoverable. Apple's manual documents output recording,
 backspaces, and unexpected log contents, but the practical composition-history
 consequence was not surfaced at the moment of use.
@@ -329,8 +352,9 @@ A data-minimizing recorder should avoid durably writing backspace text data in
 the first place. One testable design would disable PTY input echo, perform line
 editing in a trusted parent process, render the editable draft from volatile
 memory, and send and log user input only after Return commits the line. Child
-process output would be captured on a distinct channel. Delete would modify the
-volatile buffer and redraw the display without appending either the abandoned
+process output would be captured on a distinct channel. A backward-edit action
+would modify the volatile buffer and redraw the display without appending
+either the abandoned
 text or `08 20 08` to durable storage. The volatile draft would be cleared on
 commit, cancelation, crash recovery, or timeout.
 
@@ -345,10 +369,11 @@ before durable logging is therefore the preferred hypothesis.
 
 ### Hardware, software, and comparison boundaries
 
-No measured result attributes retention to keyboard hardware. The protocol's
-Delete input was `0x7f`; the child PTY's software line discipline produced the
-`08 20 08` visual-erasure output. A later September 21 attempt on a 2015 Intel
-Mac occurred in plain Terminal before the proposed `script` control was started;
+No measured result attributes retention to keyboard hardware. The physical
+Delete-key action produced the `0x7f` input byte; the child PTY interpreted it
+as POSIX `ERASE` and produced the `08 20 08` visual-erasure output. A later
+September 21 attempt on a 2015 Intel Mac occurred in plain Terminal before the
+proposed `script` control was started;
 no native recording from that attempt was found. A surviving, untimestamped
 shell-history line is consistent with the committed replacement but contains no
 erased draft. Its
@@ -369,8 +394,8 @@ under [`replications/intel-mac-2026-10-27/`](../../replications/intel-mac-2026-1
 An independent Windows ConPTY study by `@oliviamckee` recorded the ConPTY output
 pipe while a `ReadConsoleW` child received only the committed replacement. Its
 follow-up 2 x 2 matrix found that starting column determined whether the final
-erase used `0D 20 0D`, whereas serializing Backspace as `0x7f` versus `0x08`
-did not change output within either column pair. Those external artifacts remain
+erase used `0D 20 0D`, whereas serializing the backward-edit input as `0x7f`
+versus `0x08` did not change output within either column pair. Those external artifacts remain
 in their source repository and are linked through the
 [replication index](../../replications/).
 
@@ -413,13 +438,14 @@ whether transcript viewers render or conceal control-byte history.
 On a MacBook Pro (`Mac17,2`, Apple M5, 24 GB) running macOS 27.0 build
 `26A428`, `/usr/bin/script -q` recorded a `llama-cli` PTY output stream that
 retained text erased from the visible interactive input line. In canonical
-mode, the PTY echoed `marie is black.`, processed fifteen Delete presses,
-emitted fifteen `08 20 08` erase triplets, and delivered only the committed
+mode, the PTY echoed `marie is black.`, processed fifteen configured `ERASE`
+actions initiated by the physical Delete key, emitted fifteen `08 20 08` erase
+triplets, and delivered only the committed
 `stanley is red.` line to `llama-cli`. The 15-byte draft plus 45-byte erase
 output left 60 bytes of backspace text data in the transcript. Apple documents
 that `script` records terminal output and that its log includes backspaces, but
-does not state that
-the visually deleted text can consequently remain recoverable. The finding
+does not state that the visually erased text can consequently remain
+recoverable. The finding
 concerns this recorded PTY path; it does not establish independent retention by
 the keyboard, model, runner, an unrecorded terminal, or a network service.
 
@@ -454,6 +480,11 @@ https://github.com/apple-oss-distributions/shell_cmds/blob/e256b9a97f9bbd751305b
 Cerf, V. G. (1969). *ASCII format for network interchange* (RFC 20). RFC
 Editor. https://doi.org/10.17487/RFC0020
 
+Dewald, A., Freiling, F. C., & Weber, T. (2011). Design and implementation of a
+documentation tool for interactive commandline sessions. In *2011 Sixth
+International Conference on IT Security Incident Management and IT Forensics*
+(pp. 62–80). IEEE. https://doi.org/10.1109/IMF.2011.17
+
 Gerganov, G., & llama.cpp contributors. (2026). *console.cpp* (Commit
 b29c606e28a01b1bc8c1351026a0fa6e616bf6c4) [Source code]. GitHub.
 https://github.com/ggml-org/llama.cpp/blob/b29c606e28a01b1bc8c1351026a0fa6e616bf6c4/common/console.cpp
@@ -483,6 +514,6 @@ D., Mills, M., & Shehabi, A. (2026). *United States data center energy usage
 report: 2025 update* (LBNL-2001758). Lawrence Berkeley National Laboratory.
 https://doi.org/10.71468/P1RP4F
 
-The Open Group. (2004). General terminal interface. In *The Open Group Base
-Specifications Issue 6, IEEE Std 1003.1, 2004 edition*.
-https://pubs.opengroup.org/onlinepubs/007904975/basedefs/xbd_chap11.html
+The Open Group. (2024). General terminal interface. In *The Open Group Base
+Specifications Issue 8, IEEE Std 1003.1-2024*.
+https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap11.html
