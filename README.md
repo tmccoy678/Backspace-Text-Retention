@@ -26,7 +26,11 @@ negative control, and traces when literal recovered text entered the Codex
 conversation. It also records and credits
 [Liv's Codex generalization hypothesis](docs/PR3-FORENSIC-RESPONSE.md#9-livs-codex-generalization-hypothesis):
 deleted pre-submission composition may persist in ordinary Codex interfaces
-without the custom Blu Offline recorder. That hypothesis is not yet tested.
+without the custom Blu Offline recorder. A subsequent
+[read-only retrospective verdict](docs/LIV-CODEX-HYPOTHESIS-RETROSPECTIVE-VERDICT.md)
+found that the graphical Codex app independently persists the current unsent
+draft, while the strong claim that every Codex interface durably preserves a
+deleted revision is not supported by the existing evidence.
 
 The surviving Intel shell history is available as a
 [line-preserving redacted derivative](evidence/intel-history/). Authentication
