@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A local browser simulation of recorder-retained terminal composition history.">
+  <title>Backspace Gate — live terminal demo</title>
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="top">
+      <div>
+        <div class="eyebrow">BACKSPACE GATE · LIVE BROWSER DEMO</div>
+        <h1>Erase it. Then inspect what the recorder retained.</h1>
+        <p>A one-line simulation of canonical editing, terminal echo, and an output-only sequential recorder.</p>
+      </div>
+      <span class="badge">NO UPLOADS · NO STORAGE</span>
+    </header>
+
+    <section class="instructions">
+      <div class="card">
+        <strong>YOUR TURN</strong>
+        <ol>
+          <li>Type a harmless draft. Do not press Return.</li>
+          <li>Erase it completely with Backspace.</li>
+          <li>Type a different line and press Return.</li>
+        </ol>
+      </div>
+      <div class="card">
+        <strong>WHAT THIS PAGE IS</strong>
+        <p>This browser page simulates the measured byte path entirely in memory. It is not a real PTY and does not contact a server.</p>
+        <p>The repository's one-line macOS demo uses the real <code>script</code> recorder and canonical terminal line discipline.</p>
+      </div>
+    </section>
+
+    <section class="terminal" aria-label="Interactive terminal simulation">
+      <div class="label">VISIBLE TERMINAL LINE</div>
+      <div class="prompt-row"><span class="prompt">&gt;</span><input id="terminal-input" aria-label="Terminal input" autocomplete="off" autocapitalize="off" spellcheck="false"></div>
+      <div class="status" id="status" aria-live="polite"></div>
+      <div class="recorder">
+        <div class="label">OUTPUT RECORDER · LIVE COMPRESSED VIEW</div>
+        <pre id="recorder-output"></pre>
+      </div>
+    </section>
+
+    <div class="controls">
+      <button id="reset" type="button">Reset</button>
+      <button id="copy-report" type="button" disabled>Copy report</button>
+      <a class="button" href="https://github.com/tmccoy678/Backspace-Text-Retention">Repository</a>
+    </div>
+
+    <section id="result" class="result-grid" hidden>
+      <section>
+        <h2>CHILD PROCESS RECEIVED ONLY</h2>
+        <pre id="child-output" class="child"></pre>
+      </section>
+      <section>
+        <h2>VISUAL-ERASE RUNS</h2>
+        <pre id="erase-runs" class="runs"></pre>
+      </section>
+      <section class="wide">
+        <h2>RAW BYTE TRANSCRIPT</h2>
+        <pre id="hex-output"></pre>
+      </section>
+    </section>
+
+    <p class="fine"><strong>Claim boundary:</strong> This is a teaching simulation of the documented mechanism. It does not test model memory, cloud receipt, passive agent access, deception, or secure deletion. Use only synthetic text.</p>
+  </main>
+  <script type="module" src="demo.js"></script>
+</body>
+</html>

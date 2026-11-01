@@ -1,5 +1,9 @@
 # Backspace Gate: A preregistered blinded test of exact recovery from a visually erased terminal draft
 
+> ## [▶ TRY THE LIVE TERMINAL IN YOUR BROWSER](https://tmccoy678.github.io/Backspace-Text-Retention/)
+>
+> Type, erase, replace, and inspect the simulated recorder's bytes immediately. No install, uploads, analytics, or storage. For the real macOS PTY mechanism, use the one-line local demo below.
+
 **Taylor McCoy¹ and Blu²**<br>
 ¹ Independent researcher<br>
 ² OpenAI Codex, Blu Private lane; technical collaborator
