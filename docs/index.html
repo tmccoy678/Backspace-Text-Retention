@@ -15,7 +15,7 @@
         <h1>Erase it. Then inspect what the recorder retained.</h1>
         <p>A one-line simulation of canonical editing, terminal echo, and an output-only sequential recorder.</p>
       </div>
-      <span class="badge">NO UPLOADS · NO STORAGE</span>
+      <div class="badges"><span class="badge">NO UPLOADS · NO STORAGE</span><span class="badge engine" id="engine-badge">LOADING ENGINE</span></div>
     </header>
 
     <section class="instructions">
@@ -29,7 +29,7 @@
       </div>
       <div class="card">
         <strong>WHAT THIS PAGE IS</strong>
-        <p>This browser page simulates the measured byte path entirely in memory. It is not a real PTY and does not contact a server.</p>
+        <p>This browser page simulates the measured byte path entirely in memory. Typed text never leaves the page.</p>
         <p>The repository's one-line macOS demo uses the real <code>script</code> recorder and canonical terminal line discipline.</p>
       </div>
     </section>
@@ -41,6 +41,8 @@
       <div class="recorder">
         <div class="label">OUTPUT RECORDER · LIVE COMPRESSED VIEW</div>
         <pre id="recorder-output"></pre>
+        <div class="label raw-label">LIVE RAW BYTES</div>
+        <pre id="live-hex-output" class="live-hex"></pre>
       </div>
     </section>
 

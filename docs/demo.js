@@ -1,14 +1,26 @@
 import {TerminalRecorderDemo} from './demo-engine.mjs';
+import {loadRustTerminalRecorder} from './wasm-engine.mjs';
 
-const demo = new TerminalRecorderDemo();
+let demo;
+let engineName;
+try {
+  demo = await loadRustTerminalRecorder();
+  engineName = 'RUST/WASM ENGINE';
+} catch (error) {
+  console.warn('Rust/WASM engine unavailable; using the tested JavaScript fallback.', error);
+  demo = new TerminalRecorderDemo();
+  engineName = 'JAVASCRIPT FALLBACK';
+}
 const input = document.querySelector('#terminal-input');
 const recorder = document.querySelector('#recorder-output');
+const liveHex = document.querySelector('#live-hex-output');
 const result = document.querySelector('#result');
 const child = document.querySelector('#child-output');
 const runs = document.querySelector('#erase-runs');
 const hex = document.querySelector('#hex-output');
 const status = document.querySelector('#status');
 const copy = document.querySelector('#copy-report');
+document.querySelector('#engine-badge').textContent = engineName;
 
 function focusEnd() {
   input.focus();
@@ -18,6 +30,7 @@ function focusEnd() {
 function render() {
   input.value = demo.visible;
   recorder.textContent = demo.compressedComposition();
+  liveHex.textContent = demo.hexDump();
   const counts = demo.eraseRuns();
   status.textContent = demo.committed === null
     ? `${counts.reduce((sum, count) => sum + count, 0)} visual erase triplets retained so far`
@@ -62,6 +75,7 @@ input.addEventListener('paste', event => {
 });
 
 input.addEventListener('click', focusEnd);
+input.addEventListener('focus', focusEnd);
 document.querySelector('#reset').addEventListener('click', () => {
   demo.reset();
   input.disabled = false;

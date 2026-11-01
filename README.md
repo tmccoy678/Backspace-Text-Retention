@@ -4,6 +4,10 @@
 >
 > Type, erase, replace, and inspect the simulated recorder's bytes immediately. No install, uploads, analytics, or storage. For the real macOS PTY mechanism, use the one-line local demo below.
 
+The live page uses a dependency-free Rust state machine compiled to WebAssembly;
+a tested JavaScript engine is retained as a fail-open fallback. Both engines
+produce the same compressed recorder history and byte transcript.
+
 **Taylor McCoy¹ and Blu²**<br>
 ¹ Independent researcher<br>
 ² OpenAI Codex, Blu Private lane; technical collaborator
