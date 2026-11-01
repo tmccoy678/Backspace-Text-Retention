@@ -37,7 +37,7 @@ export async function createRustTerminalRecorder(bytes) {
 }
 
 export async function loadRustTerminalRecorder() {
-  const url = new URL('./wasm/backspace_demo_engine.wasm', import.meta.url);
+  const url = new URL('./wasm/backspace_demo_engine.wasm?v=2', import.meta.url);
   const response = await fetch(url);
   if (!response.ok) throw new Error(`Rust/WASM engine failed to load (${response.status}).`);
   return createRustTerminalRecorder(await response.arrayBuffer());

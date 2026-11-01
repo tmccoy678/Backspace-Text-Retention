@@ -1,5 +1,5 @@
-import {TerminalRecorderDemo} from './demo-engine.mjs';
-import {loadRustTerminalRecorder} from './wasm-engine.mjs';
+import {TerminalRecorderDemo} from './demo-engine.mjs?v=2';
+import {loadRustTerminalRecorder} from './wasm-engine.mjs?v=2';
 
 let demo;
 let engineName;
