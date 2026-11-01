@@ -1,0 +1,51 @@
+BACKSPACE GATE — READ-ONLY BYTE INSPECTION
+FILE:    evidence/demonstrations/2026-11-01/live-backspace-20261101-155929.typescript
+BYTES:   192
+SHA-256: 6b416f4ef0813299b2f7c6ea5a51680aa703c1fa94ce5178685277a695b35747
+ERASE RUNS (08 20 08): 3
+
+RUN 1: offsets 15..17 (0xf..0x11)
+COUNT: 1 triplets = 3 bytes
+BEFORE: '> Jimmy Neutrom'
+AFTER:  'n: Boy Genius'
+
+HEX VIEW (periods at right represent non-printable bytes):
+00000000  3e 20 4a 69 6d 6d 79 20 4e 65 75 74 72 6f 6d 08  |> Jimmy Neutrom.|
+00000010  20 08 6e 3a 20 42 6f 79 20 47 65 6e 69 75 73 08  | .n: Boy Genius.|
+00000020  20 08 08 20                                      | .. |
+
+CARET VIEW (^H is a display notation for byte 08):
+> Jimmy Neutrom^H ^Hn: Boy Genius^H ^H^H 
+
+RUN 2: offsets 31..105 (0x1f..0x69)
+COUNT: 25 triplets = 75 bytes
+BEFORE: 'n: Boy Genius'
+AFTER:  'F'
+
+HEX VIEW (periods at right represent non-printable bytes):
+0000000d  6f 6d 08 20 08 6e 3a 20 42 6f 79 20 47 65 6e 69  |om. .n: Boy Geni|
+0000001d  75 73 08 20 08 08 20 08 08 20 08 08 20 08 08 20  |us. .. .. .. .. |
+0000002d  08 08 20 08 08 20 08 08 20 08 08 20 08 08 20 08  |.. .. .. .. .. .|
+0000003d  08 20 08 08 20 08 08 20 08 08 20 08 08 20 08 08  |. .. .. .. .. ..|
+0000004d  20 08 08 20 08 08 20 08 08 20 08 08 20 08 08 20  | .. .. .. .. .. |
+0000005d  08 08 20 08 08 20 08 08 20 08 08 20 08 46 08 20  |.. .. .. .. .F. |
+0000006d  08 54 68 65 20 53 69 6d 73 20 32 3a 20 4e 69     |.The Sims 2: Ni|
+
+CARET VIEW (^H is a display notation for byte 08):
+om^H ^Hn: Boy Genius^H ^H^H ^H^H ^H^H ^H^H ^H^H ^H^H ^H^H ^H^H ^H^H ^H^H ^H^H ^H^H ^H^H ^H^H ^H^H ^H^H ^H^H ^H^H ^H^H ^H^H ^H^H ^H^H ^H^H ^H^H ^HF^H ^HThe Sims 2: Ni
+
+RUN 3: offsets 107..109 (0x6b..0x6d)
+COUNT: 1 triplets = 3 bytes
+BEFORE: 'F'
+AFTER:  'The Sims 2: Night life'
+
+HEX VIEW (periods at right represent non-printable bytes):
+00000059  20 08 08 20 08 08 20 08 08 20 08 08 20 08 08 20  | .. .. .. .. .. |
+00000069  08 46 08 20 08 54 68 65 20 53 69 6d 73 20 32 3a  |.F. .The Sims 2:|
+00000079  20 4e 69 67 68 74 20                             | Night |
+
+CARET VIEW (^H is a display notation for byte 08):
+ ^H^H ^H^H ^H^H ^H^H ^H^H ^HF^H ^HThe Sims 2: Night 
+
+The source file was opened read-only; this output is a representation.
+The SHA-256 identifies the untouched byte sequence being represented.

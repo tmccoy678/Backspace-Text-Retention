@@ -1,6 +1,6 @@
 # Related work and terminology
 
-**Review date:** October 28, 2026
+**Review date:** November 1, 2026
 
 **Scope:** Narrative review of the closest terminal-recording, writing-process,
 privacy, deletion, and secure-storage literature located for this repository.
@@ -203,6 +203,40 @@ private source is committed by hash and documented in the
 [earliest-evidence audit](EARLIEST-EVIDENCE-AUDIT.md), while its unrelated
 conversation remains unpublished.
 
+## Agent telemetry and privacy work located in the November update
+
+Three 2026 publications sharpen the agent-infrastructure boundary without
+describing the same terminal mechanism.
+
+Pasquini et al. (2026) demonstrate that adversarially manipulated logs, traces,
+and related telemetry can steer AIOps agents toward harmful diagnoses and
+remediations. Their attack concerns deliberately injected application
+telemetry. The present repository concerns benign human composition that enters
+telemetry before the user's expected commit boundary. Together, the results
+show why agent-facing observability data needs provenance rather than a blanket
+assumption that a recorded string is instruction or intent.
+
+El Yagoubi, Badu-Marfo, and Al Mallah's AgentLeak benchmark treats tool inputs,
+tool outputs, logs, artifacts, shared memory, and inter-agent messages as
+distinct internal privacy channels. That taxonomy closely supports this
+repository's insistence on naming recorder, child, tool-result, and final-agent
+layers separately. It does not study canonical terminal editing or
+output-recorded composition history.
+
+Xia and Park's SlotGuard preprint places a local transformation boundary around
+provider-bound agent transcripts, replacing sensitive paths and credentials
+while preserving typed structure. It is an architectural mitigation parallel:
+raw context can remain available inside a trusted runtime while a reduced,
+provenance-aware representation crosses the agent boundary. It does not test
+terminal echo or Backspace behavior.
+
+The November manuscript search also reviewed structured agent-observability and
+fault-detection preprints. Those systems instrument agent reasoning, calls, and
+execution spans; no located work joined canonical pre-commit editing,
+sequential PTY-output retention, and later tool-mediated agent access. This is
+a bounded narrative-search result, not a systematic-review or absolute-priority
+claim.
+
 ## Synthesis and claim boundary
 
 The literature supports five conclusions:
@@ -255,6 +289,10 @@ Apple Inc. (2023b). *script(1): Make typescript of terminal session* [Manual
 page]. Apple Open Source.
 https://github.com/apple-oss-distributions/shell_cmds/blob/e256b9a97f9bbd751305b7af36cf751668fbb849/script/script.1
 
+El Yagoubi, F., Badu-Marfo, G., & Al Mallah, R. (2026). AgentLeak: A benchmark
+for internal-channel privacy leakage in multi-agent LLM systems. *IEEE Access,
+14*, 94960–94978. https://doi.org/10.1109/ACCESS.2026.3704541
+
 Cerf, V. G. (1969). *ASCII format for network interchange* (RFC 20). RFC
 Editor. https://doi.org/10.17487/RFC0020
 
@@ -280,6 +318,12 @@ it's gone”: User understanding of online data deletion and expiration. In
 *Fourteenth Symposium on Usable Privacy and Security (SOUPS 2018)* (pp.
 329–339). USENIX Association.
 https://www.usenix.org/conference/soups2018/presentation/murillo
+
+Pasquini, D., Kornaropoulos, E. M., Ateniese, G., Akgul, O., Theocharis, A., &
+Efstathopoulos, P. (2026). When AIOps become “AI Oops”: Subverting LLM-driven
+IT operations via telemetry manipulation. In *35th USENIX Security Symposium*
+(pp. 4841–4860). USENIX Association.
+https://www.usenix.org/conference/usenixsecurity26/presentation/pasquini
 
 oliviamckee. (2026). *Backspace retention on Windows: Simulation and native
 ConPTY evidence* (Commit 5815c0136ff88b03c7d6c455962aacb7e2a8bd60) [Source
@@ -308,3 +352,6 @@ Van Waes, L., Leijten, M., & van Weijen, D. (2009). Keystroke logging in
 writing research: Observing writing processes with Inputlog. *German as a
 Foreign Language, 2–3*, 41–64.
 https://repository.uantwerpen.be/docman/irua/e8d12b/b39f88f0.pdf
+
+Xia, H., & Park, Y. (2026). SlotGuard: Stop oversharing private local context
+in LLM agent transcripts. *arXiv*. https://arxiv.org/abs/2607.17147

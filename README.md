@@ -7,6 +7,26 @@
 **Study status:** Preregistered prospective technical study. Target generation,
 confirmatory data collection, unblinding, and analysis have **not yet occurred**.
 
+## Try the one-line terminal demo
+
+On macOS, clone the repository and run the same output-only terminal mechanism
+used in a live demonstration with an in-person observer:
+
+```sh
+git clone https://github.com/tmccoy678/Backspace-Text-Retention.git && cd Backspace-Text-Retention && python3 tools/backspace_demo.py
+```
+
+Type a harmless draft without pressing Return, erase it completely, type a
+different harmless line, and press Return once. The child shows only the
+committed line; the demo then renders the earlier echo and each `08 20 08`
+visual-erasure run retained by the temporary output recording. The temporary
+transcript is deleted after the result is shown. Do not type secrets.
+
+The spontaneous November 1 demonstration is preserved separately as
+[public teaching evidence](evidence/demonstrations/2026-11-01/) and a
+[layer-by-layer report](docs/LIVE-DEMONSTRATION-2026-11-01.md). It is not part
+of the prospective study and does not establish model or cloud receipt.
+
 ## Central historical finding: retention preceded recognition
 
 The earliest surviving editing trace now associated with Backspace Gate did
