@@ -74,7 +74,7 @@ def run_demo() -> int:
     print("BACKSPACE GATE — ONE-LINE TERMINAL DEMO")
     print("Output-only recorder · canonical line editing · temporary local file")
     print()
-    print("Use synthetic, non-sensitive text. The temporary transcript is deleted")
+    print("Use synthetic, non-sensitive ASCII text. The temporary transcript is deleted")
     print("after the result is displayed.")
     print()
     print("At the > prompt:")

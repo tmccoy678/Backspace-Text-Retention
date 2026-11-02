@@ -19,8 +19,8 @@ hash, metadata, and byte offsets rather than published. See
 
 The following were checked:
 
-- the complete local Codex JSONL exchange covering the first
-  privacy-significant recognition and the September Intel attempt;
+- the complete local Codex JSONL exchange covering the first documented
+  explicit privacy interpretation and the September Intel attempt;
 - the MacBook's Desktop, Documents, Downloads, Movies, Pictures,
   `Blu-Workbench`, `Agent-Work`, screenshot inbox, and shell history;
 - September 21 screenshots and three surviving videos, all of which predate the

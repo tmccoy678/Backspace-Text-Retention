@@ -1,6 +1,6 @@
 # Earliest-evidence and launcher-origin audit
 
-This audit separates the earliest accidental observation from later controlled
+This audit separates the earliest retained traces from later controlled
 recordings and documents why `/usr/bin/script` was present in Blu Offline. It
 also distinguishes the first ordinary-shell attempt on the 2015 Intel Mac from
 the later recorded-PTY replication.
@@ -30,17 +30,16 @@ feature, selected by Blu before the Backspace Gate observation. It was not a
 Codex default, a `llama.cpp` default, a macOS background recorder, or a feature
 Taylor specifically requested by mechanism. The surrounding acceptance
 workflow—complete readback, permission checks, hashes, and preservation of
-technical sessions—supports continuity, diagnosis, audit, and reproducibility
-as the design purpose. Taylor and Liv's retrospective causal account is that
+technical sessions—is consistent with continuity, diagnosis, audit, and
+reproducibility as the design purpose. Taylor and Olivia later proposed that
 Taylor's broader instruction to Blu to be diligent and preserve complete work
 supplied the functional requirement, while Blu selected `/usr/bin/script` as
-the implementation. The contemporaneous record does not contain a single
-sentence giving that full rationale, so this is the best-supported
-interpretation, not a quoted mechanism-specific requirement.
+the implementation. The contemporaneous record does not state that complete
+rationale, so it remains an interpretation rather than a quoted requirement.
 
 The launcher announced that a transcript would be written. It did **not** warn
-that terminal echo could preserve text visibly erased before Return. That
-composition-history consequence was discovered later.
+that terminal echo could preserve text visibly erased before Return. The first
+preserved explicit statement of that consequence came later.
 
 ## Earliest September 21 evidence
 
@@ -67,11 +66,10 @@ complete 68-line contents during routine verification. The resulting Codex tool
 output included the pre-correction characters and erase bytes, but Blu's
 acceptance conclusion did not identify or discuss deleted-text retention.
 
-This makes the documented discovery sequence unusually strong: the mechanism
-was operating, and the complete trace had already crossed into a Codex tool
-record more than fourteen hours before the first preserved statement naming
-its privacy significance. The record does not establish subjective
-non-recognition during the earlier import.
+The sequence establishes two dated facts: the complete trace entered a Codex
+tool record at 12:09:30 AM, and the first preserved statement naming its privacy
+significance followed more than fourteen hours later. The record does not
+establish subjective non-recognition during the earlier import.
 
 At 2:27:03 PM, the contemporaneous conversation listed both files. After Taylor
 gave permission to inspect only the newest transcript, Blu opened `141944`. At
@@ -95,8 +93,8 @@ launch. This did not wrap or modify the model.
 
 The 3:37 PM artifact `Blu-Offline-20260921-153748.typescript` is the later
 structured foundation recording used for the byte-level case report. It remains
-valid evidence, but it was not the earliest trace or first accidental
-observation.
+valid evidence, but it was neither the earliest trace nor the first documented
+explicit privacy interpretation.
 
 ## October 27 Intel sequence
 

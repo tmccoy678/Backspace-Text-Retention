@@ -1,9 +1,10 @@
 # Rust/WASM browser engine
 
 This dependency-free Rust state machine powers the GitHub Pages terminal demo.
-It retains only in-memory visible text and sequential output bytes. The browser
-loads the committed WebAssembly binary from `docs/wasm/`; no typed text is sent
-to a server or durable browser store.
+It models the measured one-byte printable-ASCII path and retains only in-memory
+visible text and sequential output bytes. The browser loads the committed
+WebAssembly binary from `docs/wasm/`; no typed text is sent to a server or
+durable browser store.
 
 Build from the repository root:
 

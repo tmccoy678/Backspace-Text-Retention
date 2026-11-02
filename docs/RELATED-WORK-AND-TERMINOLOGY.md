@@ -197,9 +197,9 @@ transcript recording and the surrounding work were deliberate, while the
 preserved record does not identify retention of visually erased composition as
 the purpose of the acceptance run. No contemporaneous statement in that record
 names the privacy consequence; this is not proof of subjective non-recognition.
-“Accidental discovery” describes the timing of the explicit privacy finding,
-not an absence of agency, freedom, or consent. The chronology also requires
-precise retention labels. The local
+The chronology places the first explicit privacy finding after the retained
+trace; it does not establish an absence of agency, freedom, or consent. The
+local
 `script` file was durable by 12:08:27 AM; 12:09:30 AM is the earliest known
 ingestion of its complete edit trace into a Codex tool record. Neither event
 establishes passive receipt by Codex before the deliberate file read. The
@@ -294,10 +294,6 @@ Apple Inc. (2023b). *script(1): Make typescript of terminal session* [Manual
 page]. Apple Open Source.
 https://github.com/apple-oss-distributions/shell_cmds/blob/e256b9a97f9bbd751305b7af36cf751668fbb849/script/script.1
 
-El Yagoubi, F., Badu-Marfo, G., & Al Mallah, R. (2026). AgentLeak: A benchmark
-for internal-channel privacy leakage in multi-agent LLM systems. *IEEE Access,
-14*, 94960–94978. https://doi.org/10.1109/ACCESS.2026.3704541
-
 Cerf, V. G. (1969). *ASCII format for network interchange* (RFC 20). RFC
 Editor. https://doi.org/10.17487/RFC0020
 
@@ -309,6 +305,10 @@ International Conference on IT Security Incident Management and IT Forensics*
 ECMA International. (1991). *Control functions for coded character sets* (5th
 ed.; ECMA-48).
 https://ecma-international.org/wp-content/uploads/ECMA-48_5th_edition_june_1991.pdf
+
+El Yagoubi, F., Badu-Marfo, G., & Al Mallah, R. (2026). AgentLeak: A benchmark
+for internal-channel privacy leakage in multi-agent LLM systems. *IEEE Access,
+14*, 94960–94978. https://doi.org/10.1109/ACCESS.2026.3704541
 
 Eng, C. (2025). Is that Windows Notepad window really empty? *DFIR Review*.
 https://doi.org/10.21428/b0ac9c28.a8c471f1
@@ -324,16 +324,16 @@ it's gone”: User understanding of online data deletion and expiration. In
 329–339). USENIX Association.
 https://www.usenix.org/conference/soups2018/presentation/murillo
 
+oliviamckee. (2026). *Backspace retention on Windows: Simulation and native
+ConPTY evidence* (Commit 5815c0136ff88b03c7d6c455962aacb7e2a8bd60) [Source
+code and research repository]. GitHub.
+https://github.com/oliviamckee/backspace-retention-windows-study/tree/5815c0136ff88b03c7d6c455962aacb7e2a8bd60
+
 Pasquini, D., Kornaropoulos, E. M., Ateniese, G., Akgul, O., Theocharis, A., &
 Efstathopoulos, P. (2026). When AIOps become “AI Oops”: Subverting LLM-driven
 IT operations via telemetry manipulation. In *35th USENIX Security Symposium*
 (pp. 4841–4860). USENIX Association.
 https://www.usenix.org/conference/usenixsecurity26/presentation/pasquini
-
-oliviamckee. (2026). *Backspace retention on Windows: Simulation and native
-ConPTY evidence* (Commit 5815c0136ff88b03c7d6c455962aacb7e2a8bd60) [Source
-code and research repository]. GitHub.
-https://github.com/oliviamckee/backspace-retention-windows-study/tree/5815c0136ff88b03c7d6c455962aacb7e2a8bd60
 
 Reardon, J., Marforio, C., Capkun, S., & Basin, D. (2011). *Secure deletion on
 log-structured file systems* [Preprint]. arXiv.

@@ -20,7 +20,12 @@ export class TerminalRecorderDemo {
 
   type(text) {
     if (this.committed !== null || !text) return;
-    const oneLine = text.replace(/[\r\n]/g, ' ');
+    const oneLine = [...text.replace(/[\r\n]/g, ' ')]
+      .filter(character => {
+        const codepoint = character.codePointAt(0);
+        return codepoint >= 0x20 && codepoint <= 0x7e;
+      })
+      .join('');
     this.visible += oneLine;
     this.bytes.push(...encoded(oneLine));
   }

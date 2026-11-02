@@ -13,14 +13,16 @@ committed in
 
 ## Direct answer
 
-**The first discovery was genuinely accidental. The existing evidence does not
+**The known positive case used an external recorder. Existing evidence does not
 establish durable deleted-revision retention by an ordinary Codex app or CLI.**
 
 The evidence supports five narrower findings:
 
-1. Blu intentionally added owner-only transcript recording before anyone knew
-   it would retain visually erased composition. The retention consequence and
-   its privacy significance were accidental.
+1. Blu intentionally added owner-only transcript recording before retention of
+   visually erased composition was a stated goal or tested endpoint. A midnight
+   trace documents the mechanism; the first preserved explicit privacy
+   interpretation appears later. The record does not establish subjective
+   awareness before that statement.
 2. The terminal generated an echo-and-erasure byte stream. Blu Offline's
    `/usr/bin/script -q` layer made that stream durable. The local model and
    Codex did not need to possess a deleted draft to explain the recording.
@@ -39,10 +41,10 @@ that one historical Blu path retained erased composition. It does not answer
 Olivia's component-level ordinary-Codex question, because that positive path
 contained a known external recorder.
 
-## Why the discovery is demonstrably accidental
+## Chronology of recording and interpretation
 
-The strongest evidence is an unpublished normal-use recording that predates
-the recognized discovery by more than fourteen hours.
+An unpublished acceptance recording predates the first preserved explicit
+privacy interpretation by more than fourteen hours.
 
 | Time (CDT) | Contemporaneous event | Evidentiary meaning |
 | --- | --- | --- |
@@ -51,9 +53,9 @@ the recognized discovery by more than fourteen hours.
 | 12:09:30 AM | Blu ran `sed -n '1,260p'` on the complete 68-line transcript for acceptance verification. Its tool output contained the pre-correction characters and erase bytes. | The retained edit trace crossed into the Codex tool record. No preserved contemporaneous statement from that import names the privacy consequence; this does not prove subjective non-recognition. |
 | 2:13–2:17 PM | `141327` preserved a partial template-erasure session ending in Control-C. | Pre-control precursor; no replacement was submitted. |
 | 2:19–2:23 PM | `141944` preserved several abandoned Doberman drafts followed by the committed couch sentence. | First surviving substantive abandoned-draft observation located. |
-| 2:25–2:28 PM | Taylor said only that Blu could inspect what happened in the unrelated clue experiment. Blu opened the newest transcript and independently reported that erased composition had survived. | First documented privacy-significant recognition. |
+| 2:25–2:28 PM | Taylor said only that Blu could inspect what happened in the unrelated clue experiment. Blu opened the newest transcript and independently reported that erased composition had survived. | First documented explicit privacy interpretation. |
 | 2:32 PM | Taylor reacted with surprise and proposed studying the behavior. | The retention hypothesis followed the observation rather than causing it. |
-| 3:37 PM onward | Structured and matched controls deliberately isolated the mechanism. | These validate the later mechanism analysis but are not the first discovery. |
+| 3:37 PM onward | Structured and matched controls deliberately isolated the mechanism. | These validate the later mechanism analysis but are neither the earliest trace nor the first explicit privacy interpretation. |
 
 `000503` is 3,366 bytes, mode `0600`, with birth and modification time
 2026-09-21 00:08:27 -0500 and SHA-256

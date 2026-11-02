@@ -73,8 +73,8 @@ before an application reads a completed line (The Open Group, 2024). Thus, a
 terminal display is a rendering of a byte stream rather than a definitive view
 of what a recorder has stored.
 
-That distinction matters when terminal interfaces are used to prompt local
-language models. A user may reasonably infer that text erased before Return was
+This separation affects terminal interfaces used to prompt local language
+models. A user may reasonably infer that text erased before Return was
 neither submitted nor retained. In canonical mode, the first inference can be
 correct for the child process while the second is false for a session recorder.
 The present case isolates those layers. Its central observation is that the PTY
@@ -279,7 +279,7 @@ the physical keyboard. Apple's manual says the utility “makes a typescript of
 everything printed on your terminal” and separately warns that the log includes
 “linefeeds and backspaces,” adding, “This is not what the naive user expects”
 (Apple Inc., 2023b). It does not explicitly tell a
-user that the log includes not merely backspace control bytes, but also the
+user that the log includes both backspace control bytes and the
 earlier text those bytes subsequently remove from the rendered line. Put
 differently, the documentation describes the recorder's inputs without stating
 their privacy-relevant composition-history consequence. The present recording
@@ -292,7 +292,7 @@ sequential record, not a final-screen-state image; later cursor-control bytes do
 not retroactively remove earlier bytes.
 
 POSIX states, “If ECHO is set, input characters shall be echoed back to the
-terminal” (The Open Group, 2004). With canonical processing enabled, the
+terminal” (The Open Group, 2024). With canonical processing enabled, the
 terminal line discipline applies ERASE before returning the completed line to
 the child process. At the pinned llama.cpp revision, `--simple-io` follows
 `std::getline(std::cin, line)` and bypasses llama.cpp's own branch that disables
@@ -517,7 +517,7 @@ study. In *20th USENIX Conference on File and Storage Technologies (FAST 22)*
 (pp. 165–180). USENIX Association.
 https://www.usenix.org/conference/fast22/presentation/maneas
 
-Mistral AI. (2026). *Ministral 3 14B Instruct 2512 GGUF* [Large language
+Mistral AI. (2025). *Ministral 3 14B Instruct 2512 GGUF* [Large language
 model]. Hugging Face.
 https://huggingface.co/mistralai/Ministral-3-14B-Instruct-2512-GGUF
 

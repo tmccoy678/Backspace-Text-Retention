@@ -3,6 +3,7 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .venv/
+web-demo-rust/target/
 
 # Never commit model weights, credentials, or complete private session stores.
 *.gguf

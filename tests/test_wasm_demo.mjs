@@ -28,3 +28,13 @@ test('Rust/WASM and JavaScript engines produce the same evidence views', async (
   assert.equal(rust.hexDump(), javascript.hexDump());
   assert.equal(rust.report(), javascript.report());
 });
+
+test('Rust/WASM and JavaScript engines reject non-ASCII input equally', async () => {
+  const rust = await createRustTerminalRecorder(wasm);
+  const javascript = new TerminalRecorderDemo();
+  rust.type('plain 🐷 café');
+  javascript.type('plain 🐷 café');
+  assert.equal(rust.visible, 'plain  caf');
+  assert.equal(rust.visible, javascript.visible);
+  assert.equal(rust.hexDump(), javascript.hexDump());
+});

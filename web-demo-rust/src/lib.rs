@@ -31,7 +31,7 @@ impl State {
         let Some(character) = char::from_u32(codepoint) else {
             return;
         };
-        if matches!(character, '\r' | '\n') {
+        if !matches!(character, ' '..='~') {
             return;
         }
         self.visible.push(character);
@@ -266,5 +266,14 @@ mod tests {
         let state = State::default();
         assert_eq!(state.compressed(), ">");
         assert!(state.erase_runs().is_empty());
+    }
+
+    #[test]
+    fn ignores_non_ascii_and_control_characters() {
+        let mut state = State::default();
+        for character in "plain 🐷 café\nnext".chars() {
+            state.type_character(character as u32);
+        }
+        assert_eq!(state.visible, "plain  cafnext");
     }
 }

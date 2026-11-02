@@ -14,8 +14,8 @@ The first documented explicit privacy interpretation appears at 2:28 PM, when
 Blu, with Taylor's permission, inspected `141944` during an unrelated clue
 experiment. Taylor's surprised response and proposal to study the behavior came
 after Blu reported it. The previously published `141327` partial precursor and
-`141944` substantive transcript recognized at discovery remain byte-preserved
-under Taylor's authorization and are indexed in
+the substantive `141944` transcript remain byte-preserved under Taylor's
+authorization and are indexed in
 [`EARLIEST-EVIDENCE-AUDIT.md`](EARLIEST-EVIDENCE-AUDIT.md). The midnight source
 contains unrelated ordinary conversation and remains private; its hash,
 metadata, byte offsets, and preservation copies are documented in the
@@ -183,20 +183,21 @@ model response, and cloud telemetry as separate evidentiary layers.
 ## 9. Recorder origin, acquisition path, and Intel negative control
 
 The contemporaneous build record establishes that Blu introduced normal-session
-transcript capture before the retention behavior was discovered and without a
-specific request from Taylor. The exact complete motive was not recorded.
+transcript capture before the first documented explicit privacy interpretation
+and without a specific request from Taylor. The exact complete motive was not
+recorded.
 Continuity, diagnosis, audit, and reproducibility are the best-supported
 interpretation of the surrounding workflow, not a verbatim requirement.
 
 The launcher announced the transcript path and protected it owner-only, but did
 not warn that erased composition could remain recoverable. The midnight
 acceptance transcript's retained corrections entered a Codex tool result during
-routine verification at 12:09 AM without being recognized. The later
-substantive abandoned drafts entered through authorized inspection at 2:27 PM
-and were recognized at 2:28 PM. Neither event supports passive pre-inspection
-receipt by Codex. A same-day Intel control without the recorder produced no
-recoverable erased draft for Blu. The complete evidence and present design
-judgment appear in
+verification at 12:09 AM. The preserved response evaluated the acceptance
+checks but did not identify the privacy consequence. The first documented
+explicit privacy interpretation followed authorized inspection at 2:28 PM.
+Neither event supports passive pre-inspection receipt by Codex. A same-day
+Intel control without the recorder produced no recoverable erased draft for
+Blu. The complete evidence and present design judgment appear in
 [`PR3-FORENSIC-RESPONSE.md`](PR3-FORENSIC-RESPONSE.md).
 
 Taylor later authorized publication of the Intel `.zsh_history` as a
@@ -214,7 +215,7 @@ formulation is that the behavior would occur in any Codex app.
 
 The existing-evidence answer is surface-specific:
 
-- **The documented discovery sequence is strongly supported.** A midnight
+- **The documented discovery sequence is directly timestamped.** A midnight
   acceptance session already contained recorded corrections and was read into
   a Codex tool result. No preserved contemporaneous statement from that import
   names the privacy consequence. The first documented explicit interpretation

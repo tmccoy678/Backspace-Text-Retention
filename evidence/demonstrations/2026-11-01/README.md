@@ -1,9 +1,9 @@
 # Live public demonstration — November 1, 2026
 
 This directory preserves a spontaneous, unblinded demonstration performed by
-Taylor with an in-person observer after the AgentVerify extended-abstract draft was completed.
-It is a teaching demonstration, not a new confirmatory experiment and not part
-of the manuscript's historical evidence set.
+Taylor with an in-person observer after the AgentVerify extended-abstract draft
+was completed. It is a teaching demonstration, not a new confirmatory experiment
+and not part of the manuscript's historical evidence set.
 
 ## Procedure
 

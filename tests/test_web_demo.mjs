@@ -30,3 +30,9 @@ test('browser demo resets without retaining prior composition', () => {
   assert.equal(demo.compressedComposition(), '>');
   assert.deepEqual(demo.eraseRuns(), []);
 });
+
+test('browser demo limits the simulation to printable ASCII', () => {
+  const demo = new TerminalRecorderDemo();
+  demo.type('plain 🐷 café\nnext');
+  assert.equal(demo.visible, 'plain  caf next');
+});

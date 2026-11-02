@@ -9,12 +9,12 @@ coordination-file timestamp side effect is disclosed in
 by this audit are identified by SHA-256 in
 [`EVIDENCE.sha256`](EVIDENCE.sha256).
 
-A subsequent expanded pass located an earlier private routine-acceptance
-recording, `Blu-Offline-20260921-000503.typescript`. It is now the earliest
-surviving recorded editing trace located, and it had already been read without
-recognition through a Codex tool at 12:09 AM. Its unrelated natural conversation
-remains private; its hash, metadata, erase-run offsets, and preservation copies
-are committed in the
+A subsequent expanded pass located an earlier private acceptance recording,
+`Blu-Offline-20260921-000503.typescript`. It is now the earliest surviving
+recorded editing trace located. Its complete contents entered a Codex tool result
+at 12:09 AM; no preserved statement from that import names the privacy
+consequence. Its unrelated natural conversation remains private; its hash,
+metadata, erase-run offsets, and preservation copies are committed in the
 [existing-evidence answer to Olivia](../2026-10-28-olivia-hypothesis/).
 
 This audit answers the artifact questions raised by
@@ -41,8 +41,8 @@ marie is my favorite doberman and she is sleeping on the couch.
 
 At 2:27:15 PM CDT, the contemporaneous assistant opened that exact transcript.
 At 2:28:06 PM it reported the privacy-relevant observation: the transcript had
-recorded text erased during composition. This is the first documented
-privacy-significant recognition in the surviving records. It occurred more
+recorded text erased during composition. This is the first documented explicit
+privacy interpretation in the surviving records. It occurred more
 than an hour before the 3:37 PM two-sentence case currently centered in the
 foundation manuscript and more than fourteen hours after the earlier midnight
 trace, whose import contains no preserved explicit privacy interpretation.
@@ -51,8 +51,8 @@ trace, whose import contains no preserved explicit privacy interpretation.
 It is 1,190 bytes and contains two erase runs totaling 35 `08 20 08` triplets,
 but the visible input is still the literal prompt template
 `My harmless target sentence is: [WRITE YOUR SENTENCE HERE].` and the session
-ends with Control-C. It is relevant pre-control evidence, but not the first
-substantive discovery run.
+ends with Control-C. It is relevant pre-control evidence, but not a substantive
+completed run.
 
 Both files remained owner-readable source recordings (`0600`) and were later
 migrated byte-for-byte from the 2026 MacBook Pro to the Mac Studio. Their

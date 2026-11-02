@@ -19,7 +19,7 @@ external PTY recorder.
 
 ## Verdict
 
-1. **Documented discovery sequence: strongly supported.** Blu deliberately
+1. **Documented discovery sequence: directly timestamped.** Blu deliberately
    enabled owner-only transcript recording. No preserved pre-discovery message
    states that retention of visually erased composition was the purpose of an
    acceptance run or a tested endpoint. A midnight acceptance session already contained three recorded
@@ -52,15 +52,16 @@ external PTY recorder.
 
 The concise answer is:
 
-> The first Backspace Gate discovery was genuinely accidental. The September
-> trace became durable because Blu had already placed `/usr/bin/script` around
-> the terminal session. Codex-native current-draft persistence exists, but the
-> evidence already present does not show that an ordinary or every Codex
-> interface durably preserves a fully erased earlier revision.
+> The September trace became durable because Blu had already placed
+> `/usr/bin/script` around the terminal session. Retention of visually erased
+> composition was not a stated goal or tested endpoint, and the first preserved
+> explicit privacy interpretation came later. Codex-native current-draft
+> persistence exists, but the available evidence does not show that an ordinary
+> or every Codex interface durably preserves a fully erased earlier revision.
 
-## Pre-discovery chronology
+## Earlier chronology
 
-The earlier midnight artifact strengthens the accidental-discovery conclusion:
+The earlier midnight artifact fixes the order of events:
 
 | Time (CDT) | Evidence |
 | --- | --- |

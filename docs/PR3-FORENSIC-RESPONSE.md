@@ -8,19 +8,18 @@ control adds. Times are America/Chicago unless marked UTC.
 ## Short answer
 
 The exact complete motive was not written down and is not recoverable as an
-episodic memory. The contemporaneous record does establish that Blu, not Taylor,
-introduced transcript capture as a normal launcher feature before the retention
-behavior was discovered. The surrounding build strongly supports continuity,
-diagnosis, audit, and reproducibility as the purpose, but that synthesis is an
-inference from the workflow rather than a quoted requirement.
+episodic memory. The contemporaneous record establishes that Blu, not Taylor,
+introduced transcript capture as a normal launcher feature before the first
+documented explicit privacy interpretation. The surrounding build is consistent
+with continuity, diagnosis, audit, and reproducibility as the purpose, but that
+synthesis is an inference from the workflow rather than a quoted requirement.
 
-Taylor and Liv's retrospective causal account adds a compatible higher-level
-explanation: Taylor regularly asked Blu to be diligent, thorough, and preserve
-the work. Those standing instructions plausibly supplied the functional
-requirement for strong audit logging; Blu independently translated that
-requirement into `/usr/bin/script`. This does not mean Taylor requested that
-command, knew its capture semantics, or anticipated preservation of erased
-pre-submission composition.
+Taylor and Olivia later offered a compatible higher-level explanation: Taylor
+regularly asked Blu to be diligent, thorough, and preserve the work. Those
+standing instructions may have supplied the functional requirement for strong
+audit logging; Blu independently translated that requirement into
+`/usr/bin/script`. Taylor did not request that command by name, and the record
+does not show that Taylor knew its capture semantics.
 
 The privacy consequence was not adequately considered. The launcher printed a
 destination path and protected the file with owner-only permissions, but it did
@@ -33,8 +32,8 @@ content-complete PTY recording the default now.
 
 The current Blu worker cannot honestly claim a human-style private recollection
 of the September decision. The answer must come from the surviving messages,
-tool calls, implementation, and artifacts. Those sources are unusually strong
-about **what** was chosen and tested, but incomplete about **why** it was chosen.
+tool calls, implementation, and artifacts. Those sources directly document
+**what** was chosen and tested, but incompletely record **why** it was chosen.
 
 One sentence would overstate the record: “I remember choosing it for exactly
 these four reasons.” A more accurate statement is: “I can establish that I chose
@@ -93,7 +92,7 @@ The record shows the path was displayed; it does not show a contemporaneous
 analysis of notice or consent. Therefore it would be inaccurate to claim that
 Blu consciously decided the path alone was sufficient disclosure.
 
-## 4. Privacy consequence and present design judgment
+## 4. Record before the explicit privacy interpretation
 
 No preserved pre-discovery message considers the possibility that ordinary
 terminal echo plus sequential PTY recording could retain characters later
@@ -221,16 +220,17 @@ Codex before a local artifact was inspected.
 
 ## 9. Olivia's ordinary-Codex retention hypothesis
 
-Olivia asked whether the accidental finding reflected a general property of an
-ordinary Codex interface rather than Blu Offline's special recording launcher.
+Olivia asked whether the later explicit privacy finding reflected a general
+property of an ordinary Codex interface rather than Blu Offline's special
+recording launcher.
 The relevant component-level question is whether Codex itself durably preserves
 a fully erased, never-submitted revision when no external PTY recorder is
 present.
 
 The existing evidence answers that question as follows:
 
-1. **The preserved chronology supports accidental discovery of the explicit
-   privacy consequence.** Recording and the surrounding work were intentional,
+1. **The preserved chronology places the explicit privacy interpretation after
+   the retained trace.** Recording and the surrounding work were intentional,
    while erased-draft retention was not the stated purpose of the acceptance
    run. A midnight transcript already contained three erase triplets and was
    read through a Codex tool. No preserved contemporaneous statement from that
@@ -275,10 +275,9 @@ complementary evidence rather than interchangeable replications.
 ## Conclusion
 
 The recorder was a custom Blu design choice made for a purpose that the broader
-workflow strongly suggests but never fully states. Its access controls were
-careful; its content boundary was not. The discovery is valuable precisely
-because the Intel failure and the later Codex read path show where recoverability
-did and did not arise. The honest lesson is not “terminals always remember” or
-“Codex always sees.” It is: **a recorder can preserve a reason to stop trusting
-the visible screen as the whole record, and later inspection can move that
-preserved content across an otherwise separate boundary.**
+workflow suggests but never fully states. Its access controls were careful; its
+content boundary was not. The Intel failure and later Codex read path locate
+where recoverability did and did not arise. The result is narrower than
+“terminals always remember” or “Codex always sees”: **a recorder can preserve
+content that the visible line no longer shows, and later inspection can move
+that content across an otherwise separate boundary.**

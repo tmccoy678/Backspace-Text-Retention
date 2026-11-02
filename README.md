@@ -24,25 +24,25 @@ used in a live demonstration with an in-person observer:
 git clone https://github.com/tmccoy678/Backspace-Text-Retention.git && cd Backspace-Text-Retention && python3 tools/backspace_demo.py
 ```
 
-Type a harmless draft without pressing Return, erase it completely, type a
+Type a harmless ASCII draft without pressing Return, erase it completely, type a
 different harmless line, and press Return once. The child shows only the
 committed line; the demo then renders the earlier echo and each `08 20 08`
 visual-erasure run retained by the temporary output recording. The temporary
-transcript is deleted after the result is shown. Do not type secrets.
+transcript is deleted after the result is shown. The demonstration does not
+model Unicode graphemes. Do not type secrets.
 
 The spontaneous November 1 demonstration is preserved separately as
 [public teaching evidence](evidence/demonstrations/2026-11-01/) and a
 [layer-by-layer report](docs/LIVE-DEMONSTRATION-2026-11-01.md). It is not part
 of the prospective study and does not establish model or cloud receipt.
 
-## Central historical finding: retention preceded recognition
+## Earliest preserved sequence
 
-The earliest surviving editing trace now associated with Backspace Gate did
-not come from the later structured experiment. It came from an ordinary
-midnight acceptance run through the already-installed Blu Offline recording
-wrapper. Recording was intentional; the consequence that visually erased
-composition would remain recoverable was not anticipated, tested, or
-recognized.
+The earliest surviving editing trace now associated with Backspace Gate came
+from an ordinary midnight acceptance run, not the later structured experiment.
+Recording was intentional. Retention of visually erased composition was not a
+stated goal or tested endpoint, and the first preserved message explicitly
+identifying its privacy consequence came later.
 
 1. **September 20, 11:26–11:34 PM CDT — recorder embedded.** Blu
    selected, tested, and embedded `/usr/bin/script -q` in the normal owner-only
@@ -60,17 +60,16 @@ recognized.
    and erasure bytes. No preserved contemporaneous statement from that import
    identifies their privacy significance.
 4. **2:28:06 PM — first documented explicit interpretation.** During an
-   unrelated clue experiment, Blu first reported that a transcript retained text erased during
-   composition, more than fourteen hours after the midnight import.
+   unrelated clue experiment, Blu reported that a transcript retained text
+   erased during composition, more than fourteen hours after the midnight import.
    Taylor then responded with surprise and proposed studying the behavior.
 
-The layer and timestamp distinction is important: `/usr/bin/script -q` made
-the private `.typescript` durable during the 12:05–12:08 AM session; 12:09:30
-AM is the earliest known time its complete edit trace entered a Codex tool
-result, not the moment the local transcript first became durable. The private
-source remains unpublished because it contains unrelated conversation, but its
-SHA-256, size, permissions, timestamps, editing offsets, preservation copies,
-and import chronology are committed in the
+`/usr/bin/script -q` made the private `.typescript` durable during the
+12:05–12:08 AM session. At 12:09:30 AM, its complete edit trace first appears in
+a preserved Codex tool result. The private source contains unrelated
+conversation and remains unpublished; its SHA-256, size, permissions,
+timestamps, editing offsets, preservation copies, and import chronology are in
+the
 [earliest-evidence audit](docs/EARLIEST-EVIDENCE-AUDIT.md) and
 [existing-evidence investigation](investigations/2026-10-28-olivia-hypothesis/).
 
@@ -82,11 +81,10 @@ the draft before Blu opened the transcript.
 The completed September 21 terminal case that motivated this study is preserved
 separately as the [original-observation foundation](foundation/original-observation/).
 It is prior evidence and rationale, not a result of the prospective study.
-Taylor and Liv's retrospective causal account is that Taylor's broader
-instructions to work diligently and preserve complete technical records
-supplied a high-level requirement; Blu independently chose the recording
-mechanism. The contemporaneous record supports that interpretation but does
-not contain one sentence stating the full motive.
+Taylor and Olivia later proposed that Taylor's broader instructions to work
+diligently and preserve complete technical records supplied the high-level
+requirement, while Blu chose the recording mechanism. The contemporaneous
+record is consistent with that account but does not state the complete motive.
 
 A later [historical audit](investigations/2026-09-21-pre-control-and-intel/) of
 the September evidence adds exact byte-run analysis for the first two published
