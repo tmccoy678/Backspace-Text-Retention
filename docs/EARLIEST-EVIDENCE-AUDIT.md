@@ -47,12 +47,12 @@ composition-history consequence was discovered later.
 Three distinct milestones are preserved before the later structured
 `marie is black.` / `stanley is red.` recording:
 
-1. a routine midnight acceptance transcript is the earliest surviving recorded
+1. a midnight acceptance transcript is the earliest surviving recorded
    editing trace located;
 2. `141327` is the earliest previously published Backspace-specific precursor;
    and
 3. `141944` is the first substantive abandoned-draft observation and first
-   privacy-significant recognition.
+   documented explicit privacy interpretation.
 
 | Artifact | Closed / filesystem time (CDT) | Bytes | SHA-256 |
 | --- | --- | ---: | --- |
@@ -67,10 +67,11 @@ complete 68-line contents during routine verification. The resulting Codex tool
 output included the pre-correction characters and erase bytes, but Blu's
 acceptance conclusion did not identify or discuss deleted-text retention.
 
-This makes the accidental-discovery evidence unusually strong: the mechanism
+This makes the documented discovery sequence unusually strong: the mechanism
 was operating, and the complete trace had already crossed into a Codex tool
-record, more than fourteen hours before anyone recognized its privacy
-significance.
+record more than fourteen hours before the first preserved statement naming
+its privacy significance. The record does not establish subjective
+non-recognition during the earlier import.
 
 At 2:27:03 PM, the contemporaneous conversation listed both files. After Taylor
 gave permission to inspect only the newest transcript, Blu opened `141944`. At
@@ -133,9 +134,11 @@ draft. See the full [PR #3 forensic response](PR3-FORENSIC-RESPONSE.md).
 
 This result also sharpens the cloud boundary. On the newer Mac, the local Blu
 Offline recording wrapper first preserved PTY output. Retained typo-correction
-bytes entered a Codex tool result during routine acceptance verification at
-12:09 AM without being recognized. The later substantive abandoned drafts
-entered through Taylor-authorized inspection at 2:27 PM and were recognized at
+bytes entered a Codex tool result during acceptance verification at 12:09 AM.
+No preserved contemporaneous statement from that import identifies their
+privacy consequence; this does not prove subjective non-recognition. The later
+substantive abandoned drafts entered through Taylor-authorized inspection at
+2:27 PM and received the first documented explicit privacy interpretation at
 2:28 PM. Both were deliberate local-file reads; neither supports passive
 pre-inspection receipt by Codex or OpenAI. The Intel negative control likewise
 does not support passive receipt.

@@ -33,10 +33,13 @@ hashes are recorded in the repository-wide [`MANIFEST.sha256`](../../MANIFEST.sh
 An earlier private normal-use source, `Blu-Offline-20260921-000503.typescript`,
 is now the earliest surviving recorded editing trace located. It contains two
 ordinary correction runs totaling three erase triplets and was read into a
-Codex tool result during routine acceptance without anyone recognizing the
-retention consequence. Because it contains unrelated ordinary conversation, it
+Codex tool result during acceptance work. No preserved contemporaneous
+statement from that import names the retention consequence; this does not
+establish subjective non-recognition. Because it contains unrelated ordinary
+conversation, it
 is committed by metadata and hash rather than published raw; see the
 [existing-evidence investigation](../../investigations/2026-10-28-olivia-hypothesis/).
 
 The chronology therefore separates the midnight mechanical trace, the 2:28 PM
-privacy-significant recognition, and the later structured foundation recording.
+first documented explicit privacy interpretation, and the later structured
+foundation recording.

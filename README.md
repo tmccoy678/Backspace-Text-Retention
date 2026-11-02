@@ -50,18 +50,18 @@ recognized.
    setup but had not requested `script` or terminal recording by name. The
    recorder therefore preceded the observation and was not added in response
    to it.
-2. **September 21, 12:05–12:08:27 AM — earliest surviving trace.** Routine
+2. **September 21, 12:05–12:08:27 AM — earliest surviving trace.** An
    acceptance session `Blu-Offline-20260921-000503.typescript` recorded two
    ordinary editing runs containing three exact `08 20 08` visual-erasure
    triplets. `script` had already made the echo-and-erasure stream durable.
 3. **12:09:30 AM — first known Codex tool ingestion.** Blu ran
-   `sed -n '1,260p'` on the complete 68-line transcript for routine
+   `sed -n '1,260p'` on the complete 68-line transcript for acceptance
    verification. The Codex tool result contained the pre-correction characters
-   and erasure bytes, but Blu did not identify or describe their privacy
-   significance.
-4. **2:28:06 PM — first documented recognition.** During an unrelated clue
-   experiment, Blu first reported that a transcript retained text erased during
-   composition, more than fourteen hours after the unnoticed midnight import.
+   and erasure bytes. No preserved contemporaneous statement from that import
+   identifies their privacy significance.
+4. **2:28:06 PM — first documented explicit interpretation.** During an
+   unrelated clue experiment, Blu first reported that a transcript retained text erased during
+   composition, more than fourteen hours after the midnight import.
    Taylor then responded with surprise and proposed studying the behavior.
 
 The layer and timestamp distinction is important: `/usr/bin/script -q` made
@@ -189,10 +189,11 @@ macOS `/usr/bin/script -q` preserved draft-text echo and subsequent `08 20 08`
 erase sequences while canonical line editing delivered only the committed line
 to `llama-cli`. Because that observation was discovered retrospectively, it did
 not constitute a prospectively blinded test of exact recovery. An earlier
-routine acceptance transcript had already preserved three visual-erasure
-triplets and entered a Codex tool result at 12:09:30 AM without anyone
-recognizing the privacy consequence; this pre-recognition trace strongly
-supports the accidental-discovery chronology.
+acceptance transcript had already preserved three visual-erasure triplets and
+entered a Codex tool result at 12:09:30 AM. No preserved contemporaneous
+statement from that import names the privacy consequence. The trace therefore
+shows that the durable and agent-readable path preceded its first documented
+explicit privacy interpretation.
 
 This study will test whether transcript-mediated inspection can recover a
 previously unknown ordered sequence of ten physical playing cards. Taylor will

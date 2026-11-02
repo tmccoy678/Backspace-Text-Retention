@@ -1,16 +1,17 @@
 # Findings and claim boundary
 
-## 1. Earliest trace, first recognition, and structured foundation recording
+## 1. Earliest trace, first documented interpretation, and structured foundation recording
 
 The earliest surviving recorded editing trace located is the normal
 `Blu-Offline-20260921-000503.typescript` acceptance session, closed at
 12:08:27 AM on September 21. It contains two erase runs totaling three exact
 `08 20 08` triplets. Blu read the complete transcript through a Codex tool at
-12:09:30 AM for routine acceptance checks and did not identify the retention
-consequence.
+12:09:30 AM for acceptance checks. No preserved contemporaneous statement from
+that import identifies the retention consequence; this does not establish
+subjective non-recognition.
 
-The privacy-significant behavior was first recognized at 2:28 PM while Blu,
-with Taylor's permission, inspected `141944` during an unrelated clue
+The first documented explicit privacy interpretation appears at 2:28 PM, when
+Blu, with Taylor's permission, inspected `141944` during an unrelated clue
 experiment. Taylor's surprised response and proposal to study the behavior came
 after Blu reported it. The previously published `141327` partial precursor and
 `141944` substantive transcript recognized at discovery remain byte-preserved
@@ -213,10 +214,12 @@ formulation is that the behavior would occur in any Codex app.
 
 The existing-evidence answer is surface-specific:
 
-- **Accidental discovery is strongly supported.** A routine midnight session
-  already contained recorded corrections and was read into a Codex tool result
-  without anyone noticing. The privacy consequence was recognized more than
-  fourteen hours later during an unrelated experiment.
+- **The documented discovery sequence is strongly supported.** A midnight
+  acceptance session already contained recorded corrections and was read into
+  a Codex tool result. No preserved contemporaneous statement from that import
+  names the privacy consequence. The first documented explicit interpretation
+  came more than fourteen hours later during an unrelated experiment. This
+  chronology does not prove subjective non-recognition at midnight.
 - **The historical complete trace has an identified recorder.** Terminal line
   editing generated it; `/usr/bin/script -q` made it durable.
 - **The graphical app implements current-draft persistence.** It stores the

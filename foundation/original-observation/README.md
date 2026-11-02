@@ -12,8 +12,8 @@
 
 **Historical chronology:** The [earliest-evidence audit](../../docs/EARLIEST-EVIDENCE-AUDIT.md)
 and subsequent [existing-evidence investigation](../../investigations/2026-10-28-olivia-hypothesis/)
-located an unnoticed routine trace at 12:05–12:08 AM and the first
-privacy-significant recognition at 2:28 PM upon inspection of a 2:19 PM
+located an earlier acceptance trace at 12:05–12:08 AM and the first documented
+explicit privacy interpretation at 2:28 PM upon inspection of a 2:19 PM
 pre-control recording. The separate
 [September Intel audit](../../investigations/2026-09-21-pre-control-and-intel/)
 reconstructs the unrecorded 5:28 PM attempt. This report's principal 1,344-byte
@@ -21,14 +21,16 @@ artifact is the later 3:37 PM structured case; its byte-level and mechanistic
 results are unchanged.
 
 > **Historical first trace.** The earliest surviving recorded editing trace
-> located is the private routine-acceptance file
+> located is the private acceptance file
 > `Blu-Offline-20260921-000503.typescript`, made durable by the pre-existing
 > `/usr/bin/script -q` wrapper and closed at 12:08:27 AM CDT. At 12:09:30 AM,
 > Blu read its complete 68 lines through a Codex tool for routine verification; the
-> tool result contained the pre-correction characters and erasure bytes, but
-> Blu did not recognize their privacy significance. First recognition came at
-> 2:28:06 PM during an unrelated clue experiment. Thus recording was
-> intentional, while the retention consequence and discovery were accidental.
+> tool result contained the pre-correction characters and erasure bytes. No
+> preserved contemporaneous statement from that import identifies their
+> privacy significance. The first documented explicit privacy interpretation
+> came at 2:28:06 PM during an unrelated clue experiment. Recording and the
+> surrounding work were intentional; the record does not establish subjective
+> non-recognition at midnight.
 
 ## Abstract
 
