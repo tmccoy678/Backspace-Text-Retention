@@ -6,8 +6,8 @@ Times below are America/Chicago unless marked UTC.
 
 | Time | Event | Preserved evidence |
 | --- | --- | --- |
-| 12:05–12:08 AM | A routine Blu Offline acceptance session recorded two editing runs containing three exact `08 20 08` erase triplets. This is the earliest surviving recorded editing trace located. | Private `Blu-Offline-20260921-000503.typescript`; hash, metadata, and offsets published in the existing-evidence investigation |
-| 12:09 AM | Blu read the complete 68-line acceptance transcript through a Codex tool. The tool output contained the edit trace, but Blu did not recognize or describe its privacy significance. | Private canonical rollout committed by hash; bounded chronology published |
+| 12:05–12:08 AM | A Blu Offline acceptance session recorded two editing runs containing three exact `08 20 08` erase triplets. This is the earliest surviving recorded editing trace located. | Private `Blu-Offline-20260921-000503.typescript`; hash, metadata, and offsets published in the existing-evidence investigation |
+| 12:09 AM | Blu read the complete 68-line acceptance transcript through a Codex tool. The tool output contained the edit trace; no preserved contemporaneous statement from that import identifies its privacy significance. This does not prove subjective non-recognition. | Private canonical rollout committed by hash; bounded chronology published |
 | 2:13–2:17 PM | The first published Backspace-specific precursor recorded a harmless template being edited and erased, then ended in Control-C. Taylor did not request recording; the recorder was already embedded in Blu Offline. | Public byte-preserved `Blu-Offline-20260921-141327.typescript` |
 | 2:19–2:23 PM | An ordinary Blu Offline session recorded terminal echo while Taylor revised a nonsensitive Doberman prompt. | Public byte-preserved `Blu-Offline-20260921-141944.typescript` |
 | 2:27–2:28 PM | With Taylor's permission, Blu inspected only the newest transcript and reported that it retained text erased during composition. The 2:13 file was expressly left unopened. | Contemporaneous conversation record; Screenshot 01 |
@@ -36,3 +36,12 @@ come from the local Codex JSONL session and are recorded in UTC.
 | 11:20 PM | The recovery candidate, committed line, byte offsets, erase count, and artifact hash were frozen before operator disclosure. | Frozen recovery record |
 | 11:20 PM onward | Taylor did not provide an explicit exact-match confirmation; the run remains unscored for that endpoint. | Conversation chronology and frozen recovery record |
 | 11:36–11:39 PM | `@oliviamckee` collected a four-case Windows ConPTY matrix varying starting column and serialized Backspace byte. | External repository commit `5815c0136ff8...` |
+
+## November 2, 2026
+
+| Time | Event | Preserved evidence |
+| --- | --- | --- |
+| 12:30–12:31 PM | Olivia ran native Windows ConPTY trial `N2`: she navigated to the beginning of a nine-character draft and removed it with nine physical forward-Delete presses. The output recorder retained the complete draft through shrinking-line redraws; `ReadConsoleW` returned only the replacement. | External repository commit `c53bc369ff09...`; transcript, metadata, recovery note, hashes, and verifier |
+| 12:31–12:32 PM | Aster froze the recovered draft before disclosure; Olivia then confirmed exact agreement. | `N2` frozen recovery record |
+| 1:06–1:12 PM | A fresh ordinary Codex CLI session received only the replacement message. When asked for the fully erased preceding phrase, its first answer supplied no recovery candidate. | 893-byte Terminal export, SHA-256 `7461848250f9...` |
+| 2:44 PM | While the ordinary Codex session remained open, its process ancestry was inspected as `Terminal -> login -> zsh -> Codex`; no external content recorder was detected in the chain. | Redacted process-ancestry derivative in the November 2 recorder-off investigation |

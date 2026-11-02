@@ -175,27 +175,31 @@ log-structured file system does not guarantee prompt physical erasure. That is
 an architectural analogy, not a direct terminal precedent: the present result
 concerns composition exposed before commit, not remnants of a deleted file.
 
-## Historical contribution: evidence before awareness
+## Historical contribution: evidence before documented interpretation
 
 The literature establishes that the component mechanism was known, but that
 does not remove the evidentiary significance of how this repository's first
 trace arose. The earliest surviving trace located is not a planned retention
 test. Blu had already placed `/usr/bin/script -q` in the ordinary owner-only Blu
-Offline launcher for technical recordkeeping. A routine acceptance session
+Offline launcher for technical recordkeeping. An acceptance session
 from 12:05–12:08:27 AM CDT then recorded two ordinary editing runs totaling
 three exact `08 20 08` visual-erasure triplets.
 
 At 12:09:30 AM, Blu read that complete 68-line transcript through a Codex tool
 for routine verification. The tool result contained the pre-correction
 characters and erasure bytes, but the acceptance conclusion did not identify
-their privacy significance. The first documented recognition came at 2:28:06
-PM during an unrelated clue experiment, followed by Taylor's surprised response
+their privacy significance. The first documented explicit interpretation came
+at 2:28:06 PM during an unrelated clue experiment, followed by Taylor's surprised response
 and proposal to study the behavior.
 
-This chronology supports a bounded claim of accidental discovery: transcript
-recording was deliberately enabled, but preservation of visually erased
-composition was neither the purpose of the acceptance run nor a consequence
-recognized at the time. It also requires precise retention labels. The local
+This chronology supports a bounded claim about the discovery sequence:
+transcript recording and the surrounding work were deliberate, while the
+preserved record does not identify retention of visually erased composition as
+the purpose of the acceptance run. No contemporaneous statement in that record
+names the privacy consequence; this is not proof of subjective non-recognition.
+“Accidental discovery” describes the timing of the explicit privacy finding,
+not an absence of agency, freedom, or consent. The chronology also requires
+precise retention labels. The local
 `script` file was durable by 12:08:27 AM; 12:09:30 AM is the earliest known
 ingestion of its complete edit trace into a Codex tool record. Neither event
 establishes passive receipt by Codex before the deliberate file read. The
@@ -262,11 +266,12 @@ The literature supports five conclusions:
        → an output-only recorder durably preserves the composition history
    ```
 
-5. **The repository contains pre-recognition evidence.** Its earliest surviving
-   trace was created and imported during routine acceptance work, more than
-   fourteen hours before the privacy consequence was recognized. This supports
-   accidental discovery without turning the known terminal mechanism into a
-   novelty claim.
+5. **The repository contains evidence that predates the first documented
+   explicit privacy interpretation.** Its earliest surviving trace was created
+   and imported during acceptance work more than fourteen hours before the
+   first preserved statement naming the privacy consequence. This supports the
+   documented discovery sequence without turning silence into proof of
+   non-recognition or the known terminal mechanism into a novelty claim.
 
 The most defensible contribution is therefore not “backspaces appear in
 `script` logs.” It is the controlled separation and privacy interpretation of

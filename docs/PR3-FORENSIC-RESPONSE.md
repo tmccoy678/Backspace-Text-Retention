@@ -97,11 +97,12 @@ Blu consciously decided the path alone was sufficient disclosure.
 
 No preserved pre-discovery message considers the possibility that ordinary
 terminal echo plus sequential PTY recording could retain characters later
-erased from the visible input line. A routine midnight acceptance transcript
+erased from the visible input line. A midnight acceptance transcript
 already contained three erase triplets and was read in full through a Codex
-tool without recognition. The first explicit privacy-significant recognition
-appears only after Taylor authorized inspection of the newest transcript that
-afternoon.
+tool. No preserved contemporaneous statement from that import names the
+privacy consequence, which does not prove subjective non-recognition. The first
+documented explicit privacy interpretation appears after Taylor authorized
+inspection of the newest transcript that afternoon.
 
 The default should now be the opposite:
 
@@ -128,10 +129,12 @@ The evidence supports a sequence of separate layers:
    not a byte-for-byte copy of every visible edit.
 4. At 12:09 AM on September 21, Blu read a complete routine-acceptance
    transcript through a Codex tool. Its output included a small edit trace, but
-   Blu did not recognize the retention consequence.
+   no preserved contemporaneous statement from that import identifies the
+   retention consequence. This does not prove subjective non-recognition.
 5. At 2:27 PM, after Taylor explicitly authorized inspection of only the newest
    transcript from an unrelated clue experiment, Blu read the substantive
-   `141944` file and then recognized the privacy significance.
+   `141944` file and supplied the first documented explicit privacy
+   interpretation.
 6. Both command outputs became part of saved Codex conversation records only
    after the separate local files were deliberately inspected.
 
@@ -226,11 +229,14 @@ present.
 
 The existing evidence answers that question as follows:
 
-1. **The discovery was genuinely accidental.** Recording was intentional, but
-   erased-draft retention was neither anticipated nor tested. A routine midnight
-   transcript already contained three erase triplets and was read through a
-   Codex tool without recognition. The first privacy-significant recognition
-   came more than fourteen hours later during an unrelated clue experiment.
+1. **The preserved chronology supports accidental discovery of the explicit
+   privacy consequence.** Recording and the surrounding work were intentional,
+   while erased-draft retention was not the stated purpose of the acceptance
+   run. A midnight transcript already contained three erase triplets and was
+   read through a Codex tool. No preserved contemporaneous statement from that
+   import names the privacy consequence; the first documented explicit privacy
+   interpretation came more than fourteen hours later during an unrelated clue
+   experiment. This does not establish subjective non-recognition at midnight.
 2. **The historical positive has a sufficient non-Codex explanation.** The
    terminal generated echo and erase output; `/usr/bin/script -q` made the
    sequential stream durable; later tool inspection imported it into Codex.

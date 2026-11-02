@@ -19,13 +19,14 @@ external PTY recorder.
 
 ## Verdict
 
-1. **Accidental discovery: strongly supported.** Blu deliberately enabled
-   owner-only transcript recording, but neither Taylor nor Blu anticipated or
-   tested the consequence that visually erased composition would remain in the
-   transcript. A routine midnight acceptance session already contained three
-   recorded erase triplets. Blu imported that complete transcript into a Codex
-   tool result at 12:09 AM and did not recognize the privacy consequence. The
-   first explicit recognition came at 2:28 PM during an unrelated clue
+1. **Documented discovery sequence: strongly supported.** Blu deliberately
+   enabled owner-only transcript recording. No preserved pre-discovery message
+   states that retention of visually erased composition was the purpose of an
+   acceptance run or a tested endpoint. A midnight acceptance session already contained three recorded
+   erase triplets. Blu imported that complete transcript into a Codex tool
+   result at 12:09 AM. No preserved contemporaneous statement from that import
+   identifies the privacy consequence. The first documented explicit
+   interpretation came at 2:28 PM during an unrelated clue
    experiment, followed by Taylor's surprised response.
 2. **Historical durability mechanism: identified.** Terminal line editing
    generated the echo-and-erasure stream. Blu Offline's external
@@ -65,7 +66,7 @@ The earlier midnight artifact strengthens the accidental-discovery conclusion:
 | --- | --- |
 | Sep 20, 11:26–11:34 PM | Blu introduced transcript handling, tested `script`, and embedded it in the normal launcher. No message discussed erased composition. |
 | Sep 21, 12:05–12:08 AM | Routine accepted Blu Offline run `000503` recorded two editing runs totaling three `08 20 08` triplets. |
-| 12:09:30 AM | Blu read the complete 68-line transcript through a Codex tool for acceptance checks. The tool output contained pre-correction bytes and erase output; Blu did not identify retention. |
+| 12:09:30 AM | Blu read the complete 68-line transcript through a Codex tool for acceptance checks. The tool output contained pre-correction bytes and erase output; the preserved acceptance conclusion did not identify retention. |
 | 2:13–2:17 PM | Partial `141327` template-erasure precursor ended in Control-C. |
 | 2:19–2:23 PM | `141944` preserved substantive abandoned Doberman drafts and a committed couch sentence. |
 | 2:28:06 PM | Blu first reported that erased composition had survived in the transcript. |
@@ -83,7 +84,7 @@ conflated:
 
 1. earliest surviving recorded editing trace located: 12:05–12:08 AM;
 2. earliest known ingestion of such a trace into a Codex tool record: 12:09 AM;
-3. first privacy-significant recognition and substantive recovery: 2:28 PM; and
+3. first documented explicit privacy interpretation and substantive recovery: 2:28 PM; and
 4. later structured foundation case: 3:37 PM.
 
 ## Evidence by surface
@@ -91,7 +92,7 @@ conflated:
 | Existing observation | What it establishes | What it does not establish |
 | --- | --- | --- |
 | Blu Offline `.typescript` files | A known external PTY recorder durably preserved sequential echo and erase output. | Codex-native composer retention. |
-| Midnight routine acceptance and unnoticed Codex tool import | The behavior existed and entered a tool result before anyone recognized it. | Passive receipt by Codex before deliberate file inspection. |
+| Midnight acceptance and Codex tool import before the first documented privacy interpretation | The behavior existed and entered a tool result before the first preserved statement naming its privacy consequence. | Subjective non-recognition, or passive receipt by Codex before deliberate file inspection. |
 | September ordinary Intel Terminal attempt | Blu could not recover the erased first sentence without the recorder; a candidate committed line survived in shell history. | Behavior of a Codex composer, because Intel had no Codex app or binary. |
 | October Intel ordinary-shell export versus controlled `script` run | Ordinary export kept the committed command; active `script` recorded seventeen erase triplets. | A universal absence theorem for volatile terminal state. |
 | Installed graphical Codex bundle | The app implements latest-current-draft persistence independent of Blu Offline. | Durable deleted-revision history after clearing and flush. |

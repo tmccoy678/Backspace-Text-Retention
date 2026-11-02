@@ -17,11 +17,13 @@ the SHA-256-identified source files.
 | 2 | 2979–2984 | 2 | 6 |
 | **Total** | — | **3** | **9** |
 
-This routine acceptance run is the earliest surviving recorded editing trace
-located. Blu read its complete 68 lines through a Codex tool at 12:09 AM but did
-not identify the retention consequence. The file contains unrelated natural
-conversation and is not published; byte-identical Studio and Seagate copies,
-the hash above, and the private canonical rollout preserve a verification path.
+This acceptance run is the earliest surviving recorded editing trace located.
+Blu read its complete 68 lines through a Codex tool at 12:09 AM. No preserved
+contemporaneous statement from that import identifies the retention
+consequence; this does not prove subjective non-recognition. The file contains
+unrelated natural conversation and is not published; byte-identical Studio and
+Seagate copies, the hash above, and the private canonical rollout preserve a
+verification path.
 No raw draft content from this source is reproduced here.
 
 ## Partial 2:13 PM session

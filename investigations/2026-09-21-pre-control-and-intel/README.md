@@ -44,8 +44,8 @@ At 2:28:06 PM it reported the privacy-relevant observation: the transcript had
 recorded text erased during composition. This is the first documented
 privacy-significant recognition in the surviving records. It occurred more
 than an hour before the 3:37 PM two-sentence case currently centered in the
-foundation manuscript and more than fourteen hours after the unnoticed
-midnight trace.
+foundation manuscript and more than fourteen hours after the earlier midnight
+trace, whose import contains no preserved explicit privacy interpretation.
 
 `Blu-Offline-20260921-141327.typescript` is an even earlier, partial session.
 It is 1,190 bytes and contains two erase runs totaling 35 `08 20 08` triplets,
@@ -122,7 +122,7 @@ September attempt and the October replication are distinct.
 | File | Evidentiary role |
 | --- | --- |
 | [`Blu-Offline-20260921-141327.typescript`](../../evidence/transcripts/Blu-Offline-20260921-141327.typescript) | First published partial Backspace-specific precursor |
-| [`Blu-Offline-20260921-141944.typescript`](../../evidence/transcripts/Blu-Offline-20260921-141944.typescript) | First published substantive retention observation and first privacy-significant recognition |
+| [`Blu-Offline-20260921-141944.typescript`](../../evidence/transcripts/Blu-Offline-20260921-141944.typescript) | First published substantive retention observation and first documented explicit privacy interpretation |
 | [`evidence/intel-screen-20260921-162939.png`](evidence/intel-screen-20260921-162939.png) | Intel-side inspection of the copied 3:37 PM Apple-silicon transcript |
 
 The screenshot is evidence of Intel access to the copied transcript, not of a
