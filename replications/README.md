@@ -27,6 +27,7 @@ Windows evidence:
 
 - [Repository](https://github.com/oliviamckee/backspace-retention-windows-study)
 - [Immutable matrix commit `5815c0136ff8`](https://github.com/oliviamckee/backspace-retention-windows-study/commit/5815c0136ff88b03c7d6c455962aacb7e2a8bd60)
+- [Immutable physical forward-Delete commit `c53bc369ff09`](https://github.com/oliviamckee/backspace-retention-windows-study/commit/c53bc369ff09b5e0c4e97fa8e4baa8ae8b3270e2)
 - [Public review comment that prompted the matrix](https://github.com/oliviamckee/backspace-retention-windows-study/commit/1c2df2adc0e32b60260032fd6dcfa258aa24d1de#commitcomment-206991204)
 
 The Windows host recorded only the ConPTY output pipe while `ReadConsoleW`
@@ -46,7 +47,12 @@ within either column pair.
 Two other Windows conditions remain distinct. The earlier Python `P3` harness
 mapped a physical Del key to backward erase and therefore did not represent
 native Windows forward-Delete semantics. The native `N0` control sent scripted
-forward-Delete sequences, but no physical Delete event occurred in `N1`.
+forward-Delete sequences, but no physical Delete event occurred in `N1`. The
+later native `N2` trial filled that gap: after Left Arrow navigation, nine
+physical Windows Delete presses produced repeated shrinking-line redraws in the
+recorded ConPTY output. The recorder retained the complete draft,
+`ReadConsoleW` returned only the replacement, and the frozen recovery was
+confirmed as an exact match. `N2` contained no exact `08 20 08` triplet.
 
 The repositories are connected by citations and claim boundaries rather than
 by copying independently authored evidence. That keeps checksums, provenance,

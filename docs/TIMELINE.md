@@ -36,3 +36,12 @@ come from the local Codex JSONL session and are recorded in UTC.
 | 11:20 PM | The recovery candidate, committed line, byte offsets, erase count, and artifact hash were frozen before operator disclosure. | Frozen recovery record |
 | 11:20 PM onward | Taylor did not provide an explicit exact-match confirmation; the run remains unscored for that endpoint. | Conversation chronology and frozen recovery record |
 | 11:36–11:39 PM | `@oliviamckee` collected a four-case Windows ConPTY matrix varying starting column and serialized Backspace byte. | External repository commit `5815c0136ff8...` |
+
+## November 2, 2026
+
+| Time | Event | Preserved evidence |
+| --- | --- | --- |
+| 12:30–12:31 PM | Olivia ran native Windows ConPTY trial `N2`: she navigated to the beginning of a nine-character draft and removed it with nine physical forward-Delete presses. The output recorder retained the complete draft through shrinking-line redraws; `ReadConsoleW` returned only the replacement. | External repository commit `c53bc369ff09...`; transcript, metadata, recovery note, hashes, and verifier |
+| 12:31–12:32 PM | Aster froze the recovered draft before disclosure; Olivia then confirmed exact agreement. | `N2` frozen recovery record |
+| 1:06–1:12 PM | A fresh ordinary Codex CLI session received only the replacement message. When asked for the fully erased preceding phrase, its first answer supplied no recovery candidate. | 893-byte Terminal export, SHA-256 `7461848250f9...` |
+| 2:44 PM | While the ordinary Codex session remained open, its process ancestry was inspected as `Terminal -> login -> zsh -> Codex`; no external content recorder was detected in the chain. | Redacted process-ancestry derivative in the November 2 recorder-off investigation |

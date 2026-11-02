@@ -131,8 +131,19 @@ to backward erase, so it did not establish native Windows forward-Delete
 behavior. The native `N0` control used scripted forward-Delete sequences; no
 physical Delete event occurred in the native `N1` trial.
 
+On November 2, the native `N2` trial measured the missing physical-key
+condition. Olivia moved to the beginning of a nine-character draft with Left
+Arrow and pressed physical Windows Delete nine times. The output-only ConPTY
+recorder retained the complete draft through repeated shrinking-line redraws,
+while `ReadConsoleW` returned only the replacement. Aster froze the recovery
+candidate before Olivia confirmed exact agreement. Unlike `N1`, the output
+contained no exact `08 20 08` Backspace triplet. The two trials therefore
+demonstrate different recorded output forms for backward and forward editing
+on this Windows configuration; they do not define a universal erase grammar.
+
 The Windows source, exact artifacts, hashes, and verifier remain in Olivia's
-repository at immutable commit `5815c0136ff88b03c7d6c455962aacb7e2a8bd60`.
+repository. The physical forward-Delete evidence is frozen at immutable commit
+`c53bc369ff09b5e0c4e97fa8e4baa8ae8b3270e2`.
 
 ## 7. Corrections preserved
 
@@ -223,6 +234,16 @@ Describing the whole Blu lane as a historical positive observation is valid,
 but it cannot confirm Olivia's ordinary-Codex mechanism: the positive case used
 a known external recorder. The ordinary-Codex deleted-revision question remains
 unresolved by the evidence already present.
+
+A subsequent November 2 observation tested a fresh ordinary Codex CLI session.
+The live process ancestry was `Terminal -> login -> zsh -> Codex`, with no
+detected external content recorder. After an erased harmless draft was replaced
+and only the replacement was submitted, Codex supplied no recovery candidate
+in its first answer. The exported text and redacted ancestry are preserved in
+the
+[recorder-off investigation](../investigations/2026-11-02-ordinary-codex-recorder-off/).
+This is a negative first-answer observation, not proof that no representation
+existed in volatile memory, local state, or provider telemetry.
 
 The evidence does not isolate agent awareness of an experiment as a cause.
 Recoverability follows the identified acquisition path: content-complete
