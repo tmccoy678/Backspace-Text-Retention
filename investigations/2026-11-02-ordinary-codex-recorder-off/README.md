@@ -48,7 +48,7 @@ inspected ancestry.
 
 ## Artifacts
 
-- `Livi_DEL_TEST_1.txt` — byte-exact copy of the 893-byte terminal export,
+- `ordinary-codex-recorder-off.txt` — byte-exact copy of the 893-byte terminal export,
   created and modified at 1:12:20 PM CST.
 - `PROCESS-ANCESTRY-REDACTED.txt` — public derivative of the live process
   ancestry. Only the local username and home-directory prefix are redacted.
