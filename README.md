@@ -96,6 +96,29 @@ repository's own account while leaving unrecorded motives unknown. In this
 bounded sense, the project demonstrated its method on the history of its own
 creation.
 
+### Public mechanism, private evidence, and inference boundary
+
+The repository's code, synthetic fixtures, verifier, and demonstrations are
+public and reproducible under the repository's license. The private midnight
+transcript is not published; only its hash, metadata, byte offsets, and bounded
+chronology are public.
+
+Recorder-retained composition also keeps its original status. Its presence in a
+file or agent tool result establishes availability, not submission, intent,
+instruction, authorization, or predicted behavior. An agent may retrieve an
+abandoned draft for an explicitly authorized forensic task, but must not promote
+that draft into a user request or permission. This provenance boundary is the
+repository's broader agent-safety claim.
+
+At scale, retained composition could support continuity, accessibility, error
+recovery, writing research, or behavioral analysis. It could also support
+inferences about preferences, uncertainty, relationships, impulses, or future
+behavior. Keystroke logging and pre-submission web telemetry are established
+precedents; immediate agent interpretation of recorder-retained composition is
+the distinct capability identified here. This repository does not measure the
+accuracy, validity, or social value of those possible inferences. It establishes
+the acquisition path and the need to preserve provenance.
+
 A later [historical audit](investigations/2026-09-21-pre-control-and-intel/) of
 the September evidence adds exact byte-run analysis for the first two published
 Backspace-specific recordings and reconstructs the distinct unrecorded
