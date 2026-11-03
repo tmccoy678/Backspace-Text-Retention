@@ -86,6 +86,16 @@ diligently and preserve complete technical records supplied the high-level
 requirement, while Blu chose the recording mechanism. The contemporaneous
 record is consistent with that account but does not state the complete motive.
 
+### The method applied to its own history
+
+This audit applied the repository's evidentiary method to the project's origin.
+A small historical fact distributed across preserved machines and records was
+recovered, traced to its sources, and separated into source bytes, visible
+rendering, tool ingestion, and later interpretation. That process corrected the
+repository's own account while leaving unrecorded motives unknown. In this
+bounded sense, the project demonstrated its method on the history of its own
+creation.
+
 A later [historical audit](investigations/2026-09-21-pre-control-and-intel/) of
 the September evidence adds exact byte-run analysis for the first two published
 Backspace-specific recordings and reconstructs the distinct unrecorded
@@ -257,8 +267,10 @@ action produces `0x7f` (ASCII `DEL`) as input while the shell emits `0x08`
 (ASCII `BS`) plus a display-erasure sequence as output. Their `forscript` tool
 records input and output separately because an ordinary output transcript is
 not an unambiguous record of user action. Apple's manual likewise warns that
-`script` logs include backspaces. The component behavior is therefore prior
-knowledge, not a newly discovered terminal mechanism.
+`script` logs include backspaces. It does not use the term **backspace data** or
+state that an abandoned draft remains reconstructable. The component behavior
+is therefore prior knowledge; the composition-history consequence is the
+repository's measured privacy problem.
 
 The narrower contribution investigated here is the privacy consequence of the
 complete boundary: POSIX `ERASE` can remove draft text from the future line

@@ -35,6 +35,13 @@ repository should identify the layer being described.
 | **Secure deletion** | A stronger storage claim: data has been rendered unrecoverable under a stated threat model. | Neither a Backspace/Delete key action nor disappearance from a display is evidence of secure deletion. |
 | **Retention** | A representation remains recoverable at a named layer, such as a PTY recording. | Retention by one layer does not prove receipt by every other layer, including a child process, model, or network service. |
 
+**Backspace data** and **backspace text data** are descriptive terms introduced
+by this repository for the retained combination of abandoned draft bytes and
+the output bytes that later remove them from the rendered line. Apple does not
+use either term in the cited `script(1)` manual. The manual says the log includes
+“backspaces”; it does not state that the earlier composition remains
+reconstructable.
+
 ### Preferred descriptions for this repository
 
 For the measured foundation case, the least ambiguous account is:
